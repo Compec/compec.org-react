@@ -1,50 +1,89 @@
 import React from 'react'
 import {Nav,Navbar,NavDropdown,Container,Button} from 'react-bootstrap'
 import './logo.svg';
+import {LinkContainer} from 'react-router-bootstrap'
 
 function Navigation() {
     return(
         <div className="Navigation">
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
-                <Navbar.Brand href="#home">
-                    <img
-                        src="/logo.svg"
-                        width="190"
-                        height="50"
-                        className="d-inline-block align-top"
-                    />
-                </Navbar.Brand>
+                <LinkContainer to="/">
+                    <Navbar.Brand >
+                        <img
+                            src="/logo.svg"
+                            width="190"
+                            height="50"
+                            className="d-inline-block align-top"
+                        />
+                    </Navbar.Brand>
+                </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                 
                 <Nav className="mr-auto" /*variant="pills"*/></Nav>
                 <Nav>
                     <NavDropdown title="Biz Kimiz?" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1" >Hakkımızda</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Alt Kurullarımız</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Ekibimiz</NavDropdown.Item>
+                        <LinkContainer to="/hakkimizda">
+                            <NavDropdown.Item>Hakkımızda</NavDropdown.Item>
+                        </LinkContainer> 
+                        
+                        <LinkContainer to="/altkurullar">
+                            <NavDropdown.Item>Alt Kurullarımız</NavDropdown.Item>
+                        </LinkContainer> 
+                        
+                        <LinkContainer to="/yonetim">
+                            <NavDropdown.Item>Yönetim Ekibimiz</NavDropdown.Item>
+                        </LinkContainer> 
                     </NavDropdown>                    
                     
                     <NavDropdown title="Etkinliklerimiz" id="collasible-nav-dropdown" margin={100}>
-                        <NavDropdown.Item href="#action/3.1">Boğaziçi Bilişim Ödülleri</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">TechSummit</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">DataCamp</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">PlayIT</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">E-Founder</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">TeknoDolu</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Akıllı Şehirler Zirvesi</NavDropdown.Item>
+                        <LinkContainer to="/bbo">
+                            <NavDropdown.Item>Boğaziçi Bilişim Ödülleri</NavDropdown.Item>
+                        </LinkContainer>    
+                        
+                        <LinkContainer to="/techsummit">   
+                            <NavDropdown.Item>TechSummit</NavDropdown.Item>
+                        </LinkContainer>     
+                        
+                        <LinkContainer to="/datacamp">   
+                            <NavDropdown.Item>DataCamp</NavDropdown.Item>
+                        </LinkContainer>      
+                        
+                        <LinkContainer to="/playit">    
+                            <NavDropdown.Item>PlayIT</NavDropdown.Item>
+                        </LinkContainer>    
+                            
+                        <LinkContainer to="/efounder">    
+                            <NavDropdown.Item>E-Founder</NavDropdown.Item>
+                        </LinkContainer>    
+                        
+                        <LinkContainer to="/teknodolu">    
+                            <NavDropdown.Item>TeknoDolu</NavDropdown.Item>
+                        </LinkContainer>     
+                    
                     </NavDropdown> 
-					                    
-                    <Nav.Link href="#deets">Galeri</Nav.Link>
+					
+                    <LinkContainer to="/galeri">
+                        <Nav.Link>Galeri</Nav.Link>
+                    </LinkContainer>                    
 
-                    <Nav.Link href="#deets">Blog</Nav.Link>
+                    <LinkContainer to="/blog">
+                        <Nav.Link>Blog</Nav.Link>
+                    </LinkContainer>
 
-                    <Nav.Link href="#deets">İletişim</Nav.Link>
-
-                    <Button href="#deets" variant="outline-secondary">Giriş Yap</Button>
+                    <LinkContainer to="/iletisim">
+                        <Nav.Link>İletişim</Nav.Link>
+                    </LinkContainer>
+                    
+                    <LinkContainer to="/login">
+                        <Button variant="outline-secondary">Giriş Yap</Button>
+                    </LinkContainer>
                 </Nav>
                 </Navbar.Collapse>
                 </Navbar>
+                <br/>
+                <br/>
+                <br/>
         </div>
     );
 }
