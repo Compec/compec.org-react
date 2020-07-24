@@ -17,7 +17,7 @@ function Navigation() {
     return(
         <div className="Navigation">
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" key={pathname}>
-                
+                <div className="container" style={{textAlign:"center"}}>
                 <LinkContainer to="/">
                     <Navbar.Brand >
                         <img
@@ -92,10 +92,8 @@ function Navigation() {
                     </LinkContainer>
                 </Nav>
                 </Navbar.Collapse>
+                </div>
             </Navbar>
-            <br/>
-            <br/>
-            <br/>
         </div>
     );
 }

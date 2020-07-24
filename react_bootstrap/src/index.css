@@ -175,6 +175,10 @@ section .section-title {
 .content-wrap{
     flex: 1;
 }
+
+.template-demo{
+  text-align: right;
+}
 /* footer*/
 /* Login sayfası şeyleri */
 .form-signin {
@@ -219,3 +223,6 @@ section .section-title {
 } 
 etkinlik sayfalrında kullanacaktım, saldım
 */
+.Navigation{
+  margin-bottom: 75px;
+}
