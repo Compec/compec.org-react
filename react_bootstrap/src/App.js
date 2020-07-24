@@ -1,7 +1,6 @@
-import React ,{useState} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
-// import {Container,Row,Col} from 'react-bootstrap';
 //import logo from './logo.svg';
 //import './App.css';
 import Navigation from './components/Navigation'
@@ -24,8 +23,9 @@ import Altkurullar from './components/biz_kimiz/altkurullar'
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <div className="page-container">
+      <div className="content-wrap">
+      <BrowserRouter>
         <Navigation/>
           <Switch>
             <Route path="/" exact component={Home}/>
@@ -43,11 +43,13 @@ function App() {
             <Route path="/yonetim" component={Yonetim}/>
             <Route path="/altkurullar" component={Altkurullar}/>
             <Route path="/login" component={Login}/>
-
           </Switch>
-        <Footer/>  
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+      </div>      
+      <Footer/>
+
+    </div>
+    
   );
 }
 

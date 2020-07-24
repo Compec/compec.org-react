@@ -1,18 +1,30 @@
 import React from 'react'
-import {Nav,Navbar,NavDropdown,Container,Button} from 'react-bootstrap'
+import {Nav,Navbar,NavDropdown,Button} from 'react-bootstrap'
 import './logo.svg';
-import {LinkContainer} from 'react-router-bootstrap'
+import {LinkContainer} from 'react-router-bootstrap';
+import {useLocation} from 'react-router-dom';
+
+{/*const RouterNavLink = ({ children, ...props }) => (
+    <LinkContainer {...props}>
+      <Nav.Link active={false}>
+        {children}
+      </Nav.Link>
+    </LinkContainer>
+)*/}
 
 function Navigation() {
+    const {pathname} = useLocation()
     return(
         <div className="Navigation">
-                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" key={pathname}>
+                
                 <LinkContainer to="/">
                     <Navbar.Brand >
                         <img
                             src="/logo.svg"
                             width="190"
                             height="50"
+                            alt=""
                             className="d-inline-block align-top"
                         />
                     </Navbar.Brand>
@@ -80,10 +92,10 @@ function Navigation() {
                     </LinkContainer>
                 </Nav>
                 </Navbar.Collapse>
-                </Navbar>
-                <br/>
-                <br/>
-                <br/>
+            </Navbar>
+            <br/>
+            <br/>
+            <br/>
         </div>
     );
 }

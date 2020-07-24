@@ -1,12 +1,44 @@
 import React from 'react'
-import {Nav,Navbar,NavDropdown,Container,Button} from 'react-bootstrap'
 import './Footer.css'
 function Footer(){
     return(
-        <div className="Footer">
-            <footer className='footer mt-auto py-3 bg-dark text-white'>
-            <div className="container">© 2020 Compec. Bütün hakları saklıdır.</div>
-            </footer>
+        <div className="main-footer">
+            <div className='footer mt-auto py-3 bg-dark text-white'>
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <h4>Stuff list</h4>
+                            <ul className="list-unstyled">
+                            <li>Stuff 1</li>
+                            <li>Stuff 2</li>
+                            <li>Stuff 3</li>
+                            </ul>
+                        </div>
+                        <div className="col">
+                            <h4>Stuff list</h4>
+                            <ul className="list-unstyled">
+                            <li>Stuff 1</li>
+                            <li>Stuff 2</li>
+                            <li>Stuff 3</li>
+                            </ul>
+                        </div>
+                        <div className="col">
+                        {/*<div class="template-demo"> <button type="button" class="btn btn-social-icon btn-outline-facebook"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-outline-youtube"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-outline-twitter"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-outline-github"><i class="fa fa-github"></i></button> <button type="button" class="btn btn-social-icon btn-outline-linkedin"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-outline-instagram"><i class="fa fa-instagram"></i></button> </div>*/}
+                        {/*<div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook btn-rounded"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube btn-rounded"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter btn-rounded"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-dribbble btn-rounded"><i class="fa fa-dribbble"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin btn-rounded"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram btn-rounded"><i class="fa fa-instagram"></i></button> </div>*/}
+                        </div>
+                    </div>
+                    
+                    <div className="row">
+                        <hr />
+                        <p className="col-sm">
+                            &copy;{new Date().getFullYear()} Compec. Tüm hakları saklıdır.
+                        </p>
+                        <div className="col-sm">
+                        <div class="template-demo"> <button type="button" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></button> <button type="button" class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></button> <button type="button" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></button> <button type="button" class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></button> <button type="button" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></button> <button type="button" class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
