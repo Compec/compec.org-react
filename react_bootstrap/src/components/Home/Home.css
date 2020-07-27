@@ -16,6 +16,7 @@
 .carousel {
   padding-top: 200;
   margin-bottom: 4rem;
+  margin-top: -25px;
 }
 /* Since positioning the image, we need to help out the caption */
 /*.carousel-caption {
@@ -35,25 +36,6 @@
   min-width: 100%;
   height: 32rem;
 }
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
-
-
 /* Featurettes
 ------------------------- */
 
@@ -81,7 +63,7 @@
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 35px;
   }
 }
 
@@ -90,3 +72,66 @@
     margin-top: 7rem;
   }
 }
+
+
+.homeheader{
+  text-align: center;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+
+/*/ start count stats /*/
+
+section#counter-stats {
+	display: flex;
+	justify-content: center;
+}
+
+.stats {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.stats .fa {
+  color: #000000;
+  font-size: 60px;
+}
+
+/*/ end count stats /*/
+
+.home-newsletter .single {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2; 
+}
+
+.home-newsletter .single h2 {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.home-newsletter .single .form-control {
+  height: 50px;
+  border-radius: 20px 0 0 20px; 
+}
+
+.home-newsletter .single .form-control:focus {
+  box-shadow: none;
+  border-color: #243c4f; 
+}
+.home-newsletter .single .btn {
+  min-height: 50px; 
+  border-radius: 0 20px 20px 0;
+  background: #243c4f;
+  color: #fff;
+}
+
+/* https://bootsnipp.com/snippets/eoXRa */

@@ -4,11 +4,13 @@ function Blog(){
     return(
         <div>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-
-                        <h1 class="my-4">Page Heading<small>Secondary Text</small></h1> <hr/>
-                    
+                <div class="row"> 
+                    <div className="col">
+                    <h1>Compec Blog</h1> <hr/>
+                    </div>
+                </div>
+                <div className="row">
+                    <div class="col-md-8">                    
                         <div class="card mb-4 shadow">
                             <img class="card-img-top" src="./750x300.jpg" alt="Card image cap" />
                             <div class="card-body">

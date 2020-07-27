@@ -14,23 +14,14 @@ function BBO(){
             </div>
             <div class="row">
                 <div class="col">
-                    <h1>Boğaziçi TechSummit</h1><hr/>
-                    <p>2010 yılında EXIT (Expo IT) Bilişim Fuarı ismiyle düzenlenmeye başlanır. 2016 yılından itibaren ise Boğaziçi TechSummit ismiyle düzenlenir. Her yıl Türkiye'nin her tarafından teknolojiye meraklı ve bilişim alanında hedefleri olan öğrencileri ağırlayan Boğaziçi TechSummit geçtiğimiz yıl 10. defa düzenlenmiştir.
+                    <h1>Boğaziçi Bilişim Ödülleri.</h1><hr/>
+                    <p>Boğaziçi Bilişim Ödülleri, 2014'ten bu yana her yıl bilişim ve teknoloji alanında profesyonellerin ve kurumların ödüllendirildiği bir ödül törenidir. Ödüllerin kazananları, geniş çaplı bir halk oylaması ile 20 günlük bir süreçte belirlenir. Kasım ayının başında başlayan oylama süreci, Aralık ayının ilk haftasında sonlanır ve kategori kazananları belirlenir. Oylama süreci farklı ülkelerden kullanıcılar tarafından internet sitesi üzerinden gerçekleştirilir. Adaylar halk oylamasının yanı sıra alanında uzman kişilerin yer aldığı jüri tarafından oylanır.
 
-                    Etkinliğin organizasyonu her yıl Boğaziçi Üniversitesi Bilişim Kulübü bünyesinde kurulan, tamamen öğrencilerden oluşan bir ekip tarafından yürütülür.
+2018 yılında düzenlenen, BUMK Klasik Müzik Korosunun açılışta yaptığı dinleti ile renk kattığı ödül töreninde ödül sahipleri, Tansel Öngel'in sunuculuğunda ödülleriyle buluştu. Bu sene yine Aralık ayında 7.'si düzenlenecek olan ödül töreni, bilişimin enlerine ev sahipliği yapacak.
 
-                    Öğrenci kulüpleri bazında bilişim alanında düzenlenen en kapsamlı etkinlik olma özelliğini taşıyan Boğaziçi TechSummit, içerisinde panelleri, konuşmaları, fuaye alanında teknoloji deneyim stantlarını ve şirket gezilerini bulundurur. Etkinliğin amaçları ve içeriğiyle uyumlu olarak etkinliğin mottosu Teknolojiyle #YenidenTanış olarak belirlenmiştir.
-
-                    Boğaziçi TechSummit projesinin amaçları şöyle sıralanabilir:
                     </p>
                     
-                    <ul>
-                        <li>Boğaziçi Üniversitesi’nin oluşturduğu öğrenci tabanlı üretken kültür etrafında kulüp üyelerimize güncel teknolojiler, sektördeki çalışmalar, şirket iş birlikleri, marka pazarlaması ve ekip çalışması gibi konularda reel deneyimler kazandırmak</li>
-                        <li>Katılımcıları ve bizi takip edenleri “teknolojiyle yeniden tanıştırmak”, günümüz teknolojileri üzerine kapsamlı ve üretken bir perspektif kazandırmak</li>
-                        <li>Türkiye’de teknoloji üreten kişileri ve kurumları bir araya getirerek teknoloji üzerine bir ekosistem oluşmasına katkı sağlamak </li>
-
-                    </ul>
-                    <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#" role="button">View details »</a></p>
+                    <p><a class="btn btn-primary" href="https://bogazicibilisimodulleri.com/" role="button" target="_blank">Web Sitesini Ziyaret Et</a></p>
                 </div>
             </div>
             <hr/>

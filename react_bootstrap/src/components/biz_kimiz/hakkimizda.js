@@ -14,14 +14,15 @@ function Hakkimizda(){
             </div>
             <div class="row">
                 <div class="col">
-                    <h1>Boğaziçi TechSummit</h1><hr/>
-                    <p>2010 yılında EXIT (Expo IT) Bilişim Fuarı ismiyle düzenlenmeye başlanır. 2016 yılından itibaren ise Boğaziçi TechSummit ismiyle düzenlenir. Her yıl Türkiye'nin her tarafından teknolojiye meraklı ve bilişim alanında hedefleri olan öğrencileri ağırlayan Boğaziçi TechSummit geçtiğimiz yıl 10. defa düzenlenmiştir.
-
-                    Etkinliğin organizasyonu her yıl Boğaziçi Üniversitesi Bilişim Kulübü bünyesinde kurulan, tamamen öğrencilerden oluşan bir ekip tarafından yürütülür.
-
-                    Öğrenci kulüpleri bazında bilişim alanında düzenlenen en kapsamlı etkinlik olma özelliğini taşıyan Boğaziçi TechSummit, içerisinde panelleri, konuşmaları, fuaye alanında teknoloji deneyim stantlarını ve şirket gezilerini bulundurur. Etkinliğin amaçları ve içeriğiyle uyumlu olarak etkinliğin mottosu Teknolojiyle #YenidenTanış olarak belirlenmiştir.
-
-                    Boğaziçi TechSummit projesinin amaçları şöyle sıralanabilir:
+                    <h1>Boğaziçi Üniversitesi Bilişim Kulübü.</h1><hr/>
+                    <p>1994 yılında kurulan Compec, okulumuzda faaliyet gösteren 6 kariyer kulübünden biridir. 
+                    Tamamı Boğaziçi Üniversitesi öğrencilerinden oluşan üyelerimizin yazılım ve dijital tasarım başta olmak üzere verdiğimiz 
+                    eğitimlerle kendilerini teknik açıdan geliştirmelerini, yüzlerce katılımcıyı ağırlayan etkinlikleri yönetim ekibiyle beraber 
+                    sıfırdan düzenlerken aktif olarak sorumluluk alarak organizasyon tecrübesi kazanmalarını, 
+                    girişimcilik ekosistemine dahil olmalarını, network'lerini genişletmeyi ve kariyer planlaması yapmalarını kolaylaştırmayı amaçlıyoruz.
+                    Bunları yaparken de eğlenmeyi unutmuyor, yaşam boyu sürecek dostluklar kazanıyoruz.
+                    Bu amaçlar doğrultusunda çeşitli alanlarda etkinliklerle her yıl daha da büyüyerek Türkiye’nin dört bir yanından etkinliklerimize ilgi gösteren 
+                    katılımcılarımızı sektörün önde gelen isimleri ve kurumlarıyla buluşturuyoruz.
                     </p>
                     
                     <ul>
@@ -30,7 +31,6 @@ function Hakkimizda(){
                         <li>Türkiye’de teknoloji üreten kişileri ve kurumları bir araya getirerek teknoloji üzerine bir ekosistem oluşmasına katkı sağlamak </li>
 
                     </ul>
-                    <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#" role="button">View details »</a></p>
                 </div>
             </div>
             <hr/>

@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 //import logo from './logo.svg';
-//import './App.css';
+import './App.css';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './components/Home/Home'

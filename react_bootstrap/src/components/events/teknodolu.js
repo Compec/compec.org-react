@@ -14,14 +14,14 @@ function Teknodolu(){
             </div>
             <div class="row">
                 <div class="col">
-                    <h1>Boğaziçi TechSummit</h1><hr/>
-                    <p>2010 yılında EXIT (Expo IT) Bilişim Fuarı ismiyle düzenlenmeye başlanır. 2016 yılından itibaren ise Boğaziçi TechSummit ismiyle düzenlenir. Her yıl Türkiye'nin her tarafından teknolojiye meraklı ve bilişim alanında hedefleri olan öğrencileri ağırlayan Boğaziçi TechSummit geçtiğimiz yıl 10. defa düzenlenmiştir.
+                    <h1>TeknoDolu</h1><hr/>
+                    <p>TeknoDolu, tercihen dezavantajlı bölgelerde yaşayan çocukları güncel teknolojiyle buluşturan bir sosyal sorumluluk projesidir. 
 
-                    Etkinliğin organizasyonu her yıl Boğaziçi Üniversitesi Bilişim Kulübü bünyesinde kurulan, tamamen öğrencilerden oluşan bir ekip tarafından yürütülür.
+                    Etkinlik iki gün sürmektedir ve çocukların son teknoloji ürünleri deneyimlediği TeknoPanayır, atölye çalışmaları, seminerler ve diğer eğlence aktivitelerinden oluşmaktadır.
 
-                    Öğrenci kulüpleri bazında bilişim alanında düzenlenen en kapsamlı etkinlik olma özelliğini taşıyan Boğaziçi TechSummit, içerisinde panelleri, konuşmaları, fuaye alanında teknoloji deneyim stantlarını ve şirket gezilerini bulundurur. Etkinliğin amaçları ve içeriğiyle uyumlu olarak etkinliğin mottosu Teknolojiyle #YenidenTanış olarak belirlenmiştir.
+                    2019 yılında ilk kez Bilecik/Bozüyük'te 400 öğrenci ile gerçekleştirilmiştir. 
 
-                    Boğaziçi TechSummit projesinin amaçları şöyle sıralanabilir:
+                    Proje, başta Bozüyük basını olmak üzere birçok yayın kuruluşunun gündeminde yer bulmuştur.
                     </p>
                     
                     <ul>
