@@ -1,7 +1,7 @@
 import React from 'react'
 import './yonetim.css'
 
-function YonetimKart({isim="İsim Soyisim",gorev="Görev",linkedin,insta,foto}) {
+function YonetimKart({isim="İsim Soyisim",gorev="Görev",linkedin,insta,foto="/yonetim/default.png"}) {
     return(
         <div class="image-flip" >
             <div class="mainflip flip-0">

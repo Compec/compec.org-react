@@ -26,6 +26,7 @@ function YonetimKart_noinsta({isim="İsim Soyisim",gorev="Görev",linkedin="http
                                     </a>
                                 </li>
                             </ul>
+                            <p className="hidden-text">dfgbsdhfg hdjgjfh dgsfd hffgdfh mgnh fgdbsdg fnhmfng dbsv</p>
                         </div>
                     </div>
                 </div>

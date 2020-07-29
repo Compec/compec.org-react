@@ -7,7 +7,7 @@ function Iletisim(){
                 <div className="col">
                     <br/>
                     <h1>İletişim</h1>
-                    <h4>Bize sağ altta bulunan <a href="https://tawk.to">tawk.to</a> eklentisi ile canlı olarak, veya aşağıdaki iletişim bilgilerimizle ulaşabilirsiniz. </h4>
+                    <h4>Bize sağ altta bulunan <a href="https://tawk.to">tawk.to</a> eklentisi ile canlı olarak, sosyal medya hesaplarımızdan veya aşağıdaki iletişim bilgilerimizden ulaşabilirsiniz. </h4>
                     <hr/>
                 </div>
             </div>
@@ -19,11 +19,10 @@ function Iletisim(){
                 </div>
                 <div class="col-md-4">
                     <div className="container">
-                        <b>Compec</b><br/>
+                        <h4>Compec</h4>
                         Boğaziçi Üniversitesi Bilişim Kulübü<br/>
                         Bebek, Boğaziçi Üniversitesi Güney Kampüsü 1. Erkek Yurdu,
                         Compec Kulüp Odası No: 1 34342 Beşiktaş/İstanbul<br/>
-                        Phone: +1 145 000 101<br />
                         <a href="mailto:compec@boun.edu.tr">compec@boun.edu.tr</a><br/>
                     </div>
                 </div>
