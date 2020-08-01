@@ -141,7 +141,7 @@ function HomeAbout() {
 						</div>
 					</>
 				))}
-				<hr />
+				<hr />{/* 
 				<section class="home-newsletter">
 					<div class="container">
 						<div class="row">
@@ -167,7 +167,7 @@ function HomeAbout() {
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> */}
 			</Container>
 		</div>
 	)

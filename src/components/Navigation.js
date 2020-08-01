@@ -78,18 +78,19 @@ function Navigation() {
                     <LinkContainer to="/galeri">
                         <Nav.Link>Galeri</Nav.Link>
                     </LinkContainer>                    
-
+                    {/* 
                     <LinkContainer to="/blog">
                         <Nav.Link>Blog</Nav.Link>
                     </LinkContainer>
-
+                    */}
                     <LinkContainer to="/iletisim">
                         <Nav.Link>İletişim</Nav.Link>
                     </LinkContainer>
-                    
+                    {/* 
                     <LinkContainer to="/login">
                         <Button variant="outline-secondary">Giriş Yap</Button>
                     </LinkContainer>
+                    */}
                 </Nav>
                 </Navbar.Collapse>
                 </div>

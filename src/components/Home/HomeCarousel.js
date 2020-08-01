@@ -9,7 +9,7 @@ function HomeCarousel() {
 	const handleSelect = (selectedIndex, e) => {
 		setIndex(selectedIndex)
 	}
-
+ 
 	return (
 		<div className="carousel">
 			<Carousel activeIndex={index} onSelect={handleSelect}>
@@ -23,7 +23,7 @@ function HomeCarousel() {
 						<Carousel.Caption>
 							<h3> {item.captionH3}</h3>
 							<p>
-              {item.captionP}
+            					{item.captionP}
 							</p>
 						</Carousel.Caption>
 					</Carousel.Item>
