@@ -1,0 +1,1 @@
+tar -cvf ./deploy.tar --exclude=./react_bootstrap/node_modules --exclude='*.map' ./*
