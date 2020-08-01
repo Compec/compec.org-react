@@ -30,7 +30,7 @@ function HomeAbout() {
 			Name: "Sosyal Sorumluluk",
 			Text:
 				"Sene boyunca aldıkları eğitimler ile kendini geliştiren üyelerimizin öğrendiklerini yaşça küçük öğrencilere aktarmalarını ve teknoloji konusunda yetkin nesillerin yetişmesine katkıda bulunmayı amaçlıyoruz.",
-			imgSrc: "./download (2).png",
+			imgSrc: "./anasayfa-sosyalsorumluluk.jpg",
 			reverseOrder: false,
 		},
 	]

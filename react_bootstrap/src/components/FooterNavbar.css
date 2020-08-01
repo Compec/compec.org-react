@@ -5,8 +5,12 @@
     width: 100%;
 }
 
+.copyright{
+    text-align: center;
+}
+
 .template-demo{
-    text-align: right;
+    text-align: center;
 }
 
 .btn.btn-social-icon {

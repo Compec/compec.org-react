@@ -26,7 +26,7 @@ function Efounder(){
                         <li>Final yarışmasından oluşur.​</li>
 
                     </ul>
-                    <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#" role="button">View details »</a></p>
+                    <p><a class="btn btn-primary" href="https://efounder.org/" role="button">Web Sitesini Ziyaret Et</a></p>
                 </div>
             </div>
             <hr/>
