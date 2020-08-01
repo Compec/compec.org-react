@@ -1,0 +1,34 @@
+import React from 'react';
+
+function Datacamp(){
+    return(
+        <div class="container">
+            <div className="eventpage-header">
+                <div class="card bg-dark text-white" >
+                    <img class="card-img-top" src="./BingImageOfTheDay_20200720.jpg" alt="Card image cap"/>
+                    {/*<div class="card-img-overlay">
+                        <h1 class="card-title">Card title</h1>
+                        
+                    </div> */}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Boğaziçi DataCamp.</h1><hr/>
+                    <p>
+                    Boğaziçi DataCamp, Veri Bilimi alanının günümüzdeki uygulamalarının ve geleceğinin tartışıldığı ve çoğunluğunu 3.-4. Sınıf ve yüksek lisans öğrencilerinin oluşturduğu katılımcıların uygulayarak öğrenme şansı yakaladıkları iki günlük bir zirvedir. Bu zirve süresince, konuşmalar ve panellerde veri bilimi alanından bahsedilmesinin yanı sıra katılımcıların pratik yaparak öğrenebilecekleri workshoplar da gerçekleşir.
+
+                    Etkinlik boyunca bize eşlik edecek şirketler; konuşmalar, workshoplar ve standlar aracılığıyla bu alanda yaptıkları faaliyetlerden bahsedebilecek ve katılımcılar ile etkileşime geçebileceklerdir.
+                    Etkinliğin ardından ulusal düzeyde online bir veri bilimi yarışması planlanmaktadır.
+
+                    </p>
+                    
+                    <p><a class="btn btn-primary" href="http://datacamp.boun.edu.tr/" role="button" target="_blank">Web Sitesini Ziyaret Et</a></p>
+                </div>
+            </div>
+            <hr/>
+        </div>
+    );
+}
+
+export default Datacamp;

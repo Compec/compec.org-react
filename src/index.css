@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* <div className='footer mt-auto py-3 bg-dark text-white'> </div>*/
+
+/*.jumbotron{
+  background-image: url("https://bountechsummit.com/assets/about/2019_ekip.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat,repeat;
+  padding-top: 50px;
+  padding: 100px;
+  border-radius: 50px;
+
+} 
+etkinlik sayfalrında kullanacaktım, saldım
+*/
