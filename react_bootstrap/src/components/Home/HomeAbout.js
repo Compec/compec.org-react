@@ -112,7 +112,7 @@ function HomeAbout(){
                     <p class="lead">Sene boyunca aldıkları eğitimler ile kendini geliştiren üyelerimizin öğrendiklerini yaşça küçük öğrencilere aktarmalarını ve teknoloji konusunda yetkin nesillerin yetişmesine katkıda bulunmayı amaçlıyoruz.</p>
                 </div>
                 <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" width="500" height="500" src="./download (2).png" data-holder-rendered="true"/>
+                    <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" width="500" height="500" src="./anasayfa-sosyalsorumluluk.jpg" data-holder-rendered="true"/>
                 </div>
             </div>
             <hr/>

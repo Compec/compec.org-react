@@ -7,10 +7,12 @@ function Footer(){
                 <div className="container">
                     
                     <div className="row">
-                        <p className="col-sm">
-                            &copy;{new Date().getFullYear()} Compec. Tüm hakları saklıdır.
-                        </p>
-                        <div className="col-sm">
+                        <div className="col-md-12">
+                            <p className="copyright">
+                                &copy;{new Date().getFullYear()} Compec. Tüm hakları saklıdır.
+                            </p>
+                        </div>
+                        <div className="col-md-12">
                             <div class="template-demo">
                                 
                                 <a href="http://facebook.com/bouncompec" target="_blank">

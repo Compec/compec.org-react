@@ -15,7 +15,7 @@ function HomeCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./BingImageOfTheDay_20200720.jpg"
+            src="./anasayfa-slayt1.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -26,7 +26,7 @@ function HomeCarousel() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./BingImageOfTheDay_20200721.jpg?text=Second slide&bg=282c34"
+            src="./anasayfa-slayt2.jpg"
             alt="Second slide"
           />
   
