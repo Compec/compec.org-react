@@ -22,3 +22,4 @@
 /react_bootstrap/npm-debug.log*
 /react_bootstrap/yarn-debug.log*
 /react_bootstrap/yarn-error.log*
+.history
