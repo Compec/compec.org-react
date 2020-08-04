@@ -22,35 +22,33 @@ import Yonetim from './components/biz_kimiz/yonetim'
 import Altkurullar from './components/biz_kimiz/altkurullar'
 
 function App() {
-  return (
-    <div className="page-container">
-      <div className="content-wrap">
-        <BrowserRouter>
-        <Navigation/>
-          <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/galeri" component={Galeri}/>
-            <Route path="/bbo" component={BBO}/>
-            <Route path="/datacamp" component={Datacamp}/>
-            <Route path="/efounder" component={Efounder}/>
-            <Route path="/hackathon" component={Hackathon}/>
-            <Route path="/playit" component={Playit}/>
-            <Route path="/techsummit" component={Techsummit}/>
-            <Route path="/teknodolu" component={Teknodolu}/>
-            <Route path="/blog" component={Blog}/>
-            <Route path="/iletisim" component={Iletisim}/>
-            <Route path="/hakkimizda" component={Hakkimizda}/>
-            <Route path="/yonetim" component={Yonetim}/>
-            <Route path="/altkurullar" component={Altkurullar}/>
-            <Route path="/login" component={Login}/>
-          </Switch>
-      </BrowserRouter>
-      </div>      
-      <Footer/>
-
-    </div>
-    
-  );
+	return (
+		<div className="page-container">
+			<div className="content-wrap">
+				<BrowserRouter>
+					<Navigation/>
+					<Switch>
+						<Route path="/" exact component={Home}/>
+						<Route path="/galeri" component={Galeri}/>
+						<Route path="/bbo" component={BBO}/>
+						<Route path="/datacamp" component={Datacamp}/>
+						<Route path="/efounder" component={Efounder}/>
+						<Route path="/hackathon" component={Hackathon}/>
+						<Route path="/playit" component={Playit}/>
+						<Route path="/techsummit" component={Techsummit}/>
+						<Route path="/teknodolu" component={Teknodolu}/>
+						<Route path="/blog" component={Blog}/>
+						<Route path="/iletisim" component={Iletisim}/>
+						<Route path="/hakkimizda" component={Hakkimizda}/>
+						<Route path="/yonetim" component={Yonetim}/>
+						<Route path="/altkurullar" component={Altkurullar}/>
+						<Route path="/login" component={Login}/>
+					</Switch>
+				</BrowserRouter>
+			</div>      
+			<Footer/>
+		</div>
+	);
 }
 
 export default App;

@@ -12,8 +12,8 @@ function Galeri() {
 
 			<div class="row text-center text-lg-left">
 				{
-					GaleriItems.List.map((thumbnail) =>
-						<ImgThumbnail src={thumbnail.src} link={thumbnail.link} />
+					GaleriItems.List.map(
+						(thumbnail) => <ImgThumbnail src={thumbnail.src} link={thumbnail.link} />
 					)
 				}
 			</div>
