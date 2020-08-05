@@ -6,7 +6,7 @@ function Datacamp() {
 		<div class="container">
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
-					<img class="card-img-top" src="./etkinliklerimiz_datacamp.jpg" alt="Boğaziçi DataCamp" />
+					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz_datacamp.jpg" alt="Boğaziçi DataCamp" />
 					{/*<div class="card-img-overlay">
                         <h1 class="card-title">Card title</h1>
                         

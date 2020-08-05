@@ -6,7 +6,7 @@ function Techsummit() {
 		<div class="container">
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
-					<img class="card-img-top" src="./etkinliklerimiz-techsummit.jpg" alt="Boğaziçi TechSummit" />
+					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz-techsummit.jpg" alt="Boğaziçi TechSummit" />
 					{/*<div class="card-img-overlay">
                         <h1 class="card-title">Card title</h1>
                         

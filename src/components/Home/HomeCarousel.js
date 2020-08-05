@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Carousel } from "react-bootstrap"
 import "./Home.css"
-import { HomeCarouselResources } from "./localResource"
+import { HomeResources } from "./HomeResources"
 
 function HomeCarousel() {
 	const [index, setIndex] = useState(0)
@@ -14,19 +14,13 @@ function HomeCarousel() {
 		<div className="carousel">
 			<Carousel activeIndex={index} onSelect={handleSelect}>
 				{
-					HomeCarouselResources.Items.map(
+					HomeResources.Carousel.map(
 						(item) => (
 							<Carousel.Item>
-								<img
-									className="d-block w-100"
-									src= {item.src}
-									alt= {item.alt}
-								/>
+								<img className="d-block w-100" src= {item.src} alt= {item.alt} />
 								<Carousel.Caption>
-									<h3> {item.captionH3}</h3>
-									<p>
-										{item.captionP}
-									</p>
+									<h3>{item.captionH3}</h3>
+									<p>{item.captionP}</p>
 								</Carousel.Caption>
 							</Carousel.Item>
 						)

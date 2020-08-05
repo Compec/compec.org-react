@@ -6,7 +6,7 @@ function Teknodolu() {
 		<div class="container">
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
-					<img class="card-img-top" src="./etkinliklerimiz-teknodolu.jpg" alt="TeknoDolu" />
+					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz-teknodolu.jpg" alt="TeknoDolu" />
 					{/*<div class="card-img-overlay">
                         <h1 class="card-title">Card title</h1>
                         

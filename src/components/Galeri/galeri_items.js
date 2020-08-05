@@ -1,55 +1,55 @@
 const GaleriItems = {
 	List: [
 		{
-			src: "/galeri1.jpg",
-			link: "/galeri1_buyuk.jpg",
+			src: "/galeri/eski_yonetim_t.jpg",
+			link: "/galeri/eski_yonetim.jpg",
 		},
 		{
-			src: "/galeri2.jpg",
-			link: "/galeri2_buyuk.jpg",
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
 		},
 		{
-			src: "/galeri3.jpg",
-			link: "/galeri3_buyuk.jpg",
+			src: "/galeri/jj_t.jpg",
+			link: "/galeri/jj.jpg",
 			// link: "https://source.unsplash.com/aob0ukAYfuI/400x300"
 		},
 		{
-			src: "/galeri4.jpg",
-			link: "/galeri4_buyuk.jpg",
+			src: "/galeri/yunus_t.jpg",
+			link: "/galeri/yunus.jpg",
 		},
 		{
-			src: "/galeri5.jpg",
-			link: "/galeri5_buyuk.jpg",
+			src: "/galeri/sadi_t.jpg",
+			link: "/galeri/sadi.jpg",
 			// link: "https://source.unsplash.com/aob0ukAYfuI/400x300"
 		},
 		{
-			src: "/galeri6.jpg",
-			link: "/galeri6_buyuk.jpg",
+			src: "/galeri/pelin_t.jpg",
+			link: "/galeri/pelin.jpg",
 		},
 		{
-			src: "/galeri1.jpg",
-			link: "/galeri1.jpg",
+			src: "/galeri/galeri1.jpg",
+			link: "/galeri/galeri1.jpg",
 		},
 		{
-			src: "/galeri2.jpg",
-			link: "/galeri1.jpg",
+			src: "/galeri/galeri2.jpg",
+			link: "/galeri/galeri1.jpg",
 		},
 		{
-			src: "/galeri3.jpg",
-			link: "/galeri3.jpg",
+			src: "/galeri/galeri3.jpg",
+			link: "/galeri/galeri3.jpg",
 			// link: "https://source.unsplash.com/aob0ukAYfuI/400x300"
 		},
 		{
-			src: "/galeri1.jpg",
-			link: "/galeri1.jpg",
+			src: "/galeri/galeri1.jpg",
+			link: "/galeri/galeri1.jpg",
 		},
 		{
-			src: "/galeri2.jpg",
-			link: "/galeri1.jpg",
+			src: "/galeri/galeri2.jpg",
+			link: "/galeri/galeri1.jpg",
 		},
 		{
-			src: "/galeri3.jpg",
-			link: "/galeri3.jpg",
+			src: "/galeri/galeri3.jpg",
+			link: "/galeri/galeri3.jpg",
 			// link: "https://source.unsplash.com/aob0ukAYfuI/400x300"
 		},
 	],
