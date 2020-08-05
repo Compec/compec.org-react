@@ -17,13 +17,19 @@ const HomeResources = {
 			src: "./anasayfa/anasayfa-slayt2.jpg",
 			alt: "First slide",
 			captionH3: "Yüzümüzü size döndük",
-            captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
+			captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
 		},
 		{
 			src: "./anasayfa/anasayfa-slayt3.jpg",
 			alt: "First slide",
 			captionH3: "Yüzümüzü size döndük",
-            captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
+			captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
+		},
+		{
+			src: "./anasayfa/anasayfa-slayt4.jpg",
+			alt: "First slide",
+			captionH3: "Yüzümüzü size döndük",
+			captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
 		},
 	],
 	Missions : [
