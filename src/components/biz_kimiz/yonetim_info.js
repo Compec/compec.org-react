@@ -79,7 +79,7 @@ const YonetimInfo = {
 		{
 			isim: "Ahmet İkbal Adlığ",
 			gorev: "Oyun Geliştirme Lideri",
-			foto: "/yonetim/ikbal_adlig",
+			foto: "/yonetim/ikbal_adlig.jpg",
 			linkedin: "https://www.linkedin.com/in/ahmetikbaladlig/",
 			insta: "https://www.instagram.com/ikbaladlig/",
 			face: "https://www.facebook.com/ikbal13",
