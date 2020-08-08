@@ -24,7 +24,7 @@ const YonetimInfo = {
 		{
 			isim: "Yağmur Kara",
 			gorev: "PR Direktörü",
-			foto: "/yonetim/Yağmur.jpeg",
+			foto: "/yonetim/Yagmur.jpeg",
 			linkedin: "https://www.linkedin.com/in/yagmurkara/",
 			insta: "https://www.instagram.com/yagmrkaraa/",
 			face: "https://www.facebook.com/yagmrkaraaa"
@@ -48,7 +48,7 @@ const YonetimInfo = {
 		{
 			isim: "Enes Döke",
 			gorev: "Organizasyon Direktörü",
-			foto: "/yonetim/EnesDöke.jpeg",
+			foto: "/yonetim/EnesDoke.jpeg",
 			linkedin: "https://www.linkedin.com/in/enesdoke/",
 			insta: "https://www.instagram.com/enesdoke/",
 			twitter: "https://twitter.com/enesdoke"
@@ -72,14 +72,14 @@ const YonetimInfo = {
 		{
 			isim: "Ahmet Burkay Kınık",
 			gorev: "Veri Bilimi Lideri",
-			foto: "/yonetim/AhmetBurkayKınık.jpg",
+			foto: "/yonetim/AhmetBurkayKinik.jpg",
 			linkedin: "https://www.linkedin.com/in/aburkaykinik/",
 			insta: "https://www.instagram.com/ahmetburkayknk/"
 		},
 		{
 			isim: "Ahmet İkbal Adlığ",
 			gorev: "Oyun Geliştirme Lideri",
-			foto: "/yonetim/default.png",
+			foto: "/yonetim/ikbal_adlig",
 			linkedin: "https://www.linkedin.com/in/ahmetikbaladlig/",
 			insta: "https://www.instagram.com/ikbaladlig/",
 			face: "https://www.facebook.com/ikbal13",
@@ -89,7 +89,7 @@ const YonetimInfo = {
 		{
 			isim: "Alperen Özyılmaz",
 			gorev: "Kurumsal İletişim Lideri",
-			foto: "/yonetim/AlperenÖzyılmaz.jpg",
+			foto: "/yonetim/AlperenOzyilmaz.jpg",
 			linkedin: "https://linkedin.com/in/alperen-özyılmaz-8527051a6"
 		},
 		{
@@ -109,7 +109,7 @@ const YonetimInfo = {
 		{
 			isim: "Berkay İşler",
 			gorev: "Veri Bilimi Lideri",
-			foto: "/yonetim/Berkayİşler.jpg",
+			foto: "/yonetim/Berkayisler.jpg",
 			linkedin: "https://www.linkedin.com/in/berkay-işler-01a279104/",
 			insta: "https://www.instagram.com/berkay.islerr/"
 		},
@@ -124,7 +124,7 @@ const YonetimInfo = {
 		{
 			isim: "Büşra Hastürk",
 			gorev: "PR Lideri",
-			foto: "/yonetim/BüşraHastürk.jpg",
+			foto: "/yonetim/BusraHasturk.jpg",
 			linkedin: "http://linkedin.com/in/büşra-hastürk-2223a6196",
 			insta: "https://www.instagram.com/busra.hasturk/"
 		},
@@ -138,7 +138,7 @@ const YonetimInfo = {
 		{
 			isim: "Erkinalp Özcan",
 			gorev: "PR Lideri",
-			foto: "/yonetim/Erkinalp Özcan.jpeg",
+			foto: "/yonetim/Erkinalp Ozcan.jpeg",
 			linkedin: "https://www.linkedin.com/in/erkinalpozcan/",
 			insta: "https://www.instagram.com/erkinalpozcan/",
 			behance: "https://www.behance.net/erkinalpzcan"
@@ -146,14 +146,14 @@ const YonetimInfo = {
 		{
 			isim: "Halil İbrahim Çetinkaya",
 			gorev: "PR Lideri",
-			foto: "/yonetim/Halilİbrahim.jpg",
+			foto: "/yonetim/Halilibrahim.jpg",
 			linkedin: "linkedin.com/in/mdoceans",
 			insta: "https://www.instagram.com/mdoceans/"
 		},
 		{
 			isim: "Halim Yasin Zümre",
 			gorev: "Oyun Geliştirme Lideri",
-			foto: "/yonetim/HalimYasinZümre.jpg",
+			foto: "/yonetim/HalimYasinZumre.jpg",
 			linkedin: "https://www.linkedin.com/in/halimyasinzumre/",
 			insta: "https://www.instagram.com/halimyzumre/"
 		},
@@ -174,7 +174,7 @@ const YonetimInfo = {
 		{
 			isim: "Leyla Karaoğulları",
 			gorev: "Dijital Girişimcilik Lideri",
-			foto: "/yonetim/leyla karaoğulları.jpg",
+			foto: "/yonetim/leyla karaogullari.jpg",
 			linkedin: "linkedin.com/in/leyla-karaoğulları-36a9b6149"
 		},
 		{
@@ -189,21 +189,21 @@ const YonetimInfo = {
 		{
 			isim: "Merve Nur Hündür",
 			gorev: "DevTeam Lideri",
-			foto: "/yonetim/merve nur hündür.png",
+			foto: "/yonetim/merve nur hundur.png",
 			linkedin: "linkedin.com/in/merve-nur-hündür-25913116a",
 			insta: "https://www.instagram.com/hndrmerve/"
 		},
 		{
 			isim: "Metehan Gül",
 			gorev: "Kurumsal İletişim Lideri",
-			foto: "/yonetim/Metehan Gül.jpg",
+			foto: "/yonetim/Metehan Gul.jpg",
 			linkedin: "https://www.linkedin.com/in/metehangul",
 			insta: "https://instagram.com/Metehng"
 		},
 		{
 			isim: "Mirac Yiğit",
 			gorev: "Teknoloji Lideri",
-			foto: "/yonetim/MiracYiğit.jpeg",
+			foto: "/yonetim/MiracYigit.jpeg",
 			linkedin: "http://linkedin.com/in/miracyigit",
 			insta: "https://instagram.com/miraccyigitt",
 			twitter: "https://twitter.com/miraccyigitt1"
@@ -233,7 +233,7 @@ const YonetimInfo = {
 		{
 			isim: "Tuba Dağlı",
 			gorev: "İç İletişim Lideri",
-			foto: "/yonetim/Tuba Dağlı.jpg",
+			foto: "/yonetim/Tuba Dagli.jpg",
 			linkedin: "https://www.linkedin.com/in/tuba-da%C4%9Fli-84a9561b3/",
 			insta: "https://instagram.com/tuba.dl",
 			twitter: "https://twitter.com/2bayadatuba"
@@ -241,7 +241,7 @@ const YonetimInfo = {
 		{
 			isim: "Yiğit Doğan",
 			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
-			foto: "/yonetim/Yiğit Doğan.jpg",
+			foto: "/yonetim/Yigit Dogan.jpg",
 			linkedin: "https://www.linkedin.com/in/yigitdoğan312/",
 			insta: "https://www.instagram.com/yigiitdogann/",
 			twitter: "https://twitter.com/yigitdogaan"
@@ -249,7 +249,7 @@ const YonetimInfo = {
 		{
 			isim: "Zeynep Özmen",
 			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
-			foto: "/yonetim/Zeynep Özmen.jpg",
+			foto: "/yonetim/Zeynep Ozmen.jpg",
 			linkedin: "https://www.linkedin.com/in/zeynep-%C3%B6zmen-830327195",
 			insta: "https://www.instagram.com/zeyoozmen/"
 		}

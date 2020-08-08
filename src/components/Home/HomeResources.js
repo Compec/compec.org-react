@@ -44,7 +44,7 @@ const HomeResources = {
 			Name: "Eğitim.",
 			Text:
 				"Teknolojiye ilgi duyan herkese bölüm ayırt etmeksizin yazılım ve dijital tasarım başta olamak üzere birçok farklı alanda bilgi edinme ve teknik olarak kendilerini geliştirme fırsatı sunuyoruz.",
-			imgSrc: "./anasayfa/anasayfa-eğitim.jpg",
+			imgSrc: "./anasayfa/anasayfa-egitim.jpg",
 			reverseOrder: false,
 		},
 		{
