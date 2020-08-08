@@ -225,7 +225,7 @@ const YonetimInfo = {
 		},
 		{
 			isim: "Sefa Kaya",
-			gorev: "Dijital Girişimcilik Lideri",
+			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
 			foto: "/yonetim/Sefa KAYA.jpg",
 			linkedin: "linkedin.com/in/sefakaya1",
 			insta: "https://www.instagram.com/sfky_/"
