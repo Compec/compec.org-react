@@ -20,10 +20,10 @@ import Login from './components/Login/login'
 import Hakkimizda from './components/biz_kimiz/hakkimizda'
 import Yonetim from './components/biz_kimiz/yonetim'
 import Altkurullar from './components/biz_kimiz/altkurullar'
-import YonetimKart from '../../../src/components/biz_kimiz/yonetim_kart'
-import { YonetimInfo } from '../../../src/components/biz_kimiz/yonetim_info'
-import ImgThumbnail from './imgThumbnail'
-import { GaleriItems } from './galeri_items'
+import YonetimKart from './components/biz_kimiz/yonetim_kart'
+import { YonetimInfo } from './components/biz_kimiz/yonetim_info'
+import ImgThumbnail from './components/Galeri/imgThumbnail'
+import { GaleriItems } from './components/Galeri/galeri_items'
 
 function App() {
 	return (
