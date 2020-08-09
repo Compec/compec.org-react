@@ -20,34 +20,38 @@ import Login from './components/Login/login'
 import Hakkimizda from './components/biz_kimiz/hakkimizda'
 import Yonetim from './components/biz_kimiz/yonetim'
 import Altkurullar from './components/biz_kimiz/altkurullar'
+import YonetimKart from '../../../src/components/biz_kimiz/yonetim_kart'
+import { YonetimInfo } from '../../../src/components/biz_kimiz/yonetim_info'
+import ImgThumbnail from './imgThumbnail'
+import { GaleriItems } from './galeri_items'
 
 function App() {
 	return (
-		<div className="page-container">
-			<div className="content-wrap">
-				<BrowserRouter>
-					<Navigation/>
-					<Switch>
-						<Route path="/" exact component={Home}/>
-						<Route path="/galeri" component={Galeri}/>
-						<Route path="/bbo" component={BBO}/>
-						<Route path="/datacamp" component={Datacamp}/>
-						<Route path="/efounder" component={Efounder}/>
-						<Route path="/hackathon" component={Hackathon}/>
-						<Route path="/playit" component={Playit}/>
-						<Route path="/techsummit" component={Techsummit}/>
-						<Route path="/teknodolu" component={Teknodolu}/>
-						<Route path="/blog" component={Blog}/>
-						<Route path="/iletisim" component={Iletisim}/>
-						<Route path="/hakkimizda" component={Hakkimizda}/>
-						<Route path="/yonetim" component={Yonetim}/>
-						<Route path="/altkurullar" component={Altkurullar}/>
-						<Route path="/login" component={Login}/>
-					</Switch>
-				</BrowserRouter>
-			</div>      
-			<Footer/>
-		</div>
+		<BrowserRouter>
+			<div className="page-container">
+				<div className="content-wrap">
+						<Navigation/>
+						<Switch>
+							<Route path="/" exact component={Home}/>
+							<Route path="/galeri" component={Galeri}/>
+							<Route path="/bbo" component={BBO}/>
+							<Route path="/datacamp" component={Datacamp}/>
+							<Route path="/efounder" component={Efounder}/>
+							<Route path="/hackathon" component={Hackathon}/>
+							<Route path="/playit" component={Playit}/>
+							<Route path="/techsummit" component={Techsummit}/>
+							<Route path="/teknodolu" component={Teknodolu}/>
+							<Route path="/blog" component={Blog}/>
+							<Route path="/iletisim" component={Iletisim}/>
+							<Route path="/hakkimizda" component={Hakkimizda}/>
+							<Route path="/yonetim" component={Yonetim}/>
+							<Route path="/altkurullar" component={Altkurullar}/>
+							<Route path="/login" component={Login}/>
+						</Switch>
+				</div>
+				<Footer/>
+			</div>
+		</BrowserRouter>
 	);
 }
 
