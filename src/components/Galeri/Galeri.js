@@ -1,6 +1,179 @@
 import React from 'react';
-import ImgThumbnail from './imgThumbnail'
-import { GaleriItems } from './galeri_items'
+const GaleriItems = {
+	List: [
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		{
+			src: "/galeri/ezgi_enis_t.jpg",
+			link: "/galeri/ezgi_enis.jpg",
+		},
+		
+	],
+}
+
+function ImgThumbnail({ src, link }) {
+	return (
+		<div class="col-lg-3 col-md-4 col-6">
+			<a href={link} target="_blank" rel="noopener noreferrer" class="d-block mb-4 h-100">
+				<img class="img-fluid img-thumbnail shadow" src={src} alt="" />
+			</a>
+		</div>
+	)
+}
 
 function Galeri() {
 	return (
