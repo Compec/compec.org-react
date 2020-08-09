@@ -5,7 +5,7 @@ function Hakkimizda() {
 		<div class="container">
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
-					<img class="card-img-top" src="./BingImageOfTheDay_20200720.jpg" alt="Hakkımızda" />
+					<img class="card-img-top" src="/BingImageOfTheDay_20200720.jpg" alt="Hakkımızda" />
 					{/*<div class="card-img-overlay">
                         <h1 class="card-title">Card title</h1>
                         

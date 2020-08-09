@@ -12,7 +12,7 @@ function Blog() {
 				<div className="row">
 					<div class="col-md-8">
 						<div class="card mb-4 shadow">
-							<img class="card-img-top" src="./blog/750x300.jpg" alt="Card cap" />
+							<img class="card-img-top" src="/blog/750x300.jpg" alt="Card cap" />
 							<div class="card-body">
 								<h2 class="card-title">Post Title</h2>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
@@ -24,7 +24,7 @@ function Blog() {
 						</div>
 
 						<div class="card mb-4">
-							<img class="card-img-top" src="./750x300.jpg" alt="Card cap" />
+							<img class="card-img-top" src="/blog/750x300.jpg" alt="Card cap" />
 							<div class="card-body">
 								<h2 class="card-title">Post Title</h2>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
@@ -36,7 +36,7 @@ function Blog() {
 						</div>
 
 						<div class="card mb-4">
-							<img class="card-img-top" src="./750x300.jpg" alt="Card cap" />
+							<img class="card-img-top" src="/blog/750x300.jpg" alt="Card cap" />
 							<div class="card-body">
 								<h2 class="card-title">Post Title</h2>
 								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>

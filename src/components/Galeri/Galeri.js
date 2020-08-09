@@ -1,6 +1,6 @@
 import React from 'react';
-import ImgThumbnail from './components/imgThumbnail'
-import { GaleriItems } from './components/galeri_items'
+import ImgThumbnail from './imgThumbnail'
+import { GaleriItems } from './galeri_items'
 
 function Galeri() {
 	return (

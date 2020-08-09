@@ -1,7 +1,7 @@
 import React from 'react';
 import './yonetim.css'
-import YonetimKart from './components/yonetim_kart'
-import { YonetimInfo } from './components/yonetim_info'
+import YonetimKart from './yonetim_kart'
+import { YonetimInfo } from './yonetim_info'
 
 function Yonetim() {
 	return (
