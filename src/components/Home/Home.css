@@ -18,6 +18,10 @@ color: #5a5a5a;
 	margin-bottom: 4rem;
 	margin-top: -25px;
 }
+
+.carousel h1{
+	text-shadow: 2px 2px 4px #000000;
+}
 /* Since positioning the image, we need to help out the caption */
 /*.carousel-caption {
 bottom: 3rem;

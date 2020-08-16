@@ -1,35 +1,37 @@
 const HomeResources = {
 	Carousel: [
+		/*
 		{
 			src: "/UnderMaintenance.png",
 			alt: "First slide",
-			captionH3: "#CompecRocks!",
+			captionH1: "#CompecRocks!",
 			captionP: "Biz Dinazorlar",
 		},
+		*/
 		{
 			src: "/anasayfa/anasayfa-slayt1.jpg",
 			alt: "First slide",
-			captionH3: "Biz",
-			captionP:
-				"Compec (Boğaziçi Üniversitesi Bilişim Kulübü), 1994 yılından bu yana faaliyet gösteren ve bilişim alanında çalışmalar yapan kariyer kulübüdür. Sene boyunca bilişimin ve teknolojinin birçok dalında etkinlikler ve eğitimler düzenleyerek üyelerini gerek akademik dünyaya gerek iş dünyasına hazırlamayı ve onları daha donanımlı bireyler haline getirmeyi amaçlar.",
+			captionH1: "#CompecRocks!",
+			captionP:""
+				/*"Compec (Boğaziçi Üniversitesi Bilişim Kulübü), 1994 yılından bu yana faaliyet gösteren ve bilişim alanında çalışmalar yapan kariyer kulübüdür. Sene boyunca bilişimin ve teknolojinin birçok dalında etkinlikler ve eğitimler düzenleyerek üyelerini gerek akademik dünyaya gerek iş dünyasına hazırlamayı ve onları daha donanımlı bireyler haline getirmeyi amaçlar."*/
 		},
 		{
 			src: "/anasayfa/anasayfa-slayt2.jpg",
 			alt: "First slide",
-			captionH3: "Yüzümüzü size döndük",
-			captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
+			captionH1: "#ThatsIT",
+			captionP:"" /*"Her zaman sizi dinleriz, ve kendimizi geliştiririz.",*/
 		},
 		{
 			src: "/anasayfa/anasayfa-slayt3.jpg",
 			alt: "First slide",
-			captionH3: "Yüzümüzü size döndük",
-			captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
+			captionH1: "#CompecRocks!",
+			captionP: "" /*"Her zaman sizi dinleriz, ve kendimizi geliştiririz.",*/
 		},
 		{
 			src: "/anasayfa/anasayfa-slayt4.jpg",
 			alt: "First slide",
-			captionH3: "Yüzümüzü size döndük",
-			captionP: "Her zaman sizi dinleriz, ve kendimizi geliştiririz.",
+			captionH1: "#ThatsIT",
+			captionP: "" /*"Her zaman sizi dinleriz, ve kendimizi geliştiririz.",*/
 		},
 	],
 	Missions : [

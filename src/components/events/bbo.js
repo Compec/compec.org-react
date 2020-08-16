@@ -6,7 +6,7 @@ function BBO() {
 		<div class="container">
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
-					<img class="card-img-top" src="./BingImageOfTheDay_20200720.jpg" alt="Boğaziçi Bilişin Ödülleri" />
+					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz_bbo.jpg" alt="Boğaziçi Bilişin Ödülleri" />
 					{/*<div class="card-img-overlay">
                         <h1 class="card-title">Card title</h1>
                         
@@ -22,8 +22,8 @@ function BBO() {
 					Kasım ayının başında başlayan oylama süreci, Aralık ayının ilk haftasında sonlanır ve kategori kazananları belirlenir. 
 					Oylama süreci farklı ülkelerden kullanıcılar tarafından internet sitesi üzerinden gerçekleştirilir. Adaylar halk oylamasının 
 					yanı sıra alanında uzman kişilerin yer aldığı jüri tarafından oylanır.
-					2018 yılında düzenlenen, BUMK Klasik Müzik Korosunun açılışta yaptığı dinleti ile renk kattığı ödül töreninde ödül 
-					sahipleri, Tansel Öngel'in sunuculuğunda ödülleriyle buluştu. Bu sene yine Aralık ayında 7.'si düzenlenecek olan ödül töreni, 
+					2019 yılında düzenlenen, Boğaziçi Caz Ensemble'ın ve yirmi7'nin yaptıkları müzik dinletileriyle ile renk kattığı ödül töreninde ödül 
+					sahipleri, Yunus Günçe'nin sunuculuğunda ödülleriyle buluştu. Bu sene yine Aralık ayında 8.'si düzenlenecek olan ödül töreni, 
 					bilişimin enlerine ev sahipliği yapacak.
 					</p>
 

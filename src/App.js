@@ -20,6 +20,7 @@ import Login from './components/Login/login'
 import Hakkimizda from './components/biz_kimiz/hakkimizda'
 import Yonetim from './components/biz_kimiz/yonetim'
 import Altkurullar from './components/biz_kimiz/altkurullar'
+import BlogPage from './components/Blog/blog_page'
 
 function App() {
 	return (
@@ -37,12 +38,13 @@ function App() {
 							<Route path="/playit" component={Playit}/>
 							<Route path="/techsummit" component={Techsummit}/>
 							<Route path="/teknodolu" component={Teknodolu}/>
-							<Route path="/blog" component={Blog}/>
 							<Route path="/iletisim" component={Iletisim}/>
 							<Route path="/hakkimizda" component={Hakkimizda}/>
 							<Route path="/yonetim" component={Yonetim}/>
 							<Route path="/altkurullar" component={Altkurullar}/>
 							<Route path="/login" component={Login}/>
+							<Route path="/blog/:route" render={props => <BlogPage {...props}/> } />
+							<Route path="/blog" exact component={Blog}/>
 						</Switch>
 				</div>
 				<Footer/>

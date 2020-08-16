@@ -19,7 +19,7 @@ function HomeCarousel() {
 							<Carousel.Item>
 								<img className="d-block w-100" src= {item.src} alt= {item.alt} />
 								<Carousel.Caption>
-									<h3>{item.captionH3}</h3>
+									<h1>{item.captionH1}</h1>
 									<p>{item.captionP}</p>
 								</Carousel.Caption>
 							</Carousel.Item>
