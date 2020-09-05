@@ -1,8 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ImgThumbnail from './imgThumbnail'
-import { GaleriItems } from './galeri_items'
+import axios from 'axios'
+// import { GaleriItems } from './galeri_items' 
 
 function Galeri() {
+
+	const [galeriItems,setGaleriItems] = useState([]);
+
+	useEffect(() => {
+		console.log("effect");
+		
+		axios.get("https://lciepy4cof.execute-api.us-east-1.amazonaws.com/gallery")
+		
+		.then((response) => {
+			console.log("promise fulfilled");
+			setGaleriItems(response.data[0].fields.list);
+		});
+	}, []);
+
+	console.log("render", galeriItems.length, "notes");
+	console.log(galeriItems)
+	
+
+
 	return (
 		<div class="container">
 
@@ -11,11 +31,13 @@ function Galeri() {
 			<hr class="mt-2 mb-5" />
 
 			<div class="row text-center text-lg-left">
+
 				{
-					GaleriItems.List.map(
-						(thumbnail) => <ImgThumbnail src={thumbnail.src} link={thumbnail.link} />
-					)
+					galeriItems.map(
+						(item) => <ImgThumbnail src={item.fields.image.fields.file.url} link={item.fields.thumbnail.fields.file.url} />
+					)		
 				}
+
 			</div>
 		</div>
 	);
