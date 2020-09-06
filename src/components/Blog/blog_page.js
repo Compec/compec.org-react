@@ -1,64 +1,114 @@
-import React from "react"
-import Markdown from "react-markdown"
-import data from "./posts.json"
-import "./blog.css"
-import { Card, Button } from "react-bootstrap"
-import moment from "moment"
-import "moment/locale/tr"
-import { FaShareAlt } from "react-icons/fa"
+import React, { useState, useEffect } from "react";
+import Markdown from "react-markdown";
+import data from "./posts.json";
+import "./blog.css";
+import { Card, Button, Spinner } from "react-bootstrap";
+import moment from "moment";
+import "moment/locale/tr";
+import { FaShareAlt } from "react-icons/fa";
+import axios from "axios";
+require("dotenv").config();
+const contentful = require("contentful");
 
-const readingTime = require("reading-time")
-const formatReadingTime = require("reading-time-emoji")
+const readingTime = require("reading-time");
+const formatReadingTime = require("reading-time-emoji");
 
 function BlogPage(props) {
-	moment.locale("tr")
+	moment.locale("tr");
 
-	let fetchedBlog = {}
-	data.forEach((dataContent, i) => {
-		if (props.match.params.route === dataContent.route) {
-			fetchedBlog = dataContent
-			fetchedBlog.time = readingTime(dataContent.content)
+	const client = contentful.createClient({
+		space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+		accessToken: process.env.REACT_APP_CONTENTFUL_KEY,
+	});
+
+	const [fetchedBlog, setFetchedBlog] = useState(null);
+
+	useEffect(() => {
+		console.log("effect");
+		/*
+		axios.get("https://9wcdm2ug07.execute-api.us-east-1.amazonaws.com/blog")
+		
+		.then((response) => {
+			console.log("promise fulfilled");
+			setBlogItems(response.data);
+		});
+		*/
+		client
+			.getEntries({
+				content_type: "blog",
+				"fields.route": props.match.params.route,
+			})
+			.then((response) => {
+				console.log("response geldi");
+				setFetchedBlog({
+					id: response.items[0].fields.id,
+					title: response.items[0].fields.title,
+					author: response.items[0].fields.author,
+					date: response.items[0].fields.date,
+					content: response.items[0].fields.content,
+					time: readingTime(response.items[0].fields.content),
+				});
+
+				console.log(fetchedBlog.time.minutes);
+				console.log(fetchedBlog);
+			})
+			.catch(console.error);
+		console.log(fetchedBlog);
+	}, []);
+
+	/*blogItems.forEach((blogItem, i) => {
+		if (props.match.params.route === blogItem.fields.route) {
+			fetchedBlog = blogItem
+			fetchedBlog.time = readingTime(blogItem.fields.content.content[0].content[0].value)
 		}
-	})
+	})*/
+
 	return (
 		<div className="container">
 			<Card>
-				<Card.Header className="text-muted">
-					Tahmini Okuma Süresi
-					{formatReadingTime(fetchedBlog.time.minutes).split(" ")[0]}
-					{moment.duration(fetchedBlog.time.time).humanize()}
-				</Card.Header>
+				{fetchedBlog ? (
+					<>
+						<Card.Header className="text-muted">
+							Tahmini Okuma Süresi
+							{formatReadingTime(fetchedBlog.time.minutes).split(" ")[0]}
+							{moment.duration(fetchedBlog.time.time).humanize()}
+						</Card.Header>
 
-				<Card.Body>
-					<Markdown source={fetchedBlog.content} escapeHtml={false} />
-				</Card.Body>
-				<Card.Footer>
-					{fetchedBlog.date} | {fetchedBlog.author}
-					{navigator.share && (
-						<Button
-							size="sm"
-							variant="outline-primary"
-							className="float-right"
-							onClick={() => {
-								navigator
-									.share({
-										title: fetchedBlog.title,
-										text: fetchedBlog.description,
-										url: window.location.href,
-									})
-									.then(() => console.log("Successful share"))
-									.catch((error) =>
-										console.log("Error sharing", error)
-									)
-							}}
-						>
-							<FaShareAlt />
-						</Button>
-					)}
-				</Card.Footer>
+						<Card.Body>
+							<Markdown source={fetchedBlog.content} escapeHtml={false} />
+						</Card.Body>
+
+						<Card.Footer>
+							{fetchedBlog.date} | {fetchedBlog.author}
+							{navigator.share && (
+								<Button
+									size="sm"
+									variant="outline-primary"
+									className="float-right"
+									onClick={() => {
+										navigator
+											.share({
+												title: fetchedBlog.title,
+												text: fetchedBlog.description,
+												url: window.location.href,
+											})
+											.then(() => console.log("Successful share"))
+											.catch((error) => console.log("Error sharing", error));
+									}}
+								>
+									<FaShareAlt />
+								</Button>
+							)}
+						</Card.Footer>
+					</>
+				) : (
+					<div className="text-center">
+						<Spinner animation="border" variant="dark" size="lg" />
+					</div>
+				)}
 			</Card>
 		</div>
-	)
+	);
 }
 
-export default BlogPage
+export default BlogPage;

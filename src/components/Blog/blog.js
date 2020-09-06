@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import BlogKart from './blog_kart'
 import data from './posts.json'
+import axios from 'axios'
 
 function Blog() {
+
+	const [blogItems,setBlogItems] = useState([]);
+
+	useEffect(() => {
+		console.log("effect");
+		
+		axios.get("https://9wcdm2ug07.execute-api.us-east-1.amazonaws.com/blog")
+		
+		.then((response) => {
+			console.log("promise fulfilled");
+			setBlogItems(response.data);
+		});
+	}, []);
+
+	console.log(blogItems)
+	
 	return (
 		<div>
 			<div class="container">
@@ -14,10 +31,10 @@ function Blog() {
 				<div className="row">
 					<div class="col"> {/*col-md-8*/}
 						{
-							data.map(
-								(dataContent) => {
+							blogItems.map(
+								(blogItem) => {
 									return(
-										<BlogKart title={dataContent.title} author={dataContent.author} date={dataContent.date} description={dataContent.description} img={dataContent.img} route={dataContent.route} />
+										<BlogKart title={blogItem.fields.title} author={blogItem.fields.author} date={blogItem.fields.date} description={blogItem.fields.description} img={blogItem.fields.image.fields.file.url} route={blogItem.fields.route} />
 									)		
 								}
 							)

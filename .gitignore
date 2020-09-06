@@ -25,3 +25,4 @@
 .history
 deploy.tar
 build/
+.env
