@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import BlogKart from "./blog_kart";
-import data from "./posts.json";
-import axios from "axios";
 const contentful = require("contentful");
 
 function Blog() {
@@ -13,20 +11,14 @@ function Blog() {
 	});
 
 	useEffect(() => {
-		console.log("effect");
-
 		client
 			.getEntries({
 				content_type: "blog",
 			})
 			.then((response) => {
-				console.log("promise fulfilled");
 				setBlogItems(response.items);
-				console.log(response)
 			});
 	}, []);
-	
-	console.log(blogItems);
 
 	return (
 		<div>

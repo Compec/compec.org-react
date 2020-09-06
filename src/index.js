@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as Sentry from '@sentry/react';
+import { Integrations } from '@sentry/tracing';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+
+Sentry.init({
+	dsn: "https://543154ef2af545dbbad0c705ce8e1b8f@o444354.ingest.sentry.io/5419135",
+	integrations: [
+	  new Integrations.BrowserTracing(),
+	],
+	tracesSampleRate: 1.0,
+  });
+  ReactDOM.render(
 	<React.StrictMode>
 	<App />
 	</React.StrictMode>,

@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Markdown from "react-markdown";
-import data from "./posts.json";
 import "./blog.css";
 import { Card, Button, Spinner } from "react-bootstrap";
 import moment from "moment";
 import "moment/locale/tr";
 import { FaShareAlt } from "react-icons/fa";
-import axios from "axios";
-require("dotenv").config();
 const contentful = require("contentful");
 
 const readingTime = require("reading-time");
@@ -24,7 +21,6 @@ function BlogPage(props) {
 	const [fetchedBlog, setFetchedBlog] = useState(null);
 
 	useEffect(() => {
-		console.log("effect");
 		/*
 		axios.get("https://9wcdm2ug07.execute-api.us-east-1.amazonaws.com/blog")
 		
@@ -39,7 +35,6 @@ function BlogPage(props) {
 				"fields.route": props.match.params.route,
 			})
 			.then((response) => {
-				console.log("response geldi");
 				setFetchedBlog({
 					id: response.items[0].fields.id,
 					title: response.items[0].fields.title,
@@ -48,12 +43,8 @@ function BlogPage(props) {
 					content: response.items[0].fields.content,
 					time: readingTime(response.items[0].fields.content),
 				});
-
-				console.log(fetchedBlog.time.minutes);
-				console.log(fetchedBlog);
 			})
 			.catch(console.error);
-		console.log(fetchedBlog);
 	}, []);
 
 	/*blogItems.forEach((blogItem, i) => {
