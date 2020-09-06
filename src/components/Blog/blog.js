@@ -1,44 +1,57 @@
-import React, {useState, useEffect} from 'react';
-import BlogKart from './blog_kart'
-import data from './posts.json'
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import BlogKart from "./blog_kart";
+import data from "./posts.json";
+import axios from "axios";
+const contentful = require("contentful");
 
 function Blog() {
+	const [blogItems, setBlogItems] = useState([]);
 
-	const [blogItems,setBlogItems] = useState([]);
+	const client = contentful.createClient({
+		space: "pfpwc05vxh8u",
+		accessToken: "WeygON6Z-mco0Q-A-smOEHfbn3Stq7bqwMTSSFyYpCE",
+	});
 
 	useEffect(() => {
 		console.log("effect");
-		
-		axios.get("https://9wcdm2ug07.execute-api.us-east-1.amazonaws.com/blog")
-		
-		.then((response) => {
-			console.log("promise fulfilled");
-			setBlogItems(response.data);
-		});
-	}, []);
 
-	console.log(blogItems)
+		client
+			.getEntries({
+				content_type: "blog",
+			})
+			.then((response) => {
+				console.log("promise fulfilled");
+				setBlogItems(response.items);
+				console.log(response)
+			});
+	}, []);
 	
+	console.log(blogItems);
+
 	return (
 		<div>
 			<div class="container">
 				<div class="row">
 					<div className="col">
-						<h1>Compec Blog</h1> <hr/>
+						<h1>Compec Blog</h1> <hr />
 					</div>
 				</div>
 				<div className="row">
-					<div class="col"> {/*col-md-8*/}
-						{
-							blogItems.map(
-								(blogItem) => {
-									return(
-										<BlogKart title={blogItem.fields.title} author={blogItem.fields.author} date={blogItem.fields.date} description={blogItem.fields.description} img={blogItem.fields.image.fields.file.url} route={blogItem.fields.route} />
-									)		
-								}
-							)
-						}
+					<div class="col">
+						{" "}
+						{/*col-md-8*/}
+						{blogItems.map((blogItem) => {
+							return (
+								<BlogKart
+									title={blogItem.fields.title}
+									author={blogItem.fields.author}
+									date={blogItem.fields.date}
+									description={blogItem.fields.description}
+									img={blogItem.fields.image.fields.file.url}
+									route={blogItem.fields.route}
+								/>
+							);
+						})}
 						{/* 
                         <ul class="pagination justify-content-center mb-4">
                             <li class="page-item">

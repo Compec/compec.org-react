@@ -19,7 +19,7 @@ function BlogPage(props) {
 	const client = contentful.createClient({
 		space: "pfpwc05vxh8u",
 		accessToken: "WeygON6Z-mco0Q-A-smOEHfbn3Stq7bqwMTSSFyYpCE",
-	});
+	}); 
 
 	const [fetchedBlog, setFetchedBlog] = useState(null);
 
