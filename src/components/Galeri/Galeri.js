@@ -14,6 +14,7 @@ function Galeri() {
 		
 		.then((response) => {
 			console.log("promise fulfilled");
+			console.log(response)
 			setGaleriItems(response.data[0].fields.list);
 		});
 	}, []);
@@ -34,7 +35,7 @@ function Galeri() {
 
 				{
 					galeriItems.map(
-						(item) => <ImgThumbnail src={item.fields.image.fields.file.url} link={item.fields.thumbnail.fields.file.url} />
+						(item) => <ImgThumbnail src={item.fields.thumbnail.fields.file.url} link={item.fields.image.fields.file.url} />
 					)		
 				}
 

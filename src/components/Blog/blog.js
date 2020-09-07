@@ -14,6 +14,7 @@ function Blog() {
 		client
 			.getEntries({
 				content_type: "blog",
+				order: '-fields.id'
 			})
 			.then((response) => {
 				setBlogItems(response.items);
