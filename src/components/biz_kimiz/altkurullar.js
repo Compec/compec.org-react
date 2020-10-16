@@ -1,9 +1,18 @@
 import React from 'react';
 import { Accordion, Card, Container, NavLink } from 'react-bootstrap';
+import "./yonetim.css"
+import { Helmet } from 'react-helmet';
 
 function Altkurullar() {
 	return (
-		<Container>
+		<div className="container altKurullar">
+			<Helmet>
+				<title>Alt Kurullarımız - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta 
+					name="description"
+					content="Compec, Boğaziçi Bilişim Ödülleri, DevTeam, Dijital Girişimcilik, Oyun Geliştirme, PR, Teknoloji ve Veri Bilimi olmak üzere 7 alt kurulu bünyesinde barındırır."
+				/>
+			</Helmet>
 			<h1 class="text-center text-lg-left mt-4 mb-0">Alt Kurullarımız</h1>
 			<hr class="mb-5" />
 			<h5>
@@ -20,7 +29,7 @@ function Altkurullar() {
 						<Card.Body>
 							<Container>
 								<Card.Body>
-								Boğaziçi Bilişim Ödülleri alt kurulu sene boyunca bilişim alanında en çok öne çıkan profesyonelleri ve kurumları prestijli bir ödülle buluşturan etkinlik olan Boğaziçi Bilişim Ödülleri’nin düzenlenmesiyle yükümlüdür. Bunun yanında sene boyunca bilişimle ilgili önemli bilgileri aktaran Teknoloji Magazini TechMag’in sorumluluğu ve sene boyunca ödül sahipleri ile yapılan podcast, söyleşi, röportaj gibi etkinlikler de bu alt kurulun sorumluluğundadır.
+								Boğaziçi Bilişim Ödülleri alt kurulu sene boyunca bilişim alanında en çok öne çıkan profesyonelleri ve kurumları prestijli bir ödülle buluşturan etkinlik olan Boğaziçi Bilişim Ödülleri’nin düzenlenmesiyle sorumludur. Bunun yanında sene boyunca bilişimle ilgili önemli bilgileri aktaran Teknoloji Magazini TechMag’in sorumluluğu ve sene boyunca ödül sahipleri ile yapılan podcast, söyleşi, röportaj gibi etkinlikler de bu alt kurulun sorumluluğundadır.
 								</Card.Body>
 							</Container>
 						</Card.Body>
@@ -118,7 +127,7 @@ function Altkurullar() {
 				</Card>
 
 			</Accordion>
-		</Container>
+		</div>
 	);
 }
 

@@ -5,6 +5,7 @@ import { Card, Button, Spinner } from "react-bootstrap";
 import moment from "moment";
 import "moment/locale/tr";
 import { FaShareAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 const contentful = require("contentful");
 
 const readingTime = require("reading-time");
@@ -38,6 +39,7 @@ function BlogPage(props) {
 				setFetchedBlog({
 					id: response.items[0].fields.id,
 					title: response.items[0].fields.title,
+					description: response.items[0].fields.description,
 					author: response.items[0].fields.author,
 					date: response.items[0].fields.date,
 					content: response.items[0].fields.content,
@@ -59,6 +61,13 @@ function BlogPage(props) {
 			<Card>
 				{fetchedBlog ? (
 					<>
+						<Helmet>
+						<title>{fetchedBlog.title + " - Boğaziçi Üniversitesi Bilişim Kulübü"}</title>
+						<meta
+							name="description"
+							content={fetchedBlog.description}
+						/>
+						</Helmet>
 						<Card.Header className="text-muted">
 							Tahmini Okuma Süresi
 							{formatReadingTime(fetchedBlog.time.minutes).split(" ")[0]}

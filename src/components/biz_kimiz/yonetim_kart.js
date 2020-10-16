@@ -61,7 +61,6 @@ function YonetimKart(props) {
 									</li>
 								}
 							</ul>
-							<p className="hidden-text">dfgbsdhfgggggg hdjgjfh dgsfd hffgdfh mgnh fgdbsdg fnhmfng dbsv</p>
 						</div>
 					</div>
 				</div>

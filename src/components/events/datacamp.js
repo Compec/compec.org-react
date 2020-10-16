@@ -1,9 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './events.css'
 
 function Datacamp() {
 	return (
 		<div class="container">
+			<Helmet>
+				<title>Boğaziçi DataCamp - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta 
+					name="description"
+					content="Boğaziçi DataCamp, Veri Bilimi alanının günümüzdeki uygulamalarının ve geleceğinin tartışıldığı 7 günlük bir etkinliktir."
+				/>				
+			</Helmet>
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
 					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz_datacamp.jpg" alt="Boğaziçi DataCamp" />
@@ -15,7 +23,7 @@ function Datacamp() {
 			</div>
 			<div class="row">
 				<div class="col">
-					<h1>Boğaziçi DataCamp.</h1><hr />
+					<h1>Boğaziçi DataCamp.</h1><br/>
 					<p>
 						Boğaziçi DataCamp, Veri Bilimi alanının günümüzdeki uygulamalarının ve geleceğinin tartışıldığı ve çoğunluğunu 3.-4. Sınıf ve
 						Yüksek Lisans öğrencilerinin oluşturduğu katılımcılarının uygulayarak öğrenme şansı yakaladıkları iki günlük bir zirvedir.

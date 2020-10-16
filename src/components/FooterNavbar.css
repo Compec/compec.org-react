@@ -1,8 +1,16 @@
+.navigationn {
+	background-color: #1f4068;
+}
+
 .main-footer{
 	padding-top: 3em;
 	position: relative;
 	bottom: 0;
 	width: 100%;
+}
+
+.footer {
+	background-color: #1f4068;
 }
 
 .copyright{
@@ -122,6 +130,11 @@
 	color: #ffffff
 }
 
+.btn-medium {
+	background: #222222;
+	color: white;
+}
+
 .btn-facebook:hover,
 .btn-facebook:focus {
 	background: #2d4278;
@@ -158,6 +171,47 @@
 	color: #ffffff
 }
 
+.btn-medium:hover,
+.btn-medium:focus {
+	background: #111111;
+	color: #ffffff
+}
+
 .Navigation{
 	margin-bottom: 100px;
+}
+
+.dropdown-item {
+	color: #1b1b2f;
+}
+
+.btn-outline-primary {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.5);
+}
+
+.btn-outline-primary:active:focus {
+    background-color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.5);
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.5);
+}
+
+.btn-outline-primary:focus {
+    background-color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.5);
+}
+
+.btn-outline-primary:active {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.5);
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: transparent;
+    border-color: white;
 }

@@ -1,9 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './events.css'
 
 function Techsummit() {
 	return (
 		<div class="container">
+			<Helmet>
+				<title>Boğaziçi TechSummit - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta 
+					name="description"
+					content="Boğaziçi Üniversitesi Teknoloji Zirvesi konuşma ve paneller, workshop'lar, şirket gezileri ve deneyim alanıyla eşsiz ve dolu dolu geçen bir etkinliktir."
+				/>
+			</Helmet>
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
 					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz-techsummit.jpg" alt="Boğaziçi TechSummit" />
@@ -15,7 +23,7 @@ function Techsummit() {
 			</div>
 			<div class="row">
 				<div class="col">
-					<h1>Boğaziçi TechSummit.</h1><hr />
+					<h1>Boğaziçi TechSummit.</h1><br/>
 					<p>
 					2010 yılında EXIT (Expo IT) Bilişim Fuarı ismiyle düzenlenmeye başlanan, 2016 yılında ise Boğaziçi TechSummit ismini alan 
 					Boğaziçi Üniversitesi Teknoloji Zirvesi, Her yıl Türkiye'nin dört bir yanından teknolojiye ve bilişime meraklı öğrencileri, 

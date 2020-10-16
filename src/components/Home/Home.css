@@ -20,6 +20,7 @@ color: #5a5a5a;
 }
 
 .carousel h1{
+	color: white;
 	text-shadow: 2px 2px 4px #000000;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -48,11 +49,11 @@ height: 32rem;
 }
 
 /* Thin out the marketing headings */
-.featurette-heading {
+/* .featurette-heading {
 	font-weight: 300;
 	line-height: 1;
 	letter-spacing: -.05rem;
-}
+} */
 
 
 /* RESPONSIVE CSS
@@ -68,6 +69,8 @@ height: 32rem;
 
 	.featurette-heading {
 		font-size: 35px;
+		font-family: "ProximaNovaBold";
+		color: #1b1b2f;
 	}
 }
 
@@ -95,16 +98,25 @@ section#counter-stats {
 
 .stats {
 	text-align: center;
-	font-size: 35px;
+	/* font-size: 35px;
+	/* font-weight: 700; */
+	/* 	font-size: 35px;
 	font-weight: 700;
 	font-family: 'Montserrat', sans-serif;
+*/
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
-.stats .fa {
-	color: #000000;
+.stats .countUpIcon {
+	color: #1b1b2f;
 	font-size: 60px;
+}
+
+.stats .countUpNumber {
+	color: #1b1b2f;
+	font-size: 35px;
+	font-family: "ProximaNovaBold";
 }
 
 /*/ end count stats /*/

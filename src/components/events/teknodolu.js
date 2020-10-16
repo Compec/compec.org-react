@@ -1,9 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './events.css'
 
 function Teknodolu() {
 	return (
 		<div class="container">
+			<Helmet>
+				<title>TeknoDolu - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta 
+					name="description"
+					content="TeknoDolu, tercihen dezavantajlı bölgelerde yaşayan 7-12 yaş aralığındaki çocukları güncel teknolojiyle buluşturan
+					bir sosyal sorumluluk projesidir."
+				/>
+			</Helmet>
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
 					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz-teknodolu.jpg" alt="TeknoDolu" />
@@ -16,7 +25,7 @@ function Teknodolu() {
 			<div class="row">
 				<div class="col">
 
-					<h1>TeknoDolu.</h1><hr />
+					<h1>TeknoDolu.</h1><br/>
 					<p>
 					TeknoDolu, tercihen dezavantajlı bölgelerde yaşayan çocukları güncel teknolojiyle buluşturan
 					bir sosyal sorumluluk projesidir. Etkinlik 7-12 yaş aralığındaki öğrencilerin son teknoloji ürünleri deneyimlediği

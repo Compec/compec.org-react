@@ -2,7 +2,7 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-	background: #eee !important;
+	background: #fff !important;
 }
 
 #team .btn-primary:hover,
@@ -25,14 +25,14 @@ section {
 */
 section .section-title {
 	text-align: center;
-	/*color: #007b5e; 
-	margin-bottom: 50px; 
-	text-transform: uppercase; */
+	/*color: #007b5e; */
+	margin-bottom: 30px; 
+	/* text-transform: uppercase; */
 }
 
 #team .card {
 	border: none;
-	background: #ffffff;
+	background: #eee;
 }
 
 .image-flip:hover .backside,
@@ -78,7 +78,7 @@ section .section-title {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: white;
+	background: #fff;
 	-webkit-transform: rotateY(-180deg);
 	-moz-transform: rotateY(-180deg);
 	-o-transform: rotateY(-180deg);
@@ -91,6 +91,7 @@ section .section-title {
 
 .frontside,
 .backside {
+	width: 100%;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
@@ -110,7 +111,7 @@ section .section-title {
 .frontside .card,
 .backside .card {
 	min-height: 312px;
-	min-width: 312px;
+	min-width: 300px;
 }
 
 .backside .card a {
@@ -131,4 +132,13 @@ section .section-title {
 
 .hidden-text{
 	visibility: hidden;
+}
+
+.altKurullar .card-body {
+	color: #162447;
+}
+
+#team h4 {
+	font-family: "ProximaNovaBold";
+	color: #1b1b2f;
 }

@@ -1,8 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 function Hakkimizda() {
 	return (
 		<div class="container">
+			<Helmet>
+				<title>Hakkımızda - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta 
+					name="description"
+					content="Boğaziçi Üniversitesi Bilişim Kulübü, üyelerini yazılım, tasarım ve girişimcilik alanında geliştirirken, teknolojiye ve bilişime yön verecek işlere imza atıyor." 
+					/>
+			</Helmet>
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
 					<img class="card-img-top" src="/hakkimizda.png" alt="Hakkımızda" />
@@ -14,7 +22,7 @@ function Hakkimizda() {
 			</div>
 			<div class="row">
 				<div class="col">
-					<h1>Boğaziçi Üniversitesi Bilişim Kulübü.</h1><hr />
+					<h1>Boğaziçi Üniversitesi Bilişim Kulübü.</h1><br/>
 					<p>1994 yılında kurulan Compec, okulumuzda faaliyet gösteren 6 kariyer kulübünden biridir.
 					Tamamı Boğaziçi Üniversitesi öğrencilerinden oluşan üyelerimizin yazılım ve dijital tasarım başta olmak üzere verdiğimiz
 					eğitimlerle kendilerini teknik açıdan geliştirmelerini, yüzlerce katılımcıyı ağırlayan etkinlikleri yönetim ekibiyle beraber
@@ -35,7 +43,6 @@ function Hakkimizda() {
 					</ul>
 				</div>
 			</div>
-			<hr />
 		</div>
 	);
 }

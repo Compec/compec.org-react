@@ -1,8 +1,9 @@
 import React from 'react'
-import {Nav,Navbar,NavDropdown,/*Button*/} from 'react-bootstrap'
+import {Nav, Navbar, NavDropdown, Button} from 'react-bootstrap'
 import './logo.svg';
 import {LinkContainer} from 'react-router-bootstrap';
-import {useLocation} from 'react-router-dom';
+import {useLocation, useHistory} from 'react-router-dom';
+import {UseAuth} from './Member/authcontext';
 
 /*const RouterNavLink = ({ children, ...props }) => (
 	<LinkContainer {...props}>
@@ -14,9 +15,12 @@ import {useLocation} from 'react-router-dom';
 
 function Navigation() {
 	const {pathname} = useLocation()
+	const {currentUser, logout} = UseAuth();
+	const history = useHistory();
+	
 	return(
 		<div className="Navigation">
-			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" key={pathname}>
+			<Navbar collapseOnSelect expand="lg" variant="dark" fixed="top" key={pathname} className="navigationn">
 				<div className="container" style={{textAlign:"center"}}>
 				<LinkContainer to="/">
 					<Navbar.Brand >
@@ -66,7 +70,7 @@ function Navigation() {
 						</LinkContainer>
 
 						<LinkContainer to="/efounder">
-							<NavDropdown.Item>E-Founder</NavDropdown.Item>
+							<NavDropdown.Item>e-Founder</NavDropdown.Item>
 						</LinkContainer>
 
 						<LinkContainer to="/teknodolu">
@@ -86,11 +90,14 @@ function Navigation() {
 					<LinkContainer to="/iletisim">
 						<Nav.Link>İletişim</Nav.Link>
 					</LinkContainer>
-					{/*
-					<LinkContainer to="/login">
-						<Button variant="outline-secondary">Giriş Yap</Button>
-					</LinkContainer>
-					*/}
+					{currentUser ?
+						<LinkContainer to="/member/home">
+							<Button variant="outline-primary">Üye Sistemi</Button>
+						</LinkContainer>
+					:
+					<LinkContainer to="/member/login">
+						<Button variant="outline-primary">Giriş Yap</Button>
+					</LinkContainer>}
 				</Nav>
 				</Navbar.Collapse>
 				</div>

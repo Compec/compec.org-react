@@ -15,7 +15,7 @@ function Hackathon() {
 			</div>
 			<div class="row">
 				<div class="col">
-					<h1>Boğaziçi TechSummit</h1><hr />
+					<h1>Boğaziçi TechSummit</h1><br/>
 					<p>2010 yılında EXIT (Expo IT) Bilişim Fuarı ismiyle düzenlenmeye başlanır. 2016 yılından itibaren ise Boğaziçi TechSummit ismiyle düzenlenir. Her yıl Türkiye'nin her tarafından teknolojiye meraklı ve bilişim alanında hedefleri olan öğrencileri ağırlayan Boğaziçi TechSummit geçtiğimiz yıl 10. defa düzenlenmiştir.
 
 					Etkinliğin organizasyonu her yıl Boğaziçi Üniversitesi Bilişim Kulübü bünyesinde kurulan, tamamen öğrencilerden oluşan bir ekip tarafından yürütülür.
