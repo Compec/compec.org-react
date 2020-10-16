@@ -50,5 +50,6 @@ function Yonetim() {
 		</div>
 	);
 }
+
 // kaynak: https://bootsnipp.com/snippets/92xNm
 export default Yonetim;
