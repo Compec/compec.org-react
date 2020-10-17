@@ -75,11 +75,7 @@ function Register() {
 				<p>
 					Lütfen aşağıdaki bilgileri eksiksiz ve doğruluğundan emin olarak doldurun.<br/>
 					Formu birden çok kez doldurmayınız.<br/>
-					<b>Doldurduktan sonra Boğaziçi mail kutunuzu kontrol ediniz.</b><br/>
-					Formu doldurduktan sonra kaydınızı doğrulamanız için <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
 				</p>
-
-				{alertVisibility && <div id="alert" className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
 				
 				<label for="name" class="sr-only">İsminiz</label>
 				<input type="text" id="name" name="name" class="form-control" placeholder="İsminiz" required="true" autofocus="" /><br/>
@@ -143,10 +139,14 @@ function Register() {
 				</select><br/>
 
 				<label for="bounEmail" class="sr-only">Boğaziçi Mail Adresiniz</label>
-				<input type="email" id="bounEmail" name="bounEmail" class="form-control" placeholder="Boğaziçi Mail Adresiniz" required="true" autofocus="" pattern="[a-z0-9]+(\.)+[a-z0-9]+@boun.edu.tr"/><br/>
+				<input type="email" id="bounEmail" name="bounEmail" class="form-control" placeholder="Boğaziçi (Roundcube) Mail Adresiniz" required="true" autofocus="" pattern="[a-z0-9]+(\.)+[a-z0-9]+@boun.edu.tr"/><br/>
 				
 				<label for="personalEmail" class="sr-only">Kişisel Mail Adresiniz</label>
 				<input type="email" id="personalEmail" name="personalEmail" class="form-control" placeholder="Kişisel Mail Adresiniz" required="true" autofocus="" /><br/>
+
+				<p>
+					Telefon numaranızı başında 0 olmadan, rakamların arasında boşluk olmayacak şekilde yazınız. Örnek: 5431236789
+				</p>
 
 				<label for="telephone" class="sr-only">Telefon Numaranız</label>
 				<input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Telefon Numaranız" required="true" autofocus="" pattern="5[0-9]{9}"/><br/>
@@ -154,6 +154,12 @@ function Register() {
 				<ReCAPTCHA ref={recaptchaRef} sitekey="6LeHPtQZAAAAAIMIQUeifB4lUgiovjaXsTBGFmzx" onChange={captchaFunc}/><br/>
 
 				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydol</button>
+
+				{alertVisibility && <div id="alert" className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
+				<p>
+					<b>Doldurduktan sonra Boğaziçi (Roundcube) mail kutunuzu kontrol ediniz.</b><br/>
+					Formu doldurduktan sonra kaydınızı doğrulamanız için <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
+				</p>
 			</form>
 		</div>
 	);

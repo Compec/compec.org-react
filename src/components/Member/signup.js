@@ -74,16 +74,13 @@ function SignUp() {
 					Lütfen aşağıdaki bilgileri eksiksiz ve doğruluğundan emin olarak doldurun.<br/>
 					Formu birden çok kez doldurmayınız.<br/>
 					Doğrulama kodunuz yoksa <Link to="/member/register">Kaydol</Link> sayfasına gidiniz.<br/>
-					Doğrulamayı tamamlayınca <Link to="/member/login">Giriş Yap</Link> sayfasına gidebilirsiniz.<br/>
 				</p>
-
-				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
 
 				<label for="confirmationCode" class="sr-only">Doğrulama Kodunuz</label>
 				<input type="text" id="confirmationCode" name="confirmationCode" class="form-control" placeholder="Doğrulama Kodunuz" required="true" autofocus="" /><br/>
 
 				<label for="bounEmail" class="sr-only">Boğaziçi Mail Adresiniz</label>
-				<input type="email" id="bounEmail" name="bounEmail" class="form-control" placeholder="Boğaziçi Mail Adresiniz" required="true" autofocus="" pattern="[a-z0-9]+(\.)+[a-z0-9]+@boun.edu.tr"/><br/>
+				<input type="email" id="bounEmail" name="bounEmail" class="form-control" placeholder="Boğaziçi (Roundcube) Mail Adresiniz" required="true" autofocus="" pattern="[a-z0-9]+(\.)+[a-z0-9]+@boun.edu.tr"/><br/>
 				<p>
 					Şifreniz aşağıdakilerden üçünü içermelidir ve en az 6 karakter uzunluğunda olmalıdır:
 					<ul className="text-left">
@@ -99,7 +96,11 @@ function SignUp() {
 				<label for="password2" class="sr-only">Şifrenizi tekrar yazınız</label>
 				<input type="password" id="password2" name="password2" class="form-control" placeholder="Şifrenizi tekrar yazınız" required="true" autofocus="" /><br/>
 
-				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydını Doğrula</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydını Doğrula</button><br/>
+				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}<br/>
+				<p>
+					Doğrulamayı tamamlayınca <Link to="/member/login">Giriş Yap</Link> sayfasına gidebilirsiniz.<br/>
+				</p>
 			</form>
 		</div>
 	);

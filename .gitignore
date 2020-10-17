@@ -28,3 +28,4 @@ build/
 .env
 sitemap-generator.js
 sitemap-routes.js
+debug.log
