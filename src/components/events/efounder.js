@@ -1,9 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './events.css'
 
 function Efounder() {
 	return (
 		<div class="container">
+			<Helmet>
+				<title>e-Founder - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta 
+					name="description"
+					content="e-Founder katılımcılara dijital bir girişim yaratma konusunda ilham vermeyi hedefleyen Zirve ve Yarışma'dan oluşan bir girişimcilik serüvenidir"
+				/>
+			</Helmet>
 			<div className="eventpage-header">
 				<div class="card bg-dark text-white" >
 					<img class="card-img-top" src="./etkinliklerimiz/etkinliklerimiz_efounder.jpg" alt="E-Founder" />
@@ -15,7 +23,7 @@ function Efounder() {
 			</div>
 			<div class="row">
 				<div class="col">
-					<h1>E-Founder.</h1><hr />
+					<h1>e-Founder.</h1><br/>
 					<p>
 						e-Founder, internet ile iç içe yaşayan ve girişimcilik konusunda hevesli olan öğrencilere dijital bir girişim yaratma konusunda
 						ilham vermeyi hedefleyen Zirve ve Yarışma'dan oluşan bir girişimcilik serüvenidir. e-Founder Dijital Girişimcilik Zirvesi'nde paneller,

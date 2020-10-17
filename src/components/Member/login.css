@@ -41,3 +41,7 @@
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
+.duyuru h3 {
+	font-family: "ProximaNovaBold";
+	color: #1b1b2f;
+}

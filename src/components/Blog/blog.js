@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import BlogKart from "./blog_kart";
 const contentful = require("contentful");
 
@@ -23,10 +24,17 @@ function Blog() {
 
 	return (
 		<div>
+			<Helmet>
+				<title>Blog - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta 
+					name="description"
+					content="Boğaziçi Üniversitesi Bilişim Kulübü'nün üyelerinin kaleminden dolu dolu içerikler."
+				/>
+			</Helmet>
 			<div class="container">
 				<div class="row">
 					<div className="col">
-						<h1>Compec Blog</h1> <hr />
+						<h1>Compec Blog</h1> <br/>
 					</div>
 				</div>
 				<div className="row">

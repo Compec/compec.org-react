@@ -22,35 +22,35 @@ function HomeAbout() {
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-3 stats">
-								<i class="fa fa-user" aria-hidden="true"></i>
-								<div>
-									<CountUp end={5000} suffix={"+"} />
+								<i class="fa fa-user countUpIcon" aria-hidden="true"></i>
+								<div className="countUpNumber">
+									<CountUp end={5000} duration={4} suffix={"+"} />
 								</div>
-								<h5>Katılımcı</h5>
+								<h5 className="countUpText">Katılımcı</h5>
 							</div>
 
 							<div class="col-lg-3 stats">
-								<i class="fa fa-calendar" aria-hidden="true"></i>
-								<div>
-									<CountUp end={54} suffix={"+"} />
+								<i class="fa fa-calendar countUpIcon" aria-hidden="true"></i>
+								<div className="countUpNumber">
+									<CountUp end={54} duration={4} suffix={"+"} />
 								</div>
-								<h5>Etkinlik</h5>
+								<h5 className="countUpText">Etkinlik</h5>
 							</div>
 
 							<div class="col-lg-3 stats">
-								<i class="fa fa-envelope-o" aria-hidden="true"></i>
-								<div>
-									<CountUp end={13000} suffix={"+"} />
+								<i class="fa fa-envelope-o countUpIcon" aria-hidden="true"></i>
+								<div className="countUpNumber">
+									<CountUp end={13000} duration={4} suffix={"+"} />
 								</div>
-								<h5>Kişilik İletişim Ağı</h5>
+								<h5 className="countUpText">Kişilik İletişim Ağı</h5>
 							</div>
 
 							<div class="col-lg-3 stats">
-								<i class="fa fa-rocket" aria-hidden="true"></i>
-								<div>
-									<CountUp end={1200} suffix={"+"} />
+								<i class="fa fa-rocket countUpIcon" aria-hidden="true"></i>
+								<div className="countUpNumber">
+									<CountUp end={1200} duration={4} suffix={"+"} />
 								</div>
-								<h5>Yeni Üye</h5>
+								<h5 className="countUpText">Yeni Üye</h5>
 							</div>
 						</div>
 					</div>

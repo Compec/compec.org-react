@@ -1,9 +1,11 @@
 import React from 'react'
 import './FooterNavbar.css'
+import {FaMediumM} from 'react-icons/fa';
+
 function Footer() {
 	return (
 		<div className="main-footer">
-			<div className='footer mt-auto py-3 bg-dark text-white'>
+			<div className='footer mt-auto py-3 text-white'>
 				<div className="container">
 
 					<div className="row">
@@ -48,6 +50,12 @@ function Footer() {
 								<a href="http://instagram.com/bouncompec" target="_blank" rel="noopener noreferrer">
 									<button type="button" class="btn btn-social-icon btn-instagram">
 										<i class="fa fa-instagram"></i>
+									</button>
+								</a>
+
+								<a href="https://medium.com/bouncompec" target="_blank" rel="noopener noreferrer">
+									<button type="button" class="btn btn-social-icon btn-medium">
+										<FaMediumM/>
 									</button>
 								</a>
 							</div>
