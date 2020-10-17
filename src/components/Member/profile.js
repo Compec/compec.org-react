@@ -2,6 +2,7 @@ import React from 'react';
 import { UseAuth } from './authcontext';
 import { Spinner } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Profile(){
 
@@ -20,6 +21,11 @@ function Profile(){
 
 	return(
 		<div className="container profile-page">
+			<Helmet>
+				<title>Üye Sistemi Profilim - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta name="description"
+				content="Boğaziçi Üniversitesi Bilişim Kulübü üye sistemi profil." />
+			</Helmet>
 			{userData ? (
 				<div>
 					<div className="row d-flex justify-content-center">
@@ -63,7 +69,7 @@ function Profile(){
 									<hr />
 									<div class="row">
 										<div class="col-sm-4">
-											<h6 class="mb-0">Boğaziçi Email Adresi</h6>
+											<h6 class="mb-0">Boğaziçi Mail Adresi</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
 											{userData.bounEmail}

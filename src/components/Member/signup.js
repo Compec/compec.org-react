@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import axios from "axios";
+import { Helmet } from 'react-helmet';
+import { Link } from "react-router-dom";
 
 function SignUp() {
 
@@ -59,6 +61,11 @@ function SignUp() {
 	}
 	return (
 		<div class="login-page text-center">
+			<Helmet>
+				<title>Kaydını Doğrula - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta name="description"
+				content="Boğaziçi Üniversitesi Bilişim Kulübü üye sistemine kaydını doğrula." />
+			</Helmet>
 			<form class="form-signin" onSubmit={onSubmit} id="registrationForm">
 				<img class="mb-4" src="/compec_mavi.svg" alt="" width="250" height="150" />
 				<h1 class="h3 mb-3 font-weight-normal">Compec'e kaydınızı tamamlayın!</h1>
@@ -66,6 +73,8 @@ function SignUp() {
 				<p>
 					Lütfen aşağıdaki bilgileri eksiksiz ve doğruluğundan emin olarak doldurun.<br/>
 					Formu birden çok kez doldurmayınız.<br/>
+					Doğrulama kodunuz yoksa <Link to="/member/register">Kaydol</Link> sayfasına gidiniz.<br/>
+					Doğrulamayı tamamlayınca <Link to="/member/login">Giriş Yap</Link> sayfasına gidebilirsiniz.<br/>
 				</p>
 
 				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}

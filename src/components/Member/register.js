@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Register() {
 
@@ -62,6 +63,11 @@ function Register() {
 	}
 	return (
 		<div class="login-page text-center">
+			<Helmet>
+				<title>Kaydol - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta name="description"
+				content="Boğaziçi Üniversitesi Bilişim Kulübü üye sistemine kaydol." />
+			</Helmet>
 			<form class="form-signin" onSubmit={onSubmit} id="registrationForm">
 				<img class="mb-4" src="/compec_mavi.svg" alt="" width="250" height="150" />
 				<h1 class="h3 mb-3 font-weight-normal">Compec'e kaydolun!</h1>
@@ -69,8 +75,8 @@ function Register() {
 				<p>
 					Lütfen aşağıdaki bilgileri eksiksiz ve doğruluğundan emin olarak doldurun.<br/>
 					Formu birden çok kez doldurmayınız.<br/>
-					Doldurduktan sonra Boğaziçi mail kutunuzu kontrol ediniz.
-					Kaydınızı doğrulamanız için <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
+					<b>Doldurduktan sonra Boğaziçi mail kutunuzu kontrol ediniz.</b><br/>
+					Formu doldurduktan sonra kaydınızı doğrulamanız için <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
 				</p>
 
 				{alertVisibility && <div id="alert" className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}

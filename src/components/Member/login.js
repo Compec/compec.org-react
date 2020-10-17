@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './login.css'
 import {UseAuth} from './authcontext';
 import { useHistory, Link} from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 function Login() {
 
@@ -42,12 +43,17 @@ function Login() {
 
 	return (
 		<div class="login-page text-center">
+			<Helmet>
+				<title>Giriş Yap - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta name="description"
+				content="Boğaziçi Üniversitesi Bilişim Kulübü üye sistemine giriş yap." />
+			</Helmet>
 			<form class="form-signin" onSubmit={handleSubmit}>
 				<img class="mb-4" src="/compec_mavi.svg" alt="" width="250" height="150" />
 
 				<h1 class="h3 mb-3 font-weight-normal">Compec Üye Sistemine Giriş Yap</h1>
 				<p>
-					Compec'e üye olmak için <Link to="/member/register">Kayıt Ol</Link> sayfasına ulaşabilirsiniz.
+					Compec'e üye olmak için önce <Link to="/member/register">Kaydol</Link> sayfasına, sonra <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
 				</p>
 				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
 

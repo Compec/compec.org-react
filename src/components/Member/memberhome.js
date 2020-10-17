@@ -3,6 +3,7 @@ import { UseAuth } from "./authcontext";
 import { Link } from "react-router-dom";
 import Duyuru from "./duyuru";
 import { Spinner } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 
 function MemberHome(){
 	const { announcements, meetings, events} = UseAuth();
@@ -18,6 +19,11 @@ function MemberHome(){
 
 	return(
 		<div className="container memberHome">
+			<Helmet>
+				<title>Üye Sistemi Ana Sayfa - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<meta name="description"
+				content="Boğaziçi Üniversitesi Bilişim Kulübü üye sistemi ana sayfası." />
+			</Helmet>
 			{(duyurular && toplantilar && etkinlikler) ? (
 				<div className="row d-flex justify-content-center">
 				<div className="col-9">
