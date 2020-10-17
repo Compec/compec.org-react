@@ -63,7 +63,7 @@ function Login() {
 					</label>
 				</div> */}
 
-				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Sign in</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Giriş Yap</button>
 
 				
 			</form>

@@ -90,7 +90,7 @@ function SignUp() {
 				<label for="password2" class="sr-only">Şifrenizi tekrar yazınız</label>
 				<input type="password" id="password2" name="password2" class="form-control" placeholder="Şifrenizi tekrar yazınız" required="true" autofocus="" /><br/>
 
-				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydol</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydını Doğrula</button>
 			</form>
 		</div>
 	);

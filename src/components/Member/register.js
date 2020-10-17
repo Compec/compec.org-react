@@ -64,7 +64,7 @@ function Register() {
 		<div class="login-page text-center">
 			<form class="form-signin" onSubmit={onSubmit} id="registrationForm">
 				<img class="mb-4" src="/compec_mavi.svg" alt="" width="250" height="150" />
-				<h1 class="h3 mb-3 font-weight-normal">Compec'e kayıt olun!</h1>
+				<h1 class="h3 mb-3 font-weight-normal">Compec'e kaydolun!</h1>
 
 				<p>
 					Lütfen aşağıdaki bilgileri eksiksiz ve doğruluğundan emin olarak doldurun.<br/>
