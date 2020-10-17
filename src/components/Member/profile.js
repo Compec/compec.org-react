@@ -7,15 +7,15 @@ import { Helmet } from 'react-helmet';
 function Profile(){
 
 	const { userData, logout } = UseAuth();
-	const { history } = useHistory();
+	const history = useHistory();
 
 	function logoutHandler(){
 		logout()
 		.then(() => {
 			history.push("/member/login");
 		})
-		.catch(() => {
-			alert("Çıkış yapılamadı lütfen tekrar deneyin!");
+		.catch((e) => {
+			alert("Çıkış yapılamadı lütfen tekrar deneyin! Sorun: " + e);
 		});
 	}
 
