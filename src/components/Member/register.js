@@ -26,7 +26,7 @@ function Register() {
 		const bounEmail = document.querySelector("#bounEmail").value.trim().replace(/&nbsp;/g, '');
 		const personalEmail = document.querySelector("#personalEmail").value.trim().replace(/&nbsp;/g, '');
 		const telephone = document.querySelector("#telephone").value.trim().replace(/&nbsp;/g, '');
-		const recaptchaAlt = document.querySelector("#g-recaptcha-response").value;
+		const recaptchaAlt = document.querySelector(".g-recaptcha-response").value;
 		setHideButton(true);
 		axios({
 			method: 'post',
