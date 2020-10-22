@@ -17,7 +17,7 @@ function Yonetim() {
 			<section id="team" class="pb-5">
 				<div class="container">
 					<h1 class="section-title">Yönetim Kurulu</h1>
-					<div class="row">
+					<div class="row justify-content-md-center">
 						{
 							YonetimInfo.YK.map(
 								(person) => {
