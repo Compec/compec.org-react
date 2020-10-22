@@ -22,28 +22,28 @@ const YonetimInfo = {
 			insta: "https://www.instagram.com/aeozturkmen/"
 		},
 		{
-			isim: "Yağmur Kara",
-			gorev: "PR Direktörü",
-			foto: "/yonetim/Yagmur.jpeg",
-			linkedin: "https://www.linkedin.com/in/yagmurkara/",
-			insta: "https://www.instagram.com/yagmrkaraa/",
-			face: "https://www.facebook.com/yagmrkaraaa"
+			isim: "Ahmet Yiğit Doğan",
+			gorev: "Teknoloji ve PR Direktörü",
+			foto: "/yonetim/ayd.jpg",
+			linkedin: "https://www.linkedin.com/in/ayigitdogan/",
+			insta: "https://www.instagram.com/ayigitdogan/",
+			face: "https://www.facebook.com/ayigitdogan",
+			behance: "https://www.behance.net/ayigitdogan"
 		},
+		// {
+		// 	isim: "Yağmur Kara",
+		// 	gorev: "PR Direktörü",
+		// 	foto: "/yonetim/Yagmur.jpeg",
+		// 	linkedin: "https://www.linkedin.com/in/yagmurkara/",
+		// 	insta: "https://www.instagram.com/yagmrkaraa/",
+		// 	face: "https://www.facebook.com/yagmrkaraaa"
+		// },
 		{
 			isim: "Emre Burak Baş",
 			gorev: "AR-GE Direktörü",
 			foto: "/yonetim/EmreBurak.jpg",
 			linkedin: "https://www.linkedin.com/in/emreburakbas/",
 			insta: "https://www.instagram.com/emreburakbas/"
-		},
-		{
-			isim: "Ahmet Yiğit Doğan",
-			gorev: "Teknoloji Direktörü",
-			foto: "/yonetim/ayd.jpg",
-			linkedin: "https://www.linkedin.com/in/ayigitdogan/",
-			insta: "https://www.instagram.com/ayigitdogan/",
-			face: "https://www.facebook.com/ayigitdogan",
-			behance: "https://www.behance.net/ayigitdogan"
 		},
 		{
 			isim: "Enes Döke",
@@ -53,14 +53,14 @@ const YonetimInfo = {
 			insta: "https://www.instagram.com/enesdoke/",
 			twitter: "https://twitter.com/enesdoke"
 		},
-		{
-			isim: "Mert Karaca",
-			gorev: "Organizasyon Direktörü",
-			foto: "/yonetim/Mert.jpg",
-			linkedin: "http://linkedin.com/in/mert-karaca-36799b18b",
-			insta: "https://instagram.com/therealmertkaraca/",
-			face: "https://www.facebook.com/mertgalecki"
-		},
+		// {
+		// 	isim: "Mert Karaca",
+		// 	gorev: "Organizasyon Direktörü",
+		// 	foto: "/yonetim/Mert.jpg",
+		// 	linkedin: "http://linkedin.com/in/mert-karaca-36799b18b",
+		// 	insta: "https://instagram.com/therealmertkaraca/",
+		// 	face: "https://www.facebook.com/mertgalecki"
+		// },
 		{
 			isim: "Serdar Bayraktar",
 			gorev: "İç İletişim Direktörü",
