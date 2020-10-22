@@ -32,7 +32,7 @@ function Yonetim() {
 					</div>
 					<br/> <br/>
 					<h1 class="section-title">Liderler</h1> <br/>
-					<div class="row">
+					<div class="row justify-content-md-center">
 						{
 							YonetimInfo.Liderler.map(
 								(person) => {
