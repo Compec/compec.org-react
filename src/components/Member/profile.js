@@ -9,6 +9,8 @@ function Profile(){
 	const { userData, logout } = UseAuth();
 	const history = useHistory();
 
+	console.log(userData);
+
 	function logoutHandler(){
 		logout()
 		.then(() => {
@@ -91,6 +93,15 @@ function Profile(){
 										</div>
 										<div class="col-sm-8 text-secondary">
 											{userData.telephone}
+										</div>
+									</div>
+									<hr/>
+									<div class="row">
+										<div class="col-sm-4">
+											<h6 class="mb-0">Kayıtlı Olduğum Alt Kurul ve Eğitimler</h6>
+										</div>
+										<div class="col-sm-8 text-secondary">
+											{userData.altkurullar}
 										</div>
 									</div>
 									<hr/>

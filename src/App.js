@@ -25,6 +25,7 @@ import Register from "./components/Member/register"
 import SignUp from "./components/Member/signup"
 import Profile from "./components/Member/profile"
 import MemberHome from "./components/Member/memberhome";
+import AltKurulAnket from "./components/Member/altkurul"
 import { AuthProvider } from "./components/Member/authcontext";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
@@ -58,6 +59,7 @@ function App() {
 								<PublicRoute path="/member/signup" exact component={SignUp}/>
 								<PrivateRoute path="/member/home" exact component={MemberHome} />
 								<PrivateRoute path="/member/profile" exact component={Profile} />
+								<PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} />
 								<Route component={NotFound}/>
 							</Switch>
 					</div>

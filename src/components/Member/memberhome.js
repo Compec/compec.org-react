@@ -49,6 +49,7 @@ function MemberHome(){
 											link={element.link}
 											desc={element.desc}
 											title={element.title}
+											buttonText={element.buttonText}
 										/>
 										<hr/>
 									</div>
