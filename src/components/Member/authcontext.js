@@ -19,32 +19,45 @@ export function AuthProvider({children}){
 			setCurrentUser(user);
 			if(user) {
 				await database.ref("/members/" + user.uid).once("value").then((data) => {
-					let altkurullar = Object.keys(data.val().altkurullar);
-					let altKurullar = "";
-					if(altkurullar.some(element => element === "bbo")) altKurullar += "Boğaziçi Bilişim Ödülleri, ";
-					if(altkurullar.some(element => element === "devteam")) altKurullar += "DevTeam, ";
-					if(altkurullar.some(element => element === "dijgir")) altKurullar += "Dijital Girişimcilik, ";
-					if(altkurullar.some(element => element === "gamedev")) altKurullar += "Oyun Geliştirme, ";
-					if(altkurullar.some(element => element === "pr")) altKurullar += "PR, ";
-					if(altkurullar.some(element => element === "tech")) altKurullar += "Teknoloji, ";
-					if(altkurullar.some(element => element === "datasci")) altKurullar += "Veri Bilimi, ";
-					if(altkurullar.some(element => element === "algo")) altKurullar += "C++ ile ALGO101, ";
-					if(altkurullar.some(element => element === "java")) altKurullar += "Java, ";
-					if(altkurullar.some(element => element === "python")) altKurullar += "Python, ";
-					if(altkurullar.some(element => element === "webdev")) altKurullar += "Web Geliştirme, ";
-					if(altkurullar.some(element => element === "unity")) altKurullar += "Unity, ";
-					altKurullar = altKurullar.slice(0, -2);
-					setUserData({
-						name: data.val().name,
-						surname: data.val().surname,
-						bolum: data.val().bolum,
-						sinif: data.val().sinif,
-						bounEmail: data.val().bounEmail,
-						personalEmail: data.val().personalEmail,
-						telephone: data.val().telephone,
-						memberID: data.val().memberID,
-						altkurullar: altKurullar
-					})
+					if(data.val().altkurullar){ 
+						let altkurullar = Object.keys(data.val().altkurullar);
+						let altKurullar = "";
+						if(altkurullar.some(element => element === "bbo")) altKurullar += "Boğaziçi Bilişim Ödülleri, ";
+						if(altkurullar.some(element => element === "devteam")) altKurullar += "DevTeam, ";
+						if(altkurullar.some(element => element === "dijgir")) altKurullar += "Dijital Girişimcilik, ";
+						if(altkurullar.some(element => element === "gamedev")) altKurullar += "Oyun Geliştirme, ";
+						if(altkurullar.some(element => element === "pr")) altKurullar += "PR, ";
+						if(altkurullar.some(element => element === "tech")) altKurullar += "Teknoloji, ";
+						if(altkurullar.some(element => element === "datasci")) altKurullar += "Veri Bilimi, ";
+						if(altkurullar.some(element => element === "algo")) altKurullar += "C++ ile ALGO101, ";
+						if(altkurullar.some(element => element === "java")) altKurullar += "Java, ";
+						if(altkurullar.some(element => element === "python")) altKurullar += "Python, ";
+						if(altkurullar.some(element => element === "webdev")) altKurullar += "Web Geliştirme, ";
+						if(altkurullar.some(element => element === "unity")) altKurullar += "Unity, ";
+						altKurullar = altKurullar.slice(0, -2);
+						setUserData({
+							name: data.val().name,
+							surname: data.val().surname,
+							bolum: data.val().bolum,
+							sinif: data.val().sinif,
+							bounEmail: data.val().bounEmail,
+							personalEmail: data.val().personalEmail,
+							telephone: data.val().telephone,
+							memberID: data.val().memberID,
+							altkurullar: altKurullar
+						})
+					} else { 
+						setUserData({
+							name: data.val().name,
+							surname: data.val().surname,
+							bolum: data.val().bolum,
+							sinif: data.val().sinif,
+							bounEmail: data.val().bounEmail,
+							personalEmail: data.val().personalEmail,
+							telephone: data.val().telephone,
+							memberID: data.val().memberID
+						})
+					}
 				})
 				database.ref("/announcements").orderByChild("active").equalTo(true).once("value")
 				.then((data) => {
