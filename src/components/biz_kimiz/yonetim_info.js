@@ -138,7 +138,7 @@ const YonetimInfo = {
 		{
 			isim: "Erkinalp Özcan",
 			gorev: "PR Lideri",
-			foto: "/yonetim/Erkinalp Ozcan.jpeg",
+			foto: "/yonetim/erkinalp ozcan.jpeg",
 			linkedin: "https://www.linkedin.com/in/erkinalpozcan/",
 			insta: "https://www.instagram.com/erkinalpozcan/",
 			behance: "https://www.behance.net/erkinalpzcan"
@@ -189,7 +189,7 @@ const YonetimInfo = {
 		{
 			isim: "Merve Nur Hündür",
 			gorev: "DevTeam Lideri",
-			foto: "/yonetim/merve nur hundur.png",
+			foto: "/yonetim/merve nur hundur.jpeg",
 			linkedin: "linkedin.com/in/merve-nur-hündür-25913116a",
 			insta: "https://www.instagram.com/hndrmerve/"
 		},
