@@ -26,6 +26,7 @@ export function AuthProvider({children}){
 						if(altkurullar.some(element => element === "devteam")) altKurullar += "DevTeam, ";
 						if(altkurullar.some(element => element === "dijgir")) altKurullar += "Dijital Girişimcilik, ";
 						if(altkurullar.some(element => element === "gamedev")) altKurullar += "Oyun Geliştirme, ";
+						if(altkurullar.some(element => element === "ii")) altKurullar += "İç İletişim, ";
 						if(altkurullar.some(element => element === "pr")) altKurullar += "PR, ";
 						if(altkurullar.some(element => element === "tech")) altKurullar += "Teknoloji, ";
 						if(altkurullar.some(element => element === "datasci")) altKurullar += "Veri Bilimi, ";

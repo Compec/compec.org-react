@@ -15,7 +15,7 @@ function AltKurulAnket() {
 		let inputElements = document.getElementsByClassName("checkBox");
 		let result = [];
 
-		for(let i = 0; i < 12; i++){
+		for(let i = 0; i < 13; i++){
 			if(inputElements[i].checked){
 				result.push(inputElements[i].value);
 			}
@@ -69,6 +69,7 @@ function AltKurulAnket() {
 				<input className="checkBox" type="checkbox" value="bbo" name="bbo" /> Boğaziçi Bilişim Ödülleri <br/><br/>
 				<input className="checkBox" type="checkbox" value="devteam" name="devteam" /> DevTeam <br/><br/>
 				<input className="checkBox" type="checkbox" value="dijgir" name="dijgir" /> Dijital Girişimcilik <br/><br/>
+				<input className="checkBox" type="checkbox" value="ii" name="ii" /> İç İletişim <br/><br/>
 				<input className="checkBox" type="checkbox" value="gamedev" name="gamedev" /> Oyun Geliştirme <br/><br/>
 				<input className="checkBox" type="checkbox" value="pr" name="pr" /> PR <br/><br/>
 				<input className="checkBox" type="checkbox" value="tech" name="tech" /> Teknoloji <br/><br/>
