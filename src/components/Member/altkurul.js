@@ -15,7 +15,7 @@ function AltKurulAnket() {
 		let inputElements = document.getElementsByClassName("checkBox");
 		let result = [];
 
-		for(let i = 0; i < 13; i++){
+		for(let i = 0; i < 9; i++){
 			if(inputElements[i].checked){
 				result.push(inputElements[i].value);
 			}
@@ -36,11 +36,11 @@ function AltKurulAnket() {
 			})
 			console.log(objectToPush);
 	
-			database.ref("members/" + currentUser.uid).child("altkurullar").set(objectToPush)
+			database.ref("members/" + currentUser.uid).child("altkurullar").update(objectToPush)
 			.then(() => {
 				setAlertVisiblity(true);
 				setSuccess(true);
-				setAlertMessage("Alt kurullarınızı başarıyla seçtiniz! Profilinizden seçtiğiniz alt kurulları görüntüleyebilir, 27 Ekim'e kadar da seçimlerinizi değiştirebilirsiniz.");
+				setAlertMessage("Alt kurullarınızı başarıyla seçtiniz! Profilinizden seçtiğiniz alt kurulları görüntüleyebilirsiniz.");
 			})
 			.catch(err => {
 				setAlertVisiblity(true);
@@ -76,11 +76,12 @@ function AltKurulAnket() {
 				<input className="checkBox" type="checkbox" value="datasci" name="datasci" /> Veri Bilimi <br/><br/><br/>
 
 				<h3><b>Eğitimler</b></h3><hr/>
-				<input className="checkBox" type="checkbox" value="algo" name="algo" /> C++ ile ALGO101 <br/><br/>
+				{/* <input className="checkBox" type="checkbox" value="algo" name="algo" /> C++ ile ALGO101 <br/><br/>
 				<input className="checkBox" type="checkbox" value="java" name="java" /> Java <br/><br/>
 				<input className="checkBox" type="checkbox" value="python" name="python" /> Python <br/><br/>
-				<input className="checkBox" type="checkbox" value="webdev" name="webdev" /> Web Geliştirme <br/><br/>
+				<input className="checkBox" type="checkbox" value="webdev" name="webdev" /> Web Geliştirme <br/><br/> */}
 				<input className="checkBox" type="checkbox" value="unity" name="unity" /> Unity ile Oyun Geliştirme <br/><br/>
+				{/* <input className="checkBox" type="checkbox" value="tasarim" name="tasarim" /> Dijital Tasarım <br/><br/> */}
 
 				<button className="btn btn-primary" onClick={onClickHandler} disabled={hideButton} style={{marginBottom: "20px"}}>Kaydet</button>
 				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{alertMessage}</div>}

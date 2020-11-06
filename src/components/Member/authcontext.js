@@ -35,6 +35,7 @@ export function AuthProvider({children}){
 						if(altkurullar.some(element => element === "python")) altKurullar += "Python, ";
 						if(altkurullar.some(element => element === "webdev")) altKurullar += "Web Geliştirme, ";
 						if(altkurullar.some(element => element === "unity")) altKurullar += "Unity, ";
+						if(altkurullar.some(element => element === "tasarim")) altKurullar += "Dijital Tasarım, ";
 						altKurullar = altKurullar.slice(0, -2);
 						setUserData({
 							name: data.val().name,
