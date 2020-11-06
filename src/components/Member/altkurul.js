@@ -36,11 +36,11 @@ function AltKurulAnket() {
 			})
 			console.log(objectToPush);
 	
-			database.ref("members/" + currentUser.uid).child("altkurullar").set(objectToPush)
+			database.ref("members/" + currentUser.uid).child("altkurullar").update(objectToPush)
 			.then(() => {
 				setAlertVisiblity(true);
 				setSuccess(true);
-				setAlertMessage("Alt kurullarınızı başarıyla seçtiniz! Profilinizden seçtiğiniz alt kurulları görüntüleyebilir, 27 Ekim'e kadar da seçimlerinizi değiştirebilirsiniz.");
+				setAlertMessage("Alt kurullarınızı başarıyla seçtiniz! Profilinizden seçtiğiniz alt kurulları görüntüleyebilirsiniz.");
 			})
 			.catch(err => {
 				setAlertVisiblity(true);
