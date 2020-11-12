@@ -15,7 +15,7 @@ function AltKurulAnket() {
 		let inputElements = document.getElementsByClassName("checkBox");
 		let result = [];
 
-		for(let i = 0; i < 9; i++){
+		for(let i = 0; i < 10; i++){
 			if(inputElements[i].checked){
 				result.push(inputElements[i].value);
 			}
@@ -81,7 +81,7 @@ function AltKurulAnket() {
 				<input className="checkBox" type="checkbox" value="python" name="python" /> Python <br/><br/>
 				<input className="checkBox" type="checkbox" value="webdev" name="webdev" /> Web Geliştirme <br/><br/> */}
 				<input className="checkBox" type="checkbox" value="unity" name="unity" /> Unity ile Oyun Geliştirme <br/><br/>
-				{/* <input className="checkBox" type="checkbox" value="tasarim" name="tasarim" /> Dijital Tasarım <br/><br/> */}
+				<input className="checkBox" type="checkbox" value="tasarim" name="tasarim" /> Dijital Tasarım <br/><br/>
 
 				<button className="btn btn-primary" onClick={onClickHandler} disabled={hideButton} style={{marginBottom: "20px"}}>Kaydet</button>
 				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{alertMessage}</div>}
