@@ -41,17 +41,19 @@ function Blog() {
 					<div class="col">
 						{" "}
 						{/*col-md-8*/}
-						{blogItems.map((blogItem) => {
-							return (
-								<BlogKart
-									title={blogItem.fields.title}
-									author={blogItem.fields.author}
-									date={blogItem.fields.date}
-									description={blogItem.fields.description}
-									img={blogItem.fields.image.fields.file.url}
-									route={blogItem.fields.route}
-								/>
-							);
+						{blogItems.map((blogItem, i) => {
+							if (i%2 === 0){
+								return (
+									<BlogKart
+										title={blogItem.fields.title}
+										author={blogItem.fields.author}
+										date={blogItem.fields.date}
+										description={blogItem.fields.description}
+										img={blogItem.fields.image.fields.file.url}
+										route={blogItem.fields.route}
+									/>
+								);
+							}
 						})}
 						{/* 
                         <ul class="pagination justify-content-center mb-4">
@@ -63,6 +65,24 @@ function Blog() {
                             </li>
                         </ul>
                         */}
+					</div>
+					<div className="col">
+					{" "}
+						{/*col-md-8*/}
+						{blogItems.map((blogItem, i) => {
+							if (i%2 === 1){
+								return (
+									<BlogKart
+										title={blogItem.fields.title}
+										author={blogItem.fields.author}
+										date={blogItem.fields.date}
+										description={blogItem.fields.description}
+										img={blogItem.fields.image.fields.file.url}
+										route={blogItem.fields.route}
+									/>
+								);
+							}
+						})}
 					</div>
 					{/* 
 					<div class="col-md-4">
