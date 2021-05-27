@@ -20,46 +20,65 @@ function Register() {
 	const onSubmit = (e) => {
 		e.preventDefault();
 		const name = document.querySelector("#name").value.trim().replace(/&nbsp;/g, '');
-		const surname = document.querySelector("#surname").value.trim().replace(/&nbsp;/g, '');
+		// const surname = document.querySelector("#surname").value.trim().replace(/&nbsp;/g, '');
 		const bolum = document.querySelector("#bolum").value;
 		const sinif = document.querySelector("#sinif").value;
 		const bounEmail = document.querySelector("#bounEmail").value.trim().replace(/&nbsp;/g, '');
 		const personalEmail = document.querySelector("#personalEmail").value.trim().replace(/&nbsp;/g, '');
 		const telephone = document.querySelector("#telephone").value.trim().replace(/&nbsp;/g, '');
+		const password = document.querySelector("#password").value.trim().replace(/&nbsp;/g, '');
+		const password2 = document.querySelector("#password2").value.trim().replace(/&nbsp;/g, '');
 		const recaptchaAlt = document.querySelector(".g-recaptcha-response").value;
 		setHideButton(true);
-		axios({
-			method: 'post',
-			url: process.env.REACT_APP_BACKEND_SUBMIT_URL,
-			data: {
-				name: name,
-				surname: surname,
-				bolum: bolum,
-				sinif: sinif,
-				bounEmail: bounEmail,
-				personalEmail: personalEmail,
-				telephone: telephone,
-				captcha: recaptchaAlt
-			}
-		})
-		.then(res => {
-			setAlertVisibility(true);
-			setSuccess(res.data.success);
-			setMsg(res.data.msg);
-			if(res.data.success){
-				setHideButton(true);
-			} else {
-				setHideButton(false);
-			}
-			document.getElementById("alert").scrollIntoView({behavior: "smooth"});
-		})
-		.catch(e => {
+
+		var re = new RegExp(/^(?:(?=.*?[A-Z])(?:(?=.*?[0-9])(?=.*?[-!@#$%^&*()_[\]{},.<>+=])|(?=.*?[a-z])(?:(?=.*?[0-9])|(?=.*?[-!@#$%^&*()_[\]{},.<>+=])))|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-!@#$%^&*()_[\]{},.<>+=]))[A-Za-z0-9!@#$%^&*()_[\]{},.<>+=-]{6,50}/);
+		if(password !== password2){
 			setAlertVisibility(true);
 			setSuccess(false);
-			setMsg("Sunucuya bağlanırken bir sorun yaşandı. Lütfen bize ulaşıp tekrar deneyin. Sorun:", e);
+			setMsg("Girdiğiniz şifreler birbirinden farklı. Lütfen tekrar deneyiniz.");
 			setHideButton(false);
-			document.getElementById("alert").scrollIntoView({behavior: "smooth"});
-		});
+		} else {
+			if(!re.test(password)){
+				setAlertVisibility(true);
+				setSuccess(false);
+				setMsg("Girdiğiniz şifre şartları sağlamıyor.");
+				setHideButton(false);
+			} else {
+				axios({
+					method: 'post',
+					url: process.env.REACT_APP_BACKEND_SUBMIT_URL,
+					data: {
+						name: name,
+						// surname: surname,
+						bolum: bolum,
+						sinif: sinif,
+						bounEmail: bounEmail,
+						personalEmail: personalEmail,
+						telephone: telephone,
+						captcha: recaptchaAlt,
+						password: password
+					}
+				})
+				.then(res => {
+					setAlertVisibility(true);
+					setSuccess(res.data.success);
+					setMsg(res.data.msg);
+					if(res.data.success){
+						setHideButton(true);
+					} else {
+						setHideButton(false);
+					}
+					document.getElementById("alert").scrollIntoView({behavior: "smooth"});
+				})
+				.catch(e => {
+					setAlertVisibility(true);
+					setSuccess(false);
+					setMsg("Sunucuya bağlanırken bir sorun yaşandı. Lütfen bize ulaşıp tekrar deneyin. Sorun:", e);
+					setHideButton(false);
+					document.getElementById("alert").scrollIntoView({behavior: "smooth"});
+				});
+			}
+		}
 	}
 	return (
 		<div class="login-page text-center">
@@ -80,8 +99,8 @@ function Register() {
 				<label for="name" class="sr-only">İsminiz</label>
 				<input type="text" id="name" name="name" class="form-control" placeholder="İsminiz" required="true" autofocus="" /><br/>
 
-				<label for="surname" class="sr-only">Soyisminiz</label>
-				<input type="text" id="surname" name="surname" class="form-control" placeholder="Soyisminiz" required="true" autofocus="" /><br/>
+				{/* <label for="surname" class="sr-only">Soyisminiz</label>
+				<input type="text" id="surname" name="surname" class="form-control" placeholder="Soyisminiz" required="true" autofocus="" /><br/> */}
 
 				<label for="bolum" class="sr-only">Bölüm</label>
 				<p class="form-control">Bölümünüz</p>
@@ -151,14 +170,30 @@ function Register() {
 				<label for="telephone" class="sr-only">Telefon Numaranız</label>
 				<input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Telefon Numaranız" required="true" autofocus="" pattern="5[0-9]{9}"/><br/>
 
+				<p>
+					Şifreniz aşağıdakilerden üçünü içermelidir ve en az 6 karakter uzunluğunda olmalıdır:
+					<ul className="text-left">
+						<li>Küçük harf</li>
+						<li>Büyük harf</li>
+						<li>Rakam</li>
+						<li>Sembol</li>
+					</ul>
+				</p>
+
+				<label for="password" class="sr-only">Şifreniz</label>
+				<input type="password" id="password" name="password" class="form-control" placeholder="Şifreniz" required="true" autofocus="" /><br/>
+
+				<label for="password2" class="sr-only">Şifrenizi tekrar yazınız</label>
+				<input type="password" id="password2" name="password2" class="form-control" placeholder="Şifrenizi tekrar yazınız" required="true" autofocus="" /><br/>
+
 				<ReCAPTCHA ref={recaptchaRef} sitekey="6LeHPtQZAAAAAIMIQUeifB4lUgiovjaXsTBGFmzx" onChange={captchaFunc}/><br/>
 
 				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydol</button>
 
 				{alertVisibility && <div id="alert" className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
 				<p>
-					<b>Doldurduktan sonra Boğaziçi (Roundcube) mail kutunuzu kontrol ediniz.</b><br/>
-					Formu doldurduktan sonra kaydınızı doğrulamanız için <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
+					<b>Formu doldurduktan sonra kaydınızı doğrulamak için Boğaziçi (Roundcube) mail kutunuzu kontrol ediniz.</b><br/>
+					Roundcube'e ulaşmak için <a href="https://roundcube.boun.edu.tr/" target="_blank">buraya</a> tıklayabilirsiniz.
 				</p>
 			</form>
 		</div>

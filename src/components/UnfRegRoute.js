@@ -1,11 +1,11 @@
-// If the user has successfully logged in, redirect registration and login pages to profile page
+// Unfinished Registration Route
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UseAuth } from './Member/authcontext';
 
-function PublicRoute({ component: Component, ...rest}){
+function UnfRegRoute({ component: Component, ...rest}){
 
-    const { currentUser, userData } = UseAuth(); 
+    const { currentUser, userData } = UseAuth();
     return(
         <Route 
         {...rest}
@@ -14,33 +14,34 @@ function PublicRoute({ component: Component, ...rest}){
                 // if (userData) {
                     if (!currentUser.emailVerified || !(userData && userData.signupStep === 5)){
                         return(
-                            <Redirect to="/member/unfreg"/>
+                            <Component {...props}/>
                         )
                     }
                     else {
                         return(
-                            <Redirect to="/member/profile"/>
+                            <Redirect to="/member/login"/>
                         )
                     }
                 // }
                 // else {
                 //     return(
-                //         <Component {...props}/>
+                //         <Redirect to="/hakkimizda"/>
                 //     )
                 // }
-            // return (!!currentUser && currentUser.emailVerified && userData.signupStep === 4) ? 
-            // <Redirect to="/member/profile" /> : 
-            // <Component {...props} />
-
+                // return (!!currentUser && currentUser.emailVerified && userData.signupStep != 5) ? 
+                // <Component {...props} /> : 
+                // <Redirect to="/member/login"/>
             }
-
             else {
-                return(<Component {...props} />)
+                return(
+                    <Redirect to="/member/login"/>
+                )
             }
         }}
         >
+
         </Route>
     )
 }
 
-export default PublicRoute;
+export default UnfRegRoute;

@@ -31,7 +31,7 @@ function Login() {
 
 		await login(bounEmail, password)
 		.then(() => {
-			history.push("/member/home");
+			history.push(/*"/member/home"*/ "/member/profile");
 		})
 		.catch((e) => {
 			setAlertVisibility(true);
@@ -52,8 +52,11 @@ function Login() {
 				<img class="mb-4" src="/compec_mavi.svg" alt="" width="250" height="150" />
 
 				<h1 class="h3 mb-3 font-weight-normal">Compec Üye Sistemine Giriş Yap</h1>
-				<p>
+				{/* <p>
 					Compec'e üye olmak için önce <Link to="/member/register">Kaydol</Link> sayfasına, sonra <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
+				</p> */}
+				<p>
+					Compec'e üye olmak için lütfen <Link to="/member/register">Kaydol</Link> sayfasına gidiniz.
 				</p>
 				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
 

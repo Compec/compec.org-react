@@ -29,7 +29,9 @@ import AltKurulAnket from "./components/Member/altkurul"
 import { AuthProvider } from "./components/Member/authcontext";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
-import NotFound from "./components/NotFound"
+import UnfRegRoute from "./components/UnfRegRoute";
+import UnfReg from "./components/Member/unfreg";
+import NotFound from "./components/NotFound";
 
 function App() {
 	return (
@@ -56,10 +58,11 @@ function App() {
 								<Route path="/blog" exact component={Blog}/>
 								<PublicRoute path="/member/login" component={Login}/>
 								<PublicRoute path="/member/register" exact component={Register}/>
-								<PublicRoute path="/member/signup" exact component={SignUp}/>
-								<PrivateRoute path="/member/home" exact component={MemberHome} />
+								{/* <PublicRoute path="/member/signup" exact component={SignUp}/>
+								<PrivateRoute path="/member/home" exact component={MemberHome} /> */}
 								<PrivateRoute path="/member/profile" exact component={Profile} />
-								<PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} />
+								<UnfRegRoute path="/member/unfreg" exact component={UnfReg} />
+								{/* <PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} /> */}
 								<Route component={NotFound}/>
 							</Switch>
 					</div>

@@ -32,9 +32,9 @@ function Profile(){
 				<div>
 					<div className="row d-flex justify-content-center">
 						<div class="col-9">
-							<Link to="/member/home" className="text-reset">
+							{/* <Link to="/member/home" className="text-reset">
 								<div className="btn btn-primary">Ana sayfaya geri dön</div>
-							</Link>
+							</Link> */}
 							<div class="card mb-3 mt-3">
 								<div class="card-body">
 									<div class="row">
@@ -47,7 +47,7 @@ function Profile(){
 											<h6 class="mb-0">Ad Soyad</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
-											{userData.name + " " + userData.surname}
+											{userData.name /*+ " " + userData.surname*/}
 										</div>
 									</div>
 									<hr />
@@ -96,14 +96,14 @@ function Profile(){
 										</div>
 									</div>
 									<hr/>
-									<div class="row">
+									{/* <div class="row">
 										<div class="col-sm-4">
 											<h6 class="mb-0">Kayıtlı Olduğum Alt Kurul ve Eğitimler</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
 											{userData.altkurullar}
 										</div>
-									</div>
+									</div> */}
 									<hr/>
 									<div class="row">
 										<div class="col">
