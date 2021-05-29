@@ -21,6 +21,7 @@ function Galeri() {
 			.then((response) => {
 				setGaleriItems(response.items[0].fields.list);
 			});
+			// eslint-disable-next-line
 	}, []);
 
 	return (

@@ -47,6 +47,7 @@ function BlogPage(props) {
 				});
 			})
 			.catch(console.error);
+			// eslint-disable-next-line
 	}, []);
 
 	/*blogItems.forEach((blogItem, i) => {

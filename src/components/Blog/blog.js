@@ -20,6 +20,7 @@ function Blog() {
 			.then((response) => {
 				setBlogItems(response.items);
 			});
+			// eslint-disable-next-line
 	}, []);
 
 	return (

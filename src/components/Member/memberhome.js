@@ -11,6 +11,7 @@ function MemberHome(){
 	const [toplantilar, setToplantilar] = useState();
 	const [etkinlikler, setEtkinlikler] = useState();
 
+	// eslint-disable-next-line
 	useEffect(() => {
 		setDuyurular(announcements);
 		setEtkinlikler(events);
