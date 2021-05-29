@@ -257,7 +257,7 @@ const YonetimInfo = {
 			gorev: "PR Lideri",
 			foto: "/yonetim/uygar.png",
 			linkedin: "https://linkedin.com/in/uygarsahiin",
-			insta: "instagram.com/uygarsahiin"
+			insta: "https://instagram.com/uygarsahiin"
 		},
 		{
 			isim: "Yiğit Doğan",
