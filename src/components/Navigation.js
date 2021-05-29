@@ -14,8 +14,9 @@ import {UseAuth} from './Member/authcontext';
 )*/
 
 function Navigation() {
-	const {pathname} = useLocation()
-	const {currentUser, logout} = UseAuth();
+	const {pathname} = useLocation();
+	const {currentUser} = UseAuth();
+	// eslint-disable-next-line
 	const history = useHistory();
 	
 	return(

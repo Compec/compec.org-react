@@ -87,6 +87,14 @@ const YonetimInfo = {
 			link: "http://ahmetikbal.com/"
 		},
 		{
+			isim: "Alperen Dönmez",
+			gorev: "PR Lideri",
+			foto: "/yonetim/alperendonmez.jpg",
+			linkedin: "https://www.linkedin.com/in/alperendonmez",
+			insta: "https://www.instagram.com/alper.end/",
+			link: "https://www.pexels.com/@alperen-21951554"
+		},
+		{
 			isim: "Alperen Özyılmaz",
 			gorev: "Kurumsal İletişim Lideri",
 			foto: "/yonetim/AlperenOzyilmaz.jpg",
@@ -135,21 +143,21 @@ const YonetimInfo = {
 			linkedin: "https://www.linkedin.com/in/cem-karaduman-8b93a5196",
 			insta: "https://instagram.com/cemkaraduman17"
 		},
-		{
-			isim: "Erkinalp Özcan",
-			gorev: "PR Lideri",
-			foto: "/yonetim/erkinalp ozcan.jpeg",
-			linkedin: "https://www.linkedin.com/in/erkinalpozcan/",
-			insta: "https://www.instagram.com/erkinalpozcan/",
-			behance: "https://www.behance.net/erkinalpzcan"
-		},
-		{
-			isim: "Halil İbrahim Çetinkaya",
-			gorev: "PR Lideri",
-			foto: "/yonetim/Halilibrahim.jpg",
-			linkedin: "linkedin.com/in/mdoceans",
-			insta: "https://www.instagram.com/mdoceans/"
-		},
+		// {
+		// 	isim: "Erkinalp Özcan",
+		// 	gorev: "PR Lideri",
+		// 	foto: "/yonetim/erkinalp ozcan.jpeg",
+		// 	linkedin: "https://www.linkedin.com/in/erkinalpozcan/",
+		// 	insta: "https://www.instagram.com/erkinalpozcan/",
+		// 	behance: "https://www.behance.net/erkinalpzcan"
+		// },
+		// {
+		// 	isim: "Halil İbrahim Çetinkaya",
+		// 	gorev: "PR Lideri",
+		// 	foto: "/yonetim/Halilibrahim.jpg",
+		// 	linkedin: "linkedin.com/in/mdoceans",
+		// 	insta: "https://www.instagram.com/mdoceans/"
+		// },
 		{
 			isim: "Halim Yasin Zümre",
 			gorev: "Oyun Geliştirme Lideri",
@@ -177,15 +185,15 @@ const YonetimInfo = {
 			foto: "/yonetim/leyla karaogullari.jpg",
 			linkedin: "linkedin.com/in/leyla-karaoğulları-36a9b6149"
 		},
-		{
-			isim: "Mehmet Emin Al ",
-			gorev: "DevTeam Lideri",
-			foto: "/yonetim/Mehmet-emin-al.jpg",
-			linkedin: "https://www.linkedin.com/in/mhmteminal",
-			insta: "https://instagram.com/mhmteminal",
-			twitter: "https://twitter.com/mhmteminal",
-			link: "https://mehmeteminal.com.tr"
-		},
+		// {
+		// 	isim: "Mehmet Emin Al ",
+		// 	gorev: "DevTeam Lideri",
+		// 	foto: "/yonetim/Mehmet-emin-al.jpg",
+		// 	linkedin: "https://www.linkedin.com/in/mhmteminal",
+		// 	insta: "https://instagram.com/mhmteminal",
+		// 	twitter: "https://twitter.com/mhmteminal",
+		// 	link: "https://mehmeteminal.com.tr"
+		// },
 		{
 			isim: "Merve Nur Hündür",
 			gorev: "DevTeam Lideri",
@@ -217,6 +225,12 @@ const YonetimInfo = {
 			twitter: "https://twitter.com/nuralk11"
 		},
 		{
+			isim: "Onur Temiz",
+			gorev: "DevTeam Lideri",
+			foto: "/yonetim/onurtemiz.jpg",
+			linkedin: "https://www.linkedin.com/in/onurtemiz/",
+		},
+		{
 			isim: "Ömer Can Çalı",
 			gorev: "Dijital Girişimcilik Lideri",
 			foto: "/yonetim/CanCali.jpg",
@@ -237,6 +251,13 @@ const YonetimInfo = {
 			linkedin: "https://www.linkedin.com/in/tuba-da%C4%9Fli-84a9561b3/",
 			insta: "https://instagram.com/tuba.dl",
 			twitter: "https://twitter.com/2bayadatuba"
+		},
+		{
+			isim: "Uygar Şahin",
+			gorev: "PR Lideri",
+			foto: "/yonetim/uygar.png",
+			linkedin: "https://linkedin.com/in/uygarsahiin",
+			insta: "instagram.com/uygarsahiin"
 		},
 		{
 			isim: "Yiğit Doğan",

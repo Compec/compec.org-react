@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import {Link} from "react-router-dom";
@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 function Register() {
 
 	const recaptchaRef = React.createRef();
+	// eslint-disable-next-line
 	const [captcha, setCaptcha] = useState("");
 	const [success, setSuccess] = useState();
 	const [msg, setMsg] = useState("");
