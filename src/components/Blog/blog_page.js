@@ -15,8 +15,8 @@ function BlogPage(props) {
 	moment.locale("tr");
 
 	const client = contentful.createClient({
-		space: "pfpwc05vxh8u",
-		accessToken: "WeygON6Z-mco0Q-A-smOEHfbn3Stq7bqwMTSSFyYpCE",
+		space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+		accessToken: process.env.REACT_APP_CONTENTFUL_KEY
 	}); 
 
 	const [fetchedBlog, setFetchedBlog] = useState(null);
