@@ -7,18 +7,24 @@ function Blog() {
 	const [blogItems, setBlogItems] = useState([]);
 
 	const client = contentful.createClient({
-		space: "pfpwc05vxh8u",
-		accessToken: "WeygON6Z-mco0Q-A-smOEHfbn3Stq7bqwMTSSFyYpCE",
+		space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,
+		accessToken: process.env.REACT_APP_CONTENTFUL_KEY
 	});
 
 	useEffect(() => {
+		// client
+		// 	.getEntries({
+		// 		content_type: "blogList"
+		// 	})
+		// 	.then((response) => {
+		// 		setBlogItems(response.items[0].fields.list);
+		// 	});
 		client
 			.getEntries({
-				content_type: "blog",
-				order: '-fields.id'
+				content_type: "blogList"
 			})
 			.then((response) => {
-				setBlogItems(response.items);
+				setBlogItems(response.items[0].fields.list);
 			});
 			// eslint-disable-next-line
 	}, []);
