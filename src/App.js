@@ -30,6 +30,7 @@ import { AuthProvider } from "./components/Member/authcontext";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
 import NotFound from "./components/NotFound"
+import NoRegister from "./components/Member/noregister";
 
 function App() {
 	return (
@@ -55,7 +56,7 @@ function App() {
 								<Route path="/blog/:route" render={props => <BlogPage {...props}/> } />
 								<Route path="/blog" exact component={Blog}/>
 								<PublicRoute path="/member/login" component={Login}/>
-								<PublicRoute path="/member/register" exact component={Register}/>
+								<PublicRoute path="/member/register" exact component={NoRegister}/>
 								<PublicRoute path="/member/signup" exact component={SignUp}/>
 								<PrivateRoute path="/member/home" exact component={MemberHome} />
 								<PrivateRoute path="/member/profile" exact component={Profile} />
