@@ -213,6 +213,20 @@ const YonetimInfo = {
 			foto: "/yonetim/ece_yalcin.jpg",
 			linkedin: "https://www.linkedin.com/in/eceyalcin/",
 			insta: "https://www.instagram.com/eceeyylcn/"
+		},
+		{
+			isim: "Bulut Uygun",
+			gorev: "Kurumsal İletişim Lideri",
+			foto: "/yonetim/bulut_uygun.jpg",
+			linkedin: "https://www.linkedin.com/mwlite/in/bulut-uygun-289221218",
+			insta: "https://www.instagram.com/bulutmerigold/"
+		},
+		{
+			isim: "Ömer Salih Tat",
+			gorev: "Kurumsal İletişim Lideri",
+			foto: "/yonetim/omer_salih_tat.jpg",
+			linkedin: "https://www.linkedin.com/in/%C3%B6mer-salih-tat-24b712191",
+			insta: "https://www.instagram.com/osalihtt/"
 		}
 	]
 }
