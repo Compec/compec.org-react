@@ -66,8 +66,8 @@ function Navigation() {
 							<NavDropdown.Item>DataCamp</NavDropdown.Item>
 						</LinkContainer>
 
-						<LinkContainer to="/playit">
-							<NavDropdown.Item>PlayIT</NavDropdown.Item>
+						<LinkContainer to="/gamejam">
+							<NavDropdown.Item>GameJam</NavDropdown.Item>
 						</LinkContainer>
 
 						<LinkContainer to="/efounder">
