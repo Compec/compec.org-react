@@ -72,7 +72,7 @@ const YonetimInfo = {
 			insta: "https://www.instagram.com/b.r.s_7/"
 		},
 		{
-			isim: "Senay Sozüanık",
+			isim: "Senay Sözüanık",
 			gorev: "PR Lideri",
 			foto: "/yonetim/senay_sozuanik.jpg",
 			linkedin: "https://www.linkedin.com/in/senaysozuanik/",
