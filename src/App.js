@@ -64,7 +64,7 @@ function App() {
 								<PrivateRoute path="/member/profile" exact component={Profile} />
 								<UnfRegRoute path="/member/unfreg" exact component={UnfReg} />
 								{/* <PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} /> */}
-								<Route path="/member/qr" exact component={AttendanceManager}/>
+								<PrivateRoute path="/member/qr" exact component={AttendanceManager}/>
 								<Route component={NotFound}/>
 							</Switch>
 					</div>

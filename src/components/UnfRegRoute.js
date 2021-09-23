@@ -19,7 +19,7 @@ function UnfRegRoute({ component: Component, ...rest}){
                     }
                     else {
                         return(
-                            <Redirect to="/member/login"/>
+                            <Redirect to="/member/profile"/>
                         )
                     }
                 // }

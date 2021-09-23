@@ -235,13 +235,13 @@ const AttendanceManager = (props) => {
       />
 
       <p>{data}</p>
-      <button
+      {/* <button
         onClick={() => {
           setstate({});
         }}
       >
         reset
-      </button>
+      </button> */}
       {Object.entries(state).map(([key, val], i) => {
         return (
           <div key={i}>

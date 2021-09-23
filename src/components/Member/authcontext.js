@@ -18,9 +18,9 @@ export function AuthProvider({children}){
 		const unsubscribe = auth.onAuthStateChanged(async user => {
 			setCurrentUser(user);
 			if (user && user.emailVerified) {
-				database.collection("users").doc(user.uid).get()
+				await database.collection("users").doc(user.uid).get()
 				.then((querySnapshot) => {
-					console.log(querySnapshot.data());
+					// console.log(querySnapshot.data());
 						setUserData({
 							name: querySnapshot.data().nameAndSurname,
 							bolum: querySnapshot.data().department,

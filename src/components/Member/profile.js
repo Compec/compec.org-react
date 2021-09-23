@@ -9,7 +9,7 @@ function Profile(){
 	const { userData, logout } = UseAuth();
 	const history = useHistory();
 
-	console.log(userData);
+	// console.log(userData);
 
 	function logoutHandler(){
 		logout()
