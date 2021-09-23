@@ -32,6 +32,7 @@ import PublicRoute from "./components/PublicRoute";
 import UnfRegRoute from "./components/UnfRegRoute";
 import UnfReg from "./components/Member/unfreg";
 import NotFound from "./components/NotFound";
+import AttendanceManager from "./components/Member/qr";
 
 function App() {
 	return (
@@ -63,6 +64,7 @@ function App() {
 								<PrivateRoute path="/member/profile" exact component={Profile} />
 								<UnfRegRoute path="/member/unfreg" exact component={UnfReg} />
 								{/* <PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} /> */}
+								<Route path="/member/qr" exact component={AttendanceManager}/>
 								<Route component={NotFound}/>
 							</Switch>
 					</div>
