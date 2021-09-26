@@ -1,5 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react';
 import {auth, database} from './firebase';
+// import { collection, query, where } from "firebase";
 const AuthContext = React.createContext();
 
 export function UseAuth(){
@@ -118,7 +119,7 @@ export function AuthProvider({children}){
 	}
 
 	// const value = { currentUser, userData, login, logout, announcements, meetings, events, database };
-	const value = { currentUser, userData, login, logout, database };
+	const value = { currentUser, userData, login, logout, database};
 
 	return(
 		<AuthContext.Provider value={value}>

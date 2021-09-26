@@ -7,6 +7,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { cloneDeep } from "lodash";
 // import { useFirebase } from "../../core/store/firebaseHook";
 import QrReader from "react-qr-reader";
+import { UseAuth } from "./authcontext.js";
+import axios from "axios";
 
 const AttendanceManager = (props) => {
 //   const [selectedSession, _setSelectedSession] = useState<Session | null>(null);
@@ -39,6 +41,7 @@ const AttendanceManager = (props) => {
   const [data, setData] = React.useState("");
 
   const timeout = useRef(0);
+  const {database} = UseAuth();    
 
 //   type scanData = {
 //     counter: number;
@@ -47,6 +50,7 @@ const AttendanceManager = (props) => {
 //     sub?: any;
 //   };
   const [state, _setstate] = useState({});
+  const [newMemberData, setNewMemberData] = useState({});
   const stateref = useRef(state);
   const setstate = (a) => {
     stateref.current = a;
@@ -62,6 +66,10 @@ const AttendanceManager = (props) => {
   const [frameColor, _setframeColor] = useState(frameColors.white);
 
   const [currentSubmission, setcurrentSubmission] = useState(null);
+
+  const [buttonVisibility, setButtonVisibility] = useState(false);
+
+
 
   const setFrameColor = (color) => {
     _setframeColor(color);
@@ -116,7 +124,7 @@ const AttendanceManager = (props) => {
     let text = result.trim();
 
     let c = { ...stateref.current };
-    console.log("read", text);
+    // console.log("read", text);
 
     if (!c[text]) {
       // TODO: takeAttendanceByAdmin( "subID", "sessionID");
@@ -179,9 +187,30 @@ const AttendanceManager = (props) => {
     }
 
     setData(text || "");
-    console.log(c);
+    // console.log(c);
 
     setstate(c);
+    console.log(text)
+    const coll = database.collection("users");
+    const q = coll.where("emailAddress", "==", text);
+    q.get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            //console.log(doc.id, " => ", doc.data());
+            setNewMemberData(doc.data());
+            console.log(newMemberData);
+            setButtonVisibility(true);
+          
+            
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+
+
+
   };
 
   return (
@@ -234,7 +263,37 @@ const AttendanceManager = (props) => {
         style={{ maxWidth: "500px", width: "100%", maxHeight: "500px" }}
       />
 
+      <button class="btn btn-lg btn-primary btn-block" disabled={!buttonVisibility}
+        onClick={() => {
+          setNewMemberData({});
+          setButtonVisibility(false);
+          // setstate({});
+          console.log("button clicked");
+          axios({
+            method: 'post',
+            url: "http://localhost:3000/validateuser",
+            data: {
+              emailAddress: newMemberData.emailAddress,
+            }
+          })
+          .then(res => {
+            console.log(res.data)
+          })
+        }}
+      >
+        Onayla
+      </button>
+
+
+      {/* <p>{data}</p> */}
+      <p>{newMemberData ? newMemberData.nameAndSurname : ""}</p>
+      <p>{newMemberData ? newMemberData.emailAddress : ""}</p>
+      <p>{newMemberData ? newMemberData.department : ""}</p>
+      <p>{newMemberData ? newMemberData.grade : ""}</p>
+      {/* <p>{data}</p>
       <p>{data}</p>
+      <p>{data}</p> */}
+
       {/* <button
         onClick={() => {
           setstate({});
@@ -242,6 +301,9 @@ const AttendanceManager = (props) => {
       >
         reset
       </button> */}
+
+
+
       {Object.entries(state).map(([key, val], i) => {
         return (
           <div key={i}>
