@@ -271,7 +271,7 @@ const AttendanceManager = (props) => {
           console.log("button clicked");
           axios({
             method: 'post',
-            url: "http://localhost:3000/validateuser",
+            url: process.env.REACT_APP_BACKEND_PAYMENT_URL,
             data: {
               emailAddress: newMemberData.emailAddress,
             }
