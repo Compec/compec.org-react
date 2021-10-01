@@ -10,7 +10,7 @@ import QrReader from "react-qr-reader";
 import { UseAuth } from "./authcontext.js";
 import axios from "axios";
 
-const AttendanceManager = (props) => {
+const QRValidation = (props) => {
 //   const [selectedSession, _setSelectedSession] = useState<Session | null>(null);
 //   const [sessions, setSessions] = useState<Session[]>([]);
 //   const selectedSessionRef = useRef(selectedSession);
@@ -51,6 +51,7 @@ const AttendanceManager = (props) => {
 //   };
   const [state, _setstate] = useState({});
   const [newMemberData, setNewMemberData] = useState({});
+  const [newMemberUID, setNewMemberUID] = useState("");
   const stateref = useRef(state);
   const setstate = (a) => {
     stateref.current = a;
@@ -191,23 +192,37 @@ const AttendanceManager = (props) => {
 
     setstate(c);
     console.log(text)
-    const coll = database.collection("users");
-    const q = coll.where("emailAddress", "==", text);
-    q.get()
-    .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            //console.log(doc.id, " => ", doc.data());
-            setNewMemberData(doc.data());
-            console.log(newMemberData);
-            setButtonVisibility(true);
+    const docRef = database.collection("users").doc(text);
+    docRef.get()
+    .then(doc => {
+      if (doc.exists) {
+        setNewMemberData(doc.data());
+        setNewMemberUID(doc.uid)
+        console.log(newMemberUID)
+        console.log(newMemberData);
+        setButtonVisibility(true);
+      } else {
+        console.log("No such document!");
+        //burayı doldur
+    }
+
+    })
+    // const q = coll.where("emailAddress", "==", text);
+    // q.get()
+    // .then((querySnapshot) => {
+    //     querySnapshot.forEach((doc) => {
+    //         // doc.data() is never undefined for query doc snapshots
+    //         //console.log(doc.id, " => ", doc.data());
+    //         setNewMemberData(doc.data());
+    //         console.log(newMemberData);
+    //         setButtonVisibility(true);
           
             
-        });
-    })
-    .catch((error) => {
-        console.log("Error getting documents: ", error);
-    });
+    //     });
+    // })
+    // .catch((error) => {
+    //     console.log("Error getting documents: ", error);
+    // });
 
 
 
@@ -269,11 +284,12 @@ const AttendanceManager = (props) => {
           setButtonVisibility(false);
           // setstate({});
           console.log("button clicked");
+          console.log(newMemberUID);
           axios({
             method: 'post',
             url: process.env.REACT_APP_BACKEND_PAYMENT_URL,
             data: {
-              emailAddress: newMemberData.emailAddress,
+              uid: newMemberUID,
             }
           })
           .then(res => {
@@ -316,4 +332,4 @@ const AttendanceManager = (props) => {
   );
 };
 
-export default AttendanceManager;
+export default QRValidation;
