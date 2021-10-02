@@ -1,6 +1,7 @@
 import React, {useContext, useState, useEffect} from 'react';
 import {auth, database} from './firebase';
 // import { collection, query, where } from "firebase";
+import axios from 'axios';
 const AuthContext = React.createContext();
 
 export function UseAuth(){
@@ -18,10 +19,19 @@ export function AuthProvider({children}){
 	useEffect(() => {
 		const unsubscribe = auth.onAuthStateChanged(async user => {
 			setCurrentUser(user);
-			if (user && user.emailVerified) {
+			if (user /*&& user.emailVerified */) { // burası sıkıntı
 				await database.collection("users").doc(user.uid).get()
 				.then((querySnapshot) => {
 					// console.log(querySnapshot.data());
+					axios({
+						method: 'post',
+						url: process.env.REACT_APP_USER_CONTROL_URL,
+						data: {
+							memberuid: user.uid
+						}
+					})
+					.then((res) => {
+						console.log("bbb", res.data.isPaid, res.data.isYonetim)
 						setUserData({
 							name: querySnapshot.data().nameAndSurname,
 							bolum: querySnapshot.data().department,
@@ -29,8 +39,14 @@ export function AuthProvider({children}){
 							bounEmail: querySnapshot.data().emailAddress,
 							personalEmail: querySnapshot.data().personalEmail,
 							telephone: querySnapshot.data().phoneNumber,
-							signupStep: querySnapshot.data().signupStep
+							signupStep: querySnapshot.data().signupStep,
+							isPaid: res.data.isPaid,
+							isYonetim: res.data.isYonetim
 						})
+					})
+					.catch(err => 
+						console.log(err)
+					)
 				})
 				// await database.ref("/members/" + user.uid).once("value").then((data) => {
 				// 	if(data.val().altkurullar){ 

@@ -1,9 +1,8 @@
-// If the user has not logged in yet, redirect to login page
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UseAuth, userData} from './Member/authcontext';
 
-function UnfregRoute({ component: Component, ...rest}){
+function YonetimRoute({ component: Component, ...rest}){
 
     const { currentUser, userData } = UseAuth();    
     // return(
@@ -22,30 +21,38 @@ function UnfregRoute({ component: Component, ...rest}){
     return(
         <Route 
         {...rest}
-        render={props => {
+        render={(props) => {
             if (currentUser) {
-                console.log(userData)
                 // if (userData) {
-                    if (!(userData && userData.signupStep === 5) ) { // burayı kontrol et
+                    if (userData && userData.isYonetim) {
                         return(<Component {...props} />)
                     } else {
-                        if (!userData.isPaid) {
+                        if (!(userData && userData.signupStep === 5) ) { // burayı kontrol et
                             return(
-                                <Redirect to="/member/unpaidreg"/>
+                                <Redirect to="/member/unfreg"/>
                             )
                         } else {
-                            if (!currentUser.emailVerified) {
+                            if (!userData.isPaid) {
                                 return(
-                                    <Redirect to="/member/unverifiedemailreg"/>
+                                    <Redirect to="/member/unpaidreg"/>
                                 )
                             } else {
-                                return(
-                                    <Redirect to="/member/profile"/>
-                                )
+                                if (!currentUser.emailVerified) {
+                                    return(
+                                        <Redirect to="/member/unverifiedemailreg"/>
+                                    )
+                                } else {
+                                    if (!userData.isYonetim) {
+                                        return(
+                                            <Redirect to="/member/profile"/>
+                                        )
+                                    } else {
+                                        return(<Component {...props} />)
+                                    }
+                                }
                             }
                         }
                     }
-
                     // if (!currentUser.emailVerified || !(userData && userData.signupStep === 5)){
                     //     return(
                     //         <Redirect to="/member/unfreg"/>
@@ -78,4 +85,4 @@ function UnfregRoute({ component: Component, ...rest}){
     )
 }
 
-export default UnfregRoute;
+export default YonetimRoute;

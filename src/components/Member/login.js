@@ -31,7 +31,20 @@ function Login() {
 
 		await login(bounEmail, password)
 		.then(() => {
-			history.push(/*"/member/home"*/ "/member/profile");
+			// let isVerified = userCredential.user.emailVerified;
+			// let userUID = userCredential.user.uid;
+			// axios({
+			// 	method: 'post',
+			// 	url: process.env.REACT_APP_BACKEND_PAYMENT_CONTROL_URL,
+			// 	data: {
+			// 	  memberuid: userUID
+			// 	}
+			// })
+			// .then(res => 
+			// 	res.data
+			// )
+			// .catch()
+			history.push(/*"/member/home"*/ "/member/profile"); // buraya bak
 		})
 		.catch((e) => {
 			setAlertVisibility(true);

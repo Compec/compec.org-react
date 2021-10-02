@@ -1,40 +1,40 @@
+// Unfinished Registration Route
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UseAuth } from './Member/authcontext';
 
-function QRRoute({ component: Component, ...rest}){
+function UnfRegRoute({ component: Component, ...rest}){
 
     const { currentUser, userData } = UseAuth();
-
     return(
         <Route 
         {...rest}
         render={props => {
             if (currentUser) {
                 // if (userData) {
-                    if (currentUser.emailVerified && (userData && userData.signupStep === 5)){
+                    if (!currentUser.emailVerified || !(userData && userData.signupStep === 5)){
                         return(
-                            <Redirect to="/member/unfreg"/>
+                            <Component {...props}/>
                         )
                     }
                     else {
                         return(
-                        <Component {...props} />
+                            <Redirect to="/member/profile"/>
                         )
                     }
                 // }
                 // else {
                 //     return(
-                //         <Redirect to="/member/login"/>
+                //         <Redirect to="/hakkimizda"/>
                 //     )
                 // }
-                // return (!!currentUser && currentUser.emailVerified && userData.signupStep === 5) ? 
+                // return (!!currentUser && currentUser.emailVerified && userData.signupStep != 5) ? 
                 // <Component {...props} /> : 
-                // <Redirect to="/member/login" />
+                // <Redirect to="/member/login"/>
             }
             else {
                 return(
-                    <Redirect to="/member/login" />
+                    <Redirect to="/member/login"/>
                 )
             }
         }}
@@ -44,4 +44,4 @@ function QRRoute({ component: Component, ...rest}){
     )
 }
 
-export default QRRoute;
+export default UnfRegRoute;

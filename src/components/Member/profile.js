@@ -117,6 +117,13 @@ function Profile(){
 							<div className="btn btn-primary" onClick={logoutHandler}>
 								Çıkış Yap
 							</div>
+							{userData.isYonetim ? (
+							<Link to="/member/qr">
+							<div className="btn btn-primary" >
+								QR OKUT
+							</div>
+							</Link>) : null}
+
 						</div>
 					</div>
 				</div>

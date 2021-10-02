@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UseAuth, userData} from './Member/authcontext';
 
-function UnfregRoute({ component: Component, ...rest}){
+function UnverifiedEmailRoute({ component: Component, ...rest}){
 
     const { currentUser, userData } = UseAuth();    
     // return(
@@ -24,10 +24,11 @@ function UnfregRoute({ component: Component, ...rest}){
         {...rest}
         render={props => {
             if (currentUser) {
-                console.log(userData)
                 // if (userData) {
                     if (!(userData && userData.signupStep === 5) ) { // burayı kontrol et
-                        return(<Component {...props} />)
+                        return(
+                            <Redirect to="/member/unfreg"/>
+                        )
                     } else {
                         if (!userData.isPaid) {
                             return(
@@ -35,9 +36,8 @@ function UnfregRoute({ component: Component, ...rest}){
                             )
                         } else {
                             if (!currentUser.emailVerified) {
-                                return(
-                                    <Redirect to="/member/unverifiedemailreg"/>
-                                )
+                                console.log("yeter")
+                                return(<Component {...props} />)
                             } else {
                                 return(
                                     <Redirect to="/member/profile"/>
@@ -78,4 +78,4 @@ function UnfregRoute({ component: Component, ...rest}){
     )
 }
 
-export default UnfregRoute;
+export default UnverifiedEmailRoute;

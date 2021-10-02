@@ -1,7 +1,7 @@
 // If the user has not logged in yet, redirect to login page
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { UseAuth } from './Member/authcontext';
+import { UseAuth, userData} from './Member/authcontext';
 
 function PrivateRoute({ component: Component, ...rest}){
 
@@ -24,17 +24,38 @@ function PrivateRoute({ component: Component, ...rest}){
         {...rest}
         render={props => {
             if (currentUser) {
+                console.log(userData)
                 // if (userData) {
-                    if (!currentUser.emailVerified || !(userData && userData.signupStep === 5)){
+                    if (!(userData && userData.signupStep === 5) ) { // burayı kontrol et
                         return(
                             <Redirect to="/member/unfreg"/>
                         )
+                    } else {
+                        if (!userData.isPaid) {
+                            return(
+                                <Redirect to="/member/unpaidreg"/>
+                            )
+                        } else {
+                            if (!currentUser.emailVerified) {
+                                return(
+                                    <Redirect to="/member/unverifiedemailreg"/>
+                                )
+                            } else {
+                                return(<Component {...props} />)
+                            }
+                        }
                     }
-                    else {
-                        return(
-                        <Component {...props} />
-                        )
-                    }
+
+                    // if (!currentUser.emailVerified || !(userData && userData.signupStep === 5)){
+                    //     return(
+                    //         <Redirect to="/member/unfreg"/>
+                    //     )
+                    // }
+                    // else {
+                    //     return(
+                    //     <Component {...props} />
+                    //     )
+                    // }
                 // }
                 // else {
                 //     return(

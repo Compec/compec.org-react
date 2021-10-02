@@ -41,7 +41,7 @@ const QRValidation = (props) => {
   const [data, setData] = React.useState("");
 
   const timeout = useRef(0);
-  const {database} = UseAuth();    
+  const {database, currentUser} = UseAuth();    
 
 //   type scanData = {
 //     counter: number;
@@ -197,9 +197,8 @@ const QRValidation = (props) => {
     .then(doc => {
       if (doc.exists) {
         setNewMemberData(doc.data());
-        setNewMemberUID(doc.uid)
-        console.log(newMemberUID)
-        console.log(newMemberData);
+        setNewMemberUID(doc.id)
+        console.log("doc.uid", doc.id)
         setButtonVisibility(true);
       } else {
         console.log("No such document!");
@@ -284,12 +283,13 @@ const QRValidation = (props) => {
           setButtonVisibility(false);
           // setstate({});
           console.log("button clicked");
-          console.log(newMemberUID);
+          console.log("newmember", newMemberUID);
           axios({
             method: 'post',
             url: process.env.REACT_APP_BACKEND_PAYMENT_URL,
             data: {
-              uid: newMemberUID,
+              memberuid: newMemberUID,
+              yonetimuid: currentUser.uid
             }
           })
           .then(res => {

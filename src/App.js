@@ -30,7 +30,12 @@ import { AuthProvider } from "./components/Member/authcontext";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
 import UnfRegRoute from "./components/UnfRegRoute";
+import UnpaidRoute from "./components/UnpaidRoute";
+import UnverifiedEmailRoute from "./components/UnverifiedEmailRoute";
 import UnfReg from "./components/Member/unfreg";
+import UnpaidReg from "./components/Member/unpaidreg";
+import UnverifiedEmailReg from "./components/Member/unverifiedemailreg";
+import YonetimRoute from "./components/YonetimRoute";
 import NotFound from "./components/NotFound";
 import QRValidation from "./components/Member/qrreader";
 
@@ -64,7 +69,9 @@ function App() {
 								<PrivateRoute path="/member/profile" exact component={Profile} />
 								<UnfRegRoute path="/member/unfreg" exact component={UnfReg} />
 								{/* <PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} /> */}
-								<PrivateRoute path="/member/qr" exact component={QRValidation}/>
+								<YonetimRoute path="/member/qr" exact component={QRValidation}/>
+								<UnpaidRoute path="/member/unpaidreg" exact component={UnpaidReg}/>
+								<UnverifiedEmailRoute path="/member/unverifiedemailreg" exact component={UnverifiedEmailReg}/>
 								<Route component={NotFound}/>
 							</Switch>
 					</div>
