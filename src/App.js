@@ -38,6 +38,7 @@ import UnverifiedEmailReg from "./components/Member/unverifiedemailreg";
 import YonetimRoute from "./components/YonetimRoute";
 import NotFound from "./components/NotFound";
 import QRValidation from "./components/Member/qrreader";
+import KVKK from "./components/kvkk/kvkk";
 
 function App() {
 	return (
@@ -62,6 +63,7 @@ function App() {
 								<Route path="/altkurullar" component={Altkurullar}/>
 								<Route path="/blog/:route" render={props => <BlogPage {...props}/> } />
 								<Route path="/blog" exact component={Blog}/>
+                                <Route path="/kvkk" exact component={KVKK}/>
 								<PublicRoute path="/member/login" component={Login}/>
 								<PublicRoute path="/member/register" exact component={Register}/>
 								{/* <PublicRoute path="/member/signup" exact component={SignUp}/>

@@ -189,6 +189,12 @@ function Register() {
 
 				<ReCAPTCHA ref={recaptchaRef} sitekey="6LeHPtQZAAAAAIMIQUeifB4lUgiovjaXsTBGFmzx" onChange={captchaFunc}/><br/>
 
+				<p>
+					Aşağıdaki butona tıklayarak yukarıda sağlamış olduğunuz bilgilerin Compec 
+					tarafından <a href="/kvkk" target="_blank">KVKK Aydınlatma Metni</a>'ne uygun olarak işlenmesini kabul ettiğinizi 
+					beyan etmiş olursunuz.
+				</p>
+
 				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydol</button>
 
 				{alertVisibility && <div id="alert" className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
