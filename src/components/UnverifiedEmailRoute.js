@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UseAuth, userData} from './Member/authcontext';
 
-function PrivateRoute({ component: Component, ...rest}){
+function UnverifiedEmailRoute({ component: Component, ...rest}){
 
     const { currentUser, userData } = UseAuth();    
     // return(
@@ -36,11 +36,11 @@ function PrivateRoute({ component: Component, ...rest}){
                             )
                         } else {
                             if (!currentUser.emailVerified) {
-                                return(
-                                    <Redirect to="/member/unverifiedemailreg"/>
-                                )
-                            } else {
                                 return(<Component {...props} />)
+                            } else {
+                                return(
+                                    <Redirect to="/member/profile"/>
+                                )
                             }
                         }
                     }
@@ -77,4 +77,4 @@ function PrivateRoute({ component: Component, ...rest}){
     )
 }
 
-export default PrivateRoute;
+export default UnverifiedEmailRoute;
