@@ -12,7 +12,7 @@ function PublicRoute({ component: Component, ...rest}){
         render={props => {
             if (currentUser) {
                 // if (userData) {
-                    if (!currentUser.emailVerified || !(userData && userData.signupStep === 6)){
+                    if (!currentUser.emailVerified || !(userData && userData.signupStep >= 4)){
                         return(
                             <Redirect to="/member/unfreg"/>
                         )

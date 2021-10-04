@@ -27,7 +27,7 @@ function YonetimRoute({ component: Component, ...rest}){
                     if (userData && userData.isYonetim) {
                         return(<Component {...props} />)
                     } else {
-                        if (!(userData && userData.signupStep === 6) ) { // burayı kontrol et
+                        if (!(userData && userData.signupStep >= 4) ) { // burayı kontrol et
                             return(
                                 <Redirect to="/member/unfreg"/>
                             )
