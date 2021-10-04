@@ -13,11 +13,11 @@ function Profile(){
 
 	// console.log(userData);
 
-	useEffect(() => {
+    useEffect(() => {
         //generateQrCode(currentUser.uid);
         (async () => {
             try {
-                const response = await QRCode.toDataURL(currentUser.uid);
+                const response = await QRCode.toDataURL("https://compec.org/user/" + currentUser.uid);
 
                 setImageUrl(response);
             } catch (error) {
