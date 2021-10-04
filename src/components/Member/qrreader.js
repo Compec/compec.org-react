@@ -9,6 +9,7 @@ import { cloneDeep } from "lodash";
 import QrReader from "react-qr-reader";
 import { UseAuth } from "./authcontext.js";
 import axios from "axios";
+import { auth } from "firebase";
 
 const QRValidation = (props) => {
     //   const [selectedSession, _setSelectedSession] = useState<Session | null>(null);
@@ -73,19 +74,24 @@ const QRValidation = (props) => {
     const [msg, setMsg] = useState("");
     const [success, setSuccess] = useState();
 
-    const onClickHandler = () => {
+    const onClickHandler = async () => {
         setPreviousMemberName(newMemberData.nameAndSurname);
         setNewMemberData({});
         setButtonVisibility(false);
         // setstate({});
         //console.log("button clicked");
         //console.log("newmember", newMemberUID);
+        let idToken = await auth().currentUser.getIdToken();
+
         axios({
             method: 'post',
             url: process.env.REACT_APP_BACKEND_PAYMENT_URL,
             data: {
-                memberuid: newMemberUID,
-                yonetimuid: currentUser.uid
+                memberuid: newMemberUID
+                //yonetimuid: currentUser.uid
+            },
+            headers: {
+                authorization: "Bearer " + idToken
             }
         })    
         .then(res => {
@@ -227,7 +233,9 @@ const QRValidation = (props) => {
 
         setstate(c);
         //console.log(text)
-        const docRef = database.collection("users").doc(text);
+        const uid = text.match(/^https:\/\/compec.org\/user\/(.*)$/)?.[1]
+        if (!uid) return alert("Compec'e ait QR kod kullanın.")
+        const docRef = database.collection("users").doc(uid);
         docRef.get()
             .then(doc => {
                 if (doc.exists) {
