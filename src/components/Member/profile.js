@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { UseAuth } from './authcontext';
 import { Spinner } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import QRCode from 'qrcode';
 
 function Profile(){
 
-	const { userData, logout } = UseAuth();
+	const { currentUser, userData, logout } = UseAuth();
+	const [imageUrl, setImageUrl] = useState('');
 	const history = useHistory();
 
-	console.log(userData);
+	// console.log(userData);
+
+	useEffect(() => {
+        //generateQrCode(currentUser.uid);
+        (async () => {
+            try {
+                const response = await QRCode.toDataURL(currentUser.uid);
+
+                setImageUrl(response);
+            } catch (error) {
+                console.log(error);
+            }
+        })()
+    }, [])
 
 	function logoutHandler(){
 		logout()
@@ -32,9 +47,9 @@ function Profile(){
 				<div>
 					<div className="row d-flex justify-content-center">
 						<div class="col-9">
-							<Link to="/member/home" className="text-reset">
+							{/* <Link to="/member/home" className="text-reset">
 								<div className="btn btn-primary">Ana sayfaya geri dön</div>
-							</Link>
+							</Link> */}
 							<div class="card mb-3 mt-3">
 								<div class="card-body">
 									<div class="row">
@@ -47,7 +62,7 @@ function Profile(){
 											<h6 class="mb-0">Ad Soyad</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
-											{userData.name + " " + userData.surname}
+											{userData.name /*+ " " + userData.surname*/}
 										</div>
 									</div>
 									<hr />
@@ -98,12 +113,23 @@ function Profile(){
 									<hr/>
 									<div class="row">
 										<div class="col-sm-4">
+											<h6 class="mb-0">QR Kodunuz</h6>
+										</div>
+										<div class="col-sm-8 text-secondary">
+										{imageUrl ? (
+											<a href={imageUrl} download>
+												<img src={imageUrl} alt="img" />
+											</a>) : null}
+										</div>
+									</div>
+									{/* <div class="row">
+										<div class="col-sm-4">
 											<h6 class="mb-0">Kayıtlı Olduğum Alt Kurul ve Eğitimler</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
 											{userData.altkurullar}
 										</div>
-									</div>
+									</div> */}
 									<hr/>
 									<div class="row">
 										<div class="col">
@@ -117,6 +143,13 @@ function Profile(){
 							<div className="btn btn-primary" onClick={logoutHandler}>
 								Çıkış Yap
 							</div>
+							{userData.isYonetim ? (
+							<Link to="/member/qr">
+							<div className="btn btn-primary" >
+								QR OKUT
+							</div>
+							</Link>) : null}
+
 						</div>
 					</div>
 				</div>

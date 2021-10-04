@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UseAuth, userData} from './Member/authcontext';
 
-function PrivateRoute({ component: Component, ...rest}){
+function UnpaidRoute({ component: Component, ...rest}){
 
     const { currentUser, userData } = UseAuth();    
     // return(
@@ -31,16 +31,17 @@ function PrivateRoute({ component: Component, ...rest}){
                         )
                     } else {
                         if (!userData.isPaid) {
-                            return(
-                                <Redirect to="/member/unpaidreg"/>
-                            )
+
+                            return(<Component {...props} />)
                         } else {
                             if (!currentUser.emailVerified) {
                                 return(
                                     <Redirect to="/member/unverifiedemailreg"/>
                                 )
                             } else {
-                                return(<Component {...props} />)
+                                return(
+                                    <Redirect to="/member/profile"/>
+                                )
                             }
                         }
                     }
@@ -77,4 +78,4 @@ function PrivateRoute({ component: Component, ...rest}){
     )
 }
 
-export default PrivateRoute;
+export default UnpaidRoute;

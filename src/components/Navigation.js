@@ -92,7 +92,8 @@ function Navigation() {
 						<Nav.Link>İletişim</Nav.Link>
 					</LinkContainer>
 					{currentUser ?
-						<LinkContainer to="/member/home">
+						// <LinkContainer to="/member/home">
+						<LinkContainer to="/member/profile">
 							<Button variant="outline-primary">Üye Sistemi</Button>
 						</LinkContainer>
 					:

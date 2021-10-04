@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { UseAuth, userData} from './Member/authcontext';
 
-function PrivateRoute({ component: Component, ...rest}){
+function UnfregRoute({ component: Component, ...rest}){
 
     const { currentUser, userData } = UseAuth();    
     // return(
@@ -26,9 +26,7 @@ function PrivateRoute({ component: Component, ...rest}){
             if (currentUser) {
                 // if (userData) {
                     if (!(userData && userData.signupStep >= 4) ) { // burayı kontrol et
-                        return(
-                            <Redirect to="/member/unfreg"/>
-                        )
+                        return(<Component {...props} />)
                     } else {
                         if (!userData.isPaid) {
                             return(
@@ -40,7 +38,9 @@ function PrivateRoute({ component: Component, ...rest}){
                                     <Redirect to="/member/unverifiedemailreg"/>
                                 )
                             } else {
-                                return(<Component {...props} />)
+                                return(
+                                    <Redirect to="/member/profile"/>
+                                )
                             }
                         }
                     }
@@ -77,4 +77,4 @@ function PrivateRoute({ component: Component, ...rest}){
     )
 }
 
-export default PrivateRoute;
+export default UnfregRoute;

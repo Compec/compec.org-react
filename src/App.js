@@ -29,8 +29,18 @@ import AltKurulAnket from "./components/Member/altkurul"
 import { AuthProvider } from "./components/Member/authcontext";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
-import NotFound from "./components/NotFound"
 import NoRegister from "./components/Member/noregister";
+import UnfRegRoute from "./components/UnfRegRoute";
+import UnpaidRoute from "./components/UnpaidRoute";
+import UnverifiedEmailRoute from "./components/UnverifiedEmailRoute";
+import UnfReg from "./components/Member/unfreg";
+import UnpaidReg from "./components/Member/unpaidreg";
+import UnverifiedEmailReg from "./components/Member/unverifiedemailreg";
+import YonetimRoute from "./components/YonetimRoute";
+import NotFound from "./components/NotFound";
+import QRValidation from "./components/Member/qrreader";
+import KVKK from "./components/kvkk/kvkk";
+import PasswordReset from "./components/Member/passwordreset";
 
 function App() {
 	return (
@@ -55,12 +65,18 @@ function App() {
 								<Route path="/altkurullar" component={Altkurullar}/>
 								<Route path="/blog/:route" render={props => <BlogPage {...props}/> } />
 								<Route path="/blog" exact component={Blog}/>
+                                <Route path="/kvkk" exact component={KVKK}/>
 								<PublicRoute path="/member/login" component={Login}/>
-								<PublicRoute path="/member/register" exact component={NoRegister}/>
-								<PublicRoute path="/member/signup" exact component={SignUp}/>
-								<PrivateRoute path="/member/home" exact component={MemberHome} />
+								<PublicRoute path="/member/register" exact component={Register}/>
+								{/* <PublicRoute path="/member/signup" exact component={SignUp}/>
+								<PrivateRoute path="/member/home" exact component={MemberHome} /> */}
 								<PrivateRoute path="/member/profile" exact component={Profile} />
-								<PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} />
+								<UnfRegRoute path="/member/unfreg" exact component={UnfReg} />
+								{/* <PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} /> */}
+								<YonetimRoute path="/member/qr" exact component={QRValidation}/>
+								<UnpaidRoute path="/member/unpaidreg" exact component={UnpaidReg}/>
+								<UnverifiedEmailRoute path="/member/unverifiedemailreg" exact component={UnverifiedEmailReg}/>
+								<Route path="/member/passwordreset" exact component={PasswordReset} />
 								<Route component={NotFound}/>
 							</Switch>
 					</div>
