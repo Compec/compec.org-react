@@ -11,7 +11,7 @@ import BBO from "./components/events/bbo"
 import Datacamp from "./components/events/datacamp"
 import Efounder from "./components/events/efounder"
 import Hackathon from "./components/events/hackathon"
-import Playit from "./components/events/playit"
+import GameJam from "./components/events/gamejam"
 import Techsummit from "./components/events/techsummit"
 import Teknodolu from "./components/events/teknodolu"
 import Blog from "./components/Blog/blog"
@@ -29,6 +29,7 @@ import AltKurulAnket from "./components/Member/altkurul"
 import { AuthProvider } from "./components/Member/authcontext";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
+import NoRegister from "./components/Member/noregister";
 import UnfRegRoute from "./components/UnfRegRoute";
 import UnpaidRoute from "./components/UnpaidRoute";
 import UnverifiedEmailRoute from "./components/UnverifiedEmailRoute";
@@ -55,7 +56,7 @@ function App() {
 								<Route path="/datacamp" component={Datacamp}/>
 								<Route path="/efounder" component={Efounder}/>
 								<Route path="/hackathon" component={Hackathon}/>
-								<Route path="/playit" component={Playit}/>
+								<Route path="/gamejam" component={GameJam}/>
 								<Route path="/techsummit" component={Techsummit}/>
 								<Route path="/teknodolu" component={Teknodolu}/>
 								<Route path="/iletisim" component={Iletisim}/>
