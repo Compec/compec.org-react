@@ -39,6 +39,7 @@ import YonetimRoute from "./components/YonetimRoute";
 import NotFound from "./components/NotFound";
 import QRValidation from "./components/Member/qrreader";
 import KVKK from "./components/kvkk/kvkk";
+import PasswordReset from "./components/Member/passwordreset";
 
 function App() {
 	return (
@@ -74,6 +75,7 @@ function App() {
 								<YonetimRoute path="/member/qr" exact component={QRValidation}/>
 								<UnpaidRoute path="/member/unpaidreg" exact component={UnpaidReg}/>
 								<UnverifiedEmailRoute path="/member/unverifiedemailreg" exact component={UnverifiedEmailReg}/>
+								<Route path="/member/passwordreset" exact component={PasswordReset} />
 								<Route component={NotFound}/>
 							</Switch>
 					</div>

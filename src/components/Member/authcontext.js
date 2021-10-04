@@ -135,8 +135,12 @@ export function AuthProvider({children}){
 		return auth.signOut();
 	}
 
+	function passwordReset (email) {
+		return auth.sendPasswordResetEmail(email);
+	} 
+
 	// const value = { currentUser, userData, login, logout, announcements, meetings, events, database };
-	const value = { currentUser, userData, login, logout, database};
+	const value = { currentUser, userData, login, logout, database, passwordReset};
 
 	return(
 		<AuthContext.Provider value={value}>

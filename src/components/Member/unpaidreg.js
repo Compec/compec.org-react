@@ -50,8 +50,8 @@ function UnpaidReg() {
                     content="Boğaziçi Üniversitesi Bilişim Kulübü'ne kayıt adımlarınız yarım kalmış."
                 />
             </Helmet>
-            <h1>Compec'e kaydınız henüz tamamlanmamıştır. <a href="https://roundcube.boun.edu.tr" target="_blank">Roundcube</a> mail kutunuzu kontrol ediniz.</h1>
-            <h3>Kayıt formunu doldurduğunuzda size gelmiş olan "" başlıklı e-mail'de yer alan linke tıklayarak e-mail adresinizi doğrulayabilirsiniz.</h3>
+            <h1>Compec'e kaydınız henüz tamamlanmamıştır.</h1>
+            <h3>Kulüp harcınızı ödedikten sonra aşağıdaki QR kodunuzu yönetim ekibinden bir görevliye gösteriniz.</h3>
             <h4>Kaydınızı tamamlamak için tekrar form doldurmanıza gerek yoktur.</h4>
             {imageUrl ? (
                 <a href={imageUrl} download>

@@ -86,7 +86,10 @@ function Login() {
 				</div> */}
 
 				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Giriş Yap</button>
-
+				<br/>
+				<p>
+					Şifrenizi unuttuysanız <Link to="/member/passwordreset">buraya</Link> tıklayınız.
+				</p>
 				
 			</form>
 		</div>

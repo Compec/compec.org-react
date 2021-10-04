@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { UseAuth } from './authcontext';
 import { Spinner } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import QRCode from 'qrcode';
 
 function Profile(){
 
-	const { userData, logout } = UseAuth();
+	const { currentUser, userData, logout } = UseAuth();
+	const [imageUrl, setImageUrl] = useState('');
 	const history = useHistory();
 
 	// console.log(userData);
+
+	useEffect(() => {
+        //generateQrCode(currentUser.uid);
+        (async () => {
+            try {
+                const response = await QRCode.toDataURL(currentUser.uid);
+
+                setImageUrl(response);
+            } catch (error) {
+                console.log(error);
+            }
+        })()
+    }, [])
 
 	function logoutHandler(){
 		logout()
@@ -96,6 +111,17 @@ function Profile(){
 										</div>
 									</div>
 									<hr/>
+									<div class="row">
+										<div class="col-sm-4">
+											<h6 class="mb-0">QR Kodunuz</h6>
+										</div>
+										<div class="col-sm-8 text-secondary">
+										{imageUrl ? (
+											<a href={imageUrl} download>
+												<img src={imageUrl} alt="img" />
+											</a>) : null}
+										</div>
+									</div>
 									{/* <div class="row">
 										<div class="col-sm-4">
 											<h6 class="mb-0">Kayıtlı Olduğum Alt Kurul ve Eğitimler</h6>
