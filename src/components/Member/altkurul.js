@@ -11,7 +11,6 @@ function AltKurulAnket() {
 	const [success, setSuccess] = useState();
 
 	function onClickHandler() {
-		console.log(currentUser);
 		let inputElements = document.getElementsByClassName("checkBox");
 		let result = [];
 
@@ -34,7 +33,6 @@ function AltKurulAnket() {
 			result.forEach(item => {
 				objectToPush[item] = true;
 			})
-			console.log(objectToPush);
 	
 			database.ref("members/" + currentUser.uid).child("altkurullar").update(objectToPush)
 			.then(() => {

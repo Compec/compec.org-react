@@ -89,7 +89,6 @@ const QRValidation = (props) => {
             }
         })    
         .then(res => {
-            console.log(res.data)
             //console.log("prev", previousMemberName)
             if (res.data.success) {
                 setAlertVisibility(true);

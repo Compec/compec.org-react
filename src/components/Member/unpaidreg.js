@@ -5,7 +5,6 @@ import QRCode from 'qrcode';
 import { useHistory } from 'react-router-dom';
 
 function UnpaidReg() {
-    console.log(QRCode)
     const { logout, currentUser } = UseAuth();
     const [imageUrl, setImageUrl] = useState('');
     const history = useHistory();

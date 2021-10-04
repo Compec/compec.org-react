@@ -25,7 +25,7 @@ function UnverifiedEmailRoute({ component: Component, ...rest}){
         render={props => {
             if (currentUser) {
                 // if (userData) {
-                    if (!(userData && userData.signupStep === 5) ) { // burayı kontrol et
+                    if (!(userData && userData.signupStep === 6) ) { // burayı kontrol et
                         return(
                             <Redirect to="/member/unfreg"/>
                         )
@@ -36,7 +36,6 @@ function UnverifiedEmailRoute({ component: Component, ...rest}){
                             )
                         } else {
                             if (!currentUser.emailVerified) {
-                                console.log("yeter")
                                 return(<Component {...props} />)
                             } else {
                                 return(

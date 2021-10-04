@@ -198,10 +198,10 @@ function Register() {
 				<button class="btn btn-lg btn-primary btn-block" type="submit" disabled={hideButton}>Kaydol</button>
 
 				{alertVisibility && <div id="alert" className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
-				<p>
+				{/* <p>
 					<b>Formu doldurduktan sonra kaydınızı doğrulamak için Boğaziçi (Roundcube) mail kutunuzu kontrol ediniz.</b><br/>
 					Roundcube'e ulaşmak için <a href="https://roundcube.boun.edu.tr/" target="_blank">buraya</a> tıklayabilirsiniz.
-				</p>
+				</p> */}
 			</form>
 		</div>
 	);

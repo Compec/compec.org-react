@@ -23,7 +23,6 @@ export function AuthProvider({children}){
 				await database.collection("users").doc(user.uid).get()
 				.then((querySnapshot) => {
 					// console.log(querySnapshot.data());
-					console.log(process.env.REACT_APP_USER_CONTROL_URL)
 					axios({
 						method: 'post',
 						url: process.env.REACT_APP_USER_CONTROL_URL,
@@ -32,7 +31,6 @@ export function AuthProvider({children}){
 						}
 					})
 					.then((res) => {
-						console.log("bbb", res.data.isPaid, res.data.isYonetim)
 						setUserData({
 							name: querySnapshot.data().nameAndSurname,
 							bolum: querySnapshot.data().department,

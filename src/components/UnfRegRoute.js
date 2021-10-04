@@ -24,9 +24,8 @@ function UnfregRoute({ component: Component, ...rest}){
         {...rest}
         render={props => {
             if (currentUser) {
-                console.log(userData)
                 // if (userData) {
-                    if (!(userData && userData.signupStep === 5) ) { // burayı kontrol et
+                    if (!(userData && userData.signupStep === 6) ) { // burayı kontrol et
                         return(<Component {...props} />)
                     } else {
                         if (!userData.isPaid) {
