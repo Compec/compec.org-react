@@ -269,7 +269,7 @@ const QRValidation = (props) => {
     };
 
     return (
-        <div className="container">
+        <div className="container" style={{textAlign: "center"}}>
             {/* <div>
         <span>currrent session: </span>
         <span>{selectedSession?.title || selectedSession?.id}</span>
@@ -322,7 +322,7 @@ const QRValidation = (props) => {
         <br/>
         {alertVisibility && <div id="alert" className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
         <div style={{display: "flex", justifyContent: "center"}}>
-            <button class="btn btn-lg btn-primary" disabled={!buttonVisibility} onClick={onClickHandler}>
+            <button class="btn btn-lg btn-success" disabled={!buttonVisibility} onClick={onClickHandler}>
                 Onayla
             </button>
         </div>

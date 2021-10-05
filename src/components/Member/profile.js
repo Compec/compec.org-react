@@ -134,18 +134,18 @@ function Profile(){
 									<div class="row">
 										<div class="col">
 											<p className="mb-0">
-												Bilgilerinizde bir hata varsa veya şifrenizi değiştirmek isterseniz lütfen bize ulaşın.
+												Bilgilerinizde bir hata varsa lütfen bize ulaşın.
 											</p>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className="btn btn-primary" onClick={logoutHandler}>
+							<div className="btn btn-primary" onClick={logoutHandler} style={{margin:"5px"}}>
 								Çıkış Yap
 							</div>
 							{userData.isYonetim ? (
 							<Link to="/member/qr">
-							<div className="btn btn-primary" >
+							<div className="btn btn-info" style={{margin:"5px"}}>
 								QR OKUT
 							</div>
 							</Link>) : null}
