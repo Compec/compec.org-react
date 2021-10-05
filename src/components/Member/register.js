@@ -3,6 +3,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { UseAuth } from './authcontext';
+import { useHistory } from 'react-router-dom';
 
 function Register() {
 
@@ -13,6 +15,8 @@ function Register() {
 	const [msg, setMsg] = useState("");
 	const [hideButton, setHideButton] = useState();
 	const [alertVisibility, setAlertVisibility] = useState();
+	const { login } = UseAuth();
+	const history = useHistory();
 
 	const captchaFunc = (value) => {
 		setCaptcha(value);
@@ -70,6 +74,11 @@ function Register() {
 						setHideButton(false);
 					}
 					document.getElementById("alert").scrollIntoView({behavior: "smooth"});
+					login(bounEmail, password);
+					setTimeout(() => {
+						history.push("/member/unpaidreg");
+					}, 5000)
+					
 				})
 				.catch(e => {
 					setAlertVisibility(true);

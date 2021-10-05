@@ -69,7 +69,11 @@ function Login() {
 					Compec'e üye olmak için önce <Link to="/member/register">Kaydol</Link> sayfasına, sonra <Link to="/member/signup">Doğrulama</Link> sayfasına gidiniz.
 				</p> */}
 				<p>
-					Compec'e üye olmak için lütfen <Link to="/member/register">Kaydol</Link> sayfasına gidiniz.
+					Compec'e üye olmak için lütfen
+				</p>
+					<h3><Link to="/member/register">KAYDOL</Link></h3>
+				<p>
+					sayfasına gidiniz.
 				</p>
 				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{msg}</div>}
 

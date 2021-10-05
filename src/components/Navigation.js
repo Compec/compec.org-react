@@ -98,7 +98,7 @@ function Navigation() {
 						</LinkContainer>
 					:
 					<LinkContainer to="/member/login">
-						<Button variant="outline-primary">Giriş Yap</Button>
+						<Button variant="outline-primary">Kayıt / Giriş</Button>
 					</LinkContainer>}
 				</Nav>
 				</Navbar.Collapse>
