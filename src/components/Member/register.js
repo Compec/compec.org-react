@@ -98,7 +98,7 @@ function Register() {
 				</p>
 				
 				<label for="name" class="sr-only">İsminiz</label>
-				<input type="text" id="name" name="name" class="form-control" placeholder="İsminiz" required="true" autofocus="" /><br/>
+				<input type="text" id="name" name="name" class="form-control" placeholder="İsminiz - Soyisminiz" required="true" autofocus="" /><br/>
 
 				{/* <label for="surname" class="sr-only">Soyisminiz</label>
 				<input type="text" id="surname" name="surname" class="form-control" placeholder="Soyisminiz" required="true" autofocus="" /><br/> */}
