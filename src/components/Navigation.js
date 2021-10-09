@@ -70,8 +70,8 @@ function Navigation() {
 							<NavDropdown.Item>GameJam</NavDropdown.Item>
 						</LinkContainer>
 
-						<LinkContainer to="/efounder">
-							<NavDropdown.Item>e-Founder</NavDropdown.Item>
+						<LinkContainer to="/digitalized">
+							<NavDropdown.Item>Digitalized</NavDropdown.Item>
 						</LinkContainer>
 
 						<LinkContainer to="/teknodolu">

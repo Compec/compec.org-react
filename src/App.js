@@ -9,7 +9,7 @@ import Home from "./components/Home/Home"
 import Galeri from "./components/Galeri/Galeri"
 import BBO from "./components/events/bbo"
 import Datacamp from "./components/events/datacamp"
-import Efounder from "./components/events/efounder"
+import Digitalized from "./components/events/digitalized"
 import Hackathon from "./components/events/hackathon"
 import GameJam from "./components/events/gamejam"
 import Techsummit from "./components/events/techsummit"
@@ -54,7 +54,7 @@ function App() {
 								<Route path="/galeri" component={Galeri}/>
 								<Route path="/bbo" component={BBO}/>
 								<Route path="/datacamp" component={Datacamp}/>
-								<Route path="/efounder" component={Efounder}/>
+								<Route path="/digitalized" component={Digitalized}/>
 								<Route path="/hackathon" component={Hackathon}/>
 								<Route path="/gamejam" component={GameJam}/>
 								<Route path="/techsummit" component={Techsummit}/>
