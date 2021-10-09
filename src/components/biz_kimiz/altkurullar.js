@@ -60,7 +60,7 @@ function Altkurullar() {
 					<Accordion.Collapse eventKey="2">
 						<Container>
 							<Card.Body>
-								Dijital Girişimcilik alt kurulunu kulüpte girişimcilik ile ilgilenenlerin bir araya geldiği alt kuruldur. Sene içinde bu yıl 5. defa düzenlenecek olan E-Founder Dijital Girişimcilik Zirvesi ve Yarışmasını çıkarılmasından sorumludur. Alt kurulun amacı, üyelerin her hafta girişimciliğin farklı yönleri hakkında bilgi sahibi olmasını sağlayıp yılın en sonunda kendi girişiminini çıkarabilecek bilgiye ve özgüvene eriştirmektir.
+								Dijital Girişimcilik alt kurulunu kulüpte girişimcilik ile ilgilenenlerin bir araya geldiği alt kuruldur. Sene içinde bu yıl ilki düzenlenecek olan Digitalized Dijital Girişimcilik Zirvesi ve Yarışmasını çıkarılmasından sorumludur. Alt kurulun amacı, üyelerin her hafta girişimciliğin farklı yönleri hakkında bilgi sahibi olmasını sağlayıp yılın en sonunda kendi girişiminini çıkarabilecek bilgiye ve özgüvene eriştirmektir.
 							</Card.Body>
 						</Container>
 					</Accordion.Collapse>
