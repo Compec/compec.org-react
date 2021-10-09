@@ -51,7 +51,14 @@ function UnpaidReg() {
             </Helmet>
             <h1>Compec'e kaydınız henüz tamamlanmamıştır.</h1>
             <h3>Kulüp harcınızı ödedikten sonra aşağıdaki QR kodunuzu yönetim ekibinden bir görevliye gösteriniz.</h3>
-            <h4>Kaydınızı tamamlamak için tekrar form doldurmanıza gerek yoktur.</h4>
+            
+            <h4>
+                Eğer online kayıt olmak istiyorsanız 25 TL olan harcınızı aşağıdaki <span style={{color:'red', fontWeight:'bold'}}>IBAN adresine, açıklama kısmına BOUN uzantılı mail adresinizi</span> yazarak gönderiniz.<br/><br/>
+                TR09 0011 1000 0000 0101 7889 45    - Enpara  <br/>
+                Merve Nur Hündür
+            </h4>
+            <br/>
+            <h5>Kaydınızı tamamlamak için tekrar form doldurmanıza gerek yoktur.</h5>
             {imageUrl ? (
                 <a href={imageUrl} download>
                     <img src={imageUrl} alt="img" />

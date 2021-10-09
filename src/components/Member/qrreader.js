@@ -75,7 +75,7 @@ const QRValidation = (props) => {
     const [success, setSuccess] = useState();
 
     const onClickHandler = async () => {
-        setPreviousMemberName(newMemberData.nameAndSurname);
+        const name = newMemberData.nameAndSurname
         setNewMemberData({});
         setButtonVisibility(false);
         // setstate({});
@@ -98,7 +98,8 @@ const QRValidation = (props) => {
             //console.log("prev", previousMemberName)
             if (res.data.success) {
                 setAlertVisibility(true);
-                setMsg("" + previousMemberName + " has been verified")
+                setMsg("" + name + " has been verified")
+                console.assert(name === newMemberData.nameAndSurname, "Efe Doğru")
                 setSuccess(res.data.success)
             } else {
                 setAlertVisibility(true);

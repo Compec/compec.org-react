@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { UseAuth } from './authcontext';
+import { useHistory } from 'react-router-dom';
+import MaskedInput from 'react-text-mask';
 
 function Register() {
 
@@ -13,6 +16,8 @@ function Register() {
 	const [msg, setMsg] = useState("");
 	const [hideButton, setHideButton] = useState();
 	const [alertVisibility, setAlertVisibility] = useState();
+	const { login } = UseAuth();
+	const history = useHistory();
 
 	const captchaFunc = (value) => {
 		setCaptcha(value);
@@ -26,20 +31,20 @@ function Register() {
 		const sinif = document.querySelector("#sinif").value;
 		const bounEmail = document.querySelector("#bounEmail").value.trim().replace(/&nbsp;/g, '');
 		const personalEmail = document.querySelector("#personalEmail").value.trim().replace(/&nbsp;/g, '');
-		const telephone = document.querySelector("#telephone").value.trim().replace(/&nbsp;/g, '');
+		const telephone = document.querySelector("#telephone").value.trim().replace(/&nbsp;/g, '').replace(/\D/g,'');
 		const password = document.querySelector("#password").value.trim().replace(/&nbsp;/g, '');
 		const password2 = document.querySelector("#password2").value.trim().replace(/&nbsp;/g, '');
 		const recaptchaAlt = document.querySelector(".g-recaptcha-response").value;
 		setHideButton(true);
 
 		var re = new RegExp(/^(?:(?=.*?[A-Z])(?:(?=.*?[0-9])(?=.*?[-!@#$%^&*()_[\]{},.<>+=])|(?=.*?[a-z])(?:(?=.*?[0-9])|(?=.*?[-!@#$%^&*()_[\]{},.<>+=])))|(?=.*?[a-z])(?=.*?[0-9])(?=.*?[-!@#$%^&*()_[\]{},.<>+=]))[A-Za-z0-9!@#$%^&*()_[\]{},.<>+=-]{6,50}/);
-		if(password !== password2){
+		if (password !== password2) {
 			setAlertVisibility(true);
 			setSuccess(false);
 			setMsg("Girdiğiniz şifreler birbirinden farklı. Lütfen tekrar deneyiniz.");
 			setHideButton(false);
 		} else {
-			if(!re.test(password)){
+			if (!re.test(password)) {
 				setAlertVisibility(true);
 				setSuccess(false);
 				setMsg("Girdiğiniz şifre şartları sağlamıyor.");
@@ -60,24 +65,29 @@ function Register() {
 						password: password
 					}
 				})
-				.then(res => {
-					setAlertVisibility(true);
-					setSuccess(res.data.success);
-					setMsg(res.data.msg);
-					if(res.data.success){
-						setHideButton(true);
-					} else {
+					.then(res => {
+						setAlertVisibility(true);
+						setSuccess(res.data.success);
+						setMsg(res.data.msg);
+						if (res.data.success) {
+							setHideButton(true);
+						} else {
+							setHideButton(false);
+						}
+						document.getElementById("alert").scrollIntoView({ behavior: "smooth" });
+						login(bounEmail, password);
+						setTimeout(() => {
+							history.push("/member/unpaidreg");
+						}, 5000)
+
+					})
+					.catch(e => {
+						setAlertVisibility(true);
+						setSuccess(false);
+						setMsg("Sunucuya bağlanırken bir sorun yaşandı. Lütfen bize ulaşıp tekrar deneyin. Sorun:", e);
 						setHideButton(false);
-					}
-					document.getElementById("alert").scrollIntoView({behavior: "smooth"});
-				})
-				.catch(e => {
-					setAlertVisibility(true);
-					setSuccess(false);
-					setMsg("Sunucuya bağlanırken bir sorun yaşandı. Lütfen bize ulaşıp tekrar deneyin. Sorun:", e);
-					setHideButton(false);
-					document.getElementById("alert").scrollIntoView({behavior: "smooth"});
-				});
+						document.getElementById("alert").scrollIntoView({ behavior: "smooth" });
+					});
 			}
 		}
 	}
@@ -86,19 +96,21 @@ function Register() {
 			<Helmet>
 				<title>Kaydol - Boğaziçi Üniversitesi Bilişim Kulübü</title>
 				<meta name="description"
-				content="Boğaziçi Üniversitesi Bilişim Kulübü üye sistemine kaydol." />
+					content="Boğaziçi Üniversitesi Bilişim Kulübü üye sistemine kaydol." />
 			</Helmet>
 			<form class="form-signin" onSubmit={onSubmit} id="registrationForm">
 				<img class="mb-4" src="/compec_mavi.svg" alt="" width="250" height="150" />
 				<h1 class="h3 mb-3 font-weight-normal">Compec'e kaydolun!</h1>
+				<h2 class="h5 mb-2 font-weight-normal">Compec'e online olarak üye olmak için aşağıda yer alan
+					kayıt formunu doldurman ve IBAN numarasına yıllık üyelik aidatını ödemen yeterli!</h2>
 
 				<p>
-					Lütfen aşağıdaki bilgileri eksiksiz ve doğruluğundan emin olarak doldurun.<br/>
-					Formu birden çok kez doldurmayınız.<br/>
+					Lütfen aşağıdaki bilgileri eksiksiz ve doğruluğundan emin olarak doldurun.<br />
+					Formu birden çok kez doldurmayınız.<br />
 				</p>
-				
+
 				<label for="name" class="sr-only">İsminiz</label>
-				<input type="text" id="name" name="name" class="form-control" placeholder="İsminiz" required="true" autofocus="" /><br/>
+				<input type="text" id="name" name="name" class="form-control" placeholder="İsminiz - Soyisminiz" required="true" autofocus="" /><br />
 
 				{/* <label for="surname" class="sr-only">Soyisminiz</label>
 				<input type="text" id="surname" name="surname" class="form-control" placeholder="Soyisminiz" required="true" autofocus="" /><br/> */}
@@ -141,7 +153,7 @@ function Register() {
 					<option value="Uluslararası Ticaret">Uluslararası Ticaret</option>
 					<option value="Yönetim Bilişim Sistemleri">Yönetim Bilişim Sistemleri</option>
 					<option value="Diğer">Diğer</option>
-				</select><br/>
+				</select><br />
 
 				<label for="sinif" class="sr-only">Sınıf</label>
 				<p class="form-control">Sınıfınız</p>
@@ -156,42 +168,45 @@ function Register() {
 					<option value="Yüksek Lisans">Yüksek Lisans</option>
 					<option value="Doktora">Doktora</option>
 					<option value="Diğer">Diğer</option>
-				</select><br/>
+				</select><br />
 
 				<label for="bounEmail" class="sr-only">Boğaziçi Mail Adresiniz</label>
-				<input type="email" id="bounEmail" name="bounEmail" class="form-control" placeholder="Boğaziçi (Roundcube) Mail Adresiniz" required="true" autofocus="" pattern="[a-z0-9]+(\.)+[a-z0-9]+@boun.edu.tr"/><br/>
-				
+				<input type="email" id="bounEmail" name="bounEmail" class="form-control" placeholder="Boğaziçi (Roundcube) Mail Adresiniz" required="true" autofocus="" pattern="[a-z0-9]+(\.)+[a-z0-9]+@boun.edu.tr" /><br />
+
 				<label for="personalEmail" class="sr-only">Kişisel Mail Adresiniz</label>
-				<input type="email" id="personalEmail" name="personalEmail" class="form-control" placeholder="Kişisel Mail Adresiniz" required="true" autofocus="" /><br/>
+				<input type="email" id="personalEmail" name="personalEmail" class="form-control" placeholder="Kişisel Mail Adresiniz" required="true" autofocus="" /><br />
 
 				<p>
-					Telefon numaranızı başında 0 olmadan, rakamların arasında boşluk olmayacak şekilde yazınız. Örnek: 5431236789
+					
 				</p>
 
 				<label for="telephone" class="sr-only">Telefon Numaranız</label>
-				<input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Telefon Numaranız" required="true" autofocus="" pattern="5[0-9]{9}"/><br/>
+
+				<MaskedInput
+					type="tel" id="telephone" name="telephone" className="form-control" placeholder="Telefon Numaranız" required="true" autofocus="" pattern="\(5[0-9]{2}\) [0-9]{3}-[0-9]{4}"
+					mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]}
+				/><br />
 
 				<p>
-					Şifreniz aşağıdakilerden üçünü içermelidir ve en az 6 karakter uzunluğunda olmalıdır:
+					Şifreniz en az 6 karakter uzunluğunda olmalıdır ve şunları içermelidir:
 					<ul className="text-left">
 						<li>Küçük harf</li>
 						<li>Büyük harf</li>
-						<li>Rakam</li>
-						<li>Sembol</li>
+						<li>Rakam </li>
 					</ul>
 				</p>
 
 				<label for="password" class="sr-only">Şifreniz</label>
-				<input type="password" id="password" name="password" class="form-control" placeholder="Şifreniz" required="true" autofocus="" /><br/>
+				<input type="password" id="password" name="password" class="form-control" placeholder="Şifreniz" required="true" autofocus="" /><br />
 
 				<label for="password2" class="sr-only">Şifrenizi tekrar yazınız</label>
-				<input type="password" id="password2" name="password2" class="form-control" placeholder="Şifrenizi tekrar yazınız" required="true" autofocus="" /><br/>
+				<input type="password" id="password2" name="password2" class="form-control" placeholder="Şifrenizi tekrar yazınız" required="true" autofocus="" /><br />
 
-				<ReCAPTCHA ref={recaptchaRef} sitekey="6LeHPtQZAAAAAIMIQUeifB4lUgiovjaXsTBGFmzx" onChange={captchaFunc}/><br/>
+				<ReCAPTCHA ref={recaptchaRef} sitekey="6LeHPtQZAAAAAIMIQUeifB4lUgiovjaXsTBGFmzx" onChange={captchaFunc} /><br />
 
 				<p>
-					Aşağıdaki butona tıklayarak yukarıda sağlamış olduğunuz bilgilerin Compec 
-					tarafından <a href="/kvkk" target="_blank">KVKK Aydınlatma Metni</a>'ne uygun olarak işlenmesini kabul ettiğinizi 
+					Aşağıdaki butona tıklayarak yukarıda sağlamış olduğunuz bilgilerin Compec
+					tarafından <a href="/kvkk" target="_blank">KVKK Aydınlatma Metni</a>'ne uygun olarak işlenmesini kabul ettiğinizi
 					beyan etmiş olursunuz.
 				</p>
 
