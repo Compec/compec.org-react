@@ -46,7 +46,7 @@ export function AuthProvider({children}){
 					// .catch(err => 
 					// 	console.log(err)
 					// )
-					auth.currentUser.getIdTokenResult(true)
+					auth.currentUser.getIdTokenResult()
 					.then((idTokenResult) => {
 						//console.log(userData)
 						setUserData({
