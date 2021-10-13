@@ -21,7 +21,7 @@ export function AuthProvider({children}){
 			setCurrentUser(user);
 			if (user /*&& user.emailVerified */) { // burası sıkıntı
 				await database.collection("users").doc(user.uid).get()
-				.then((querySnapshot) => {
+				.then(async (querySnapshot) => {
 					// console.log(querySnapshot.data());
 					// axios({
 					// 	method: 'post',
@@ -46,7 +46,7 @@ export function AuthProvider({children}){
 					// .catch(err => 
 					// 	console.log(err)
 					// )
-					auth.currentUser.getIdTokenResult()
+					await auth.currentUser.getIdTokenResult(true)
 					.then((idTokenResult) => {
 						//console.log(userData)
 						setUserData({
