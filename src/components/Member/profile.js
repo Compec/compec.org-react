@@ -11,20 +11,20 @@ function Profile(){
 	const [imageUrl, setImageUrl] = useState('');
 	const history = useHistory();
 
-	// console.log(userData);
+	//console.log(userData);
 
-    useEffect(() => {
+	useEffect(() => {
         //generateQrCode(currentUser.uid);
-        (async () => {
-            try {
-                const response = await QRCode.toDataURL("https://compec.org/user/" + currentUser.uid);
+		(async () => {
+			try {
+				const response = await QRCode.toDataURL("https://compec.org/user/" + currentUser.uid);
 
-                setImageUrl(response);
-            } catch (error) {
-                console.log(error);
-            }
-        })()
-    }, [])
+				setImageUrl(response);
+			} catch (error) {
+				console.log(error);
+			}
+		})()
+	}, [])
 
 	function logoutHandler(){
 		logout()

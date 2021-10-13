@@ -10,17 +10,18 @@ function AltKurulAnket() {
 	const [alertMessage, setAlertMessage] = useState("");
 	const [success, setSuccess] = useState();
 
-	function onClickHandler() {
+	async function onClickHandler() {
 		let inputElements = document.getElementsByClassName("checkBox");
+		//console.log(inputElements)
 		let result = [];
 
-		for(let i = 0; i < 9; i++){
-			if(inputElements[i].checked){
+		for (let i = 0; i < inputElements.length; i++) {
+			if (inputElements[i].checked) {
 				result.push(inputElements[i].value);
 			}
 		}
 
-		if(result.length === 0){
+		if (result.length === 0) {
 
 			setSuccess(false);
 			setAlertMessage("Lütfen seçim yapınız!");
@@ -33,12 +34,13 @@ function AltKurulAnket() {
 			result.forEach(item => {
 				objectToPush[item] = true;
 			})
-	
-			database.ref("members/" + currentUser.uid).child("altkurullar").update(objectToPush)
-			.then(() => {
+			
+			//console.log(objectToPush)
+			await database.collection("users").doc(currentUser.uid).update({subcommittees: objectToPush})
+            		.then(() => {
 				setAlertVisiblity(true);
 				setSuccess(true);
-				setAlertMessage("Alt kurullarınızı başarıyla seçtiniz! Profilinizden seçtiğiniz alt kurulları görüntüleyebilirsiniz.");
+				setAlertMessage("Alt kurullarınızı başarıyla seçtiniz! "); //Profilinizden seçtiğiniz alt kurulları görüntüleyebilirsiniz.");
 			})
 			.catch(err => {
 				setAlertVisiblity(true);
@@ -46,6 +48,19 @@ function AltKurulAnket() {
 				setAlertMessage("Seçim sırasında bir hata oldu! Lütfen bize ulaşın. Oluşan hata: " + err);
 			})
 			setHideButton(true);
+
+			// database.ref("members/" + currentUser.uid).child("altkurullar").update(objectToPush)
+			// .then(() => {
+			// 	setAlertVisiblity(true);
+			// 	setSuccess(true);
+			// 	setAlertMessage("Alt kurullarınızı başarıyla seçtiniz! Profilinizden seçtiğiniz alt kurulları görüntüleyebilirsiniz.");
+			// })
+			// .catch(err => {
+			// 	setAlertVisiblity(true);
+			// 	setSuccess(false);
+			// 	setAlertMessage("Seçim sırasında bir hata oldu! Lütfen bize ulaşın. Oluşan hata: " + err);
+			// })
+			// setHideButton(true);
 		}
 	}
 
@@ -58,28 +73,28 @@ function AltKurulAnket() {
 			</Helmet>
 			<div className="card">
 				<div className="card-body">
-				<h1>Alt Kurul ve Eğitim Seçimi</h1> <hr/>
+				<h1>Alt Kurul Seçimi</h1> <hr/>
 				<p>
 					Lütfen WhatsApp gruplarına alınmak istediğiniz alt kurulları seçiniz.<br/>
 					Bu seçim toplu alım içindir. Daha sonraki zamanlarda alt kuruldan sorumlu liderlerden birine ulaşarak da alt kurul WhatsApp grubuna girebilirsiniz.
 				</p>
 				<h3><b>Alt Kurullar</b></h3><hr/>
-				<input className="checkBox" type="checkbox" value="bbo" name="bbo" /> Boğaziçi Bilişim Ödülleri <br/><br/>
+				<input className="checkBox" type="checkbox" value="compecawards" name="bbo" /> Boğaziçi Bilişim Ödülleri <br/><br/>
 				<input className="checkBox" type="checkbox" value="devteam" name="devteam" /> DevTeam <br/><br/>
-				<input className="checkBox" type="checkbox" value="dijgir" name="dijgir" /> Dijital Girişimcilik <br/><br/>
-				<input className="checkBox" type="checkbox" value="ii" name="ii" /> İç İletişim <br/><br/>
+				<input className="checkBox" type="checkbox" value="digitalEntr" name="dijgir" /> Dijital Girişimcilik <br/><br/>
+				<input className="checkBox" type="checkbox" value="internalcomms" name="ii" /> İç İletişim <br/><br/>
 				<input className="checkBox" type="checkbox" value="gamedev" name="gamedev" /> Oyun Geliştirme <br/><br/>
 				<input className="checkBox" type="checkbox" value="pr" name="pr" /> PR <br/><br/>
 				<input className="checkBox" type="checkbox" value="tech" name="tech" /> Teknoloji <br/><br/>
-				<input className="checkBox" type="checkbox" value="datasci" name="datasci" /> Veri Bilimi <br/><br/><br/>
+				<input className="checkBox" type="checkbox" value="datascience" name="datasci" /> Veri Bilimi <br/><br/><br/>
 
-				<h3><b>Eğitimler</b></h3><hr/>
-				{/* <input className="checkBox" type="checkbox" value="algo" name="algo" /> C++ ile ALGO101 <br/><br/>
+				{/*<h3><b>Eğitimler</b></h3><hr/>
+				<input className="checkBox" type="checkbox" value="algo" name="algo" /> C++ ile ALGO101 <br/><br/>
 				<input className="checkBox" type="checkbox" value="java" name="java" /> Java <br/><br/>
 				<input className="checkBox" type="checkbox" value="python" name="python" /> Python <br/><br/>
-				<input className="checkBox" type="checkbox" value="webdev" name="webdev" /> Web Geliştirme <br/><br/> */}
+				<input className="checkBox" type="checkbox" value="webdev" name="webdev" /> Web Geliştirme <br/><br/>
 				<input className="checkBox" type="checkbox" value="unity" name="unity" /> Unity ile Oyun Geliştirme <br/><br/>
-				{/*<input className="checkBox" type="checkbox" value="tasarim" name="tasarim" /> Dijital Tasarım <br/><br/>*/}
+				<input className="checkBox" type="checkbox" value="tasarim" name="tasarim" /> Dijital Tasarım <br/><br/>*/}
 
 				<button className="btn btn-primary" onClick={onClickHandler} disabled={hideButton} style={{marginBottom: "20px"}}>Kaydet</button>
 				{alertVisibility && <div className={success ? "alert alert-success" : "alert alert-danger"}>{alertMessage}</div>}

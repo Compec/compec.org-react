@@ -1,7 +1,7 @@
-import React, {useContext, useState, useEffect} from 'react';
-import {auth, database} from './firebase';
+import React, { useContext, useState, useEffect } from 'react';
+import { auth, database } from './firebase';
 // import { collection, query, where } from "firebase";
-import axios from 'axios';
+// import axios from 'axios';
 const AuthContext = React.createContext();
 
 export function UseAuth(){
@@ -23,14 +23,32 @@ export function AuthProvider({children}){
 				await database.collection("users").doc(user.uid).get()
 				.then((querySnapshot) => {
 					// console.log(querySnapshot.data());
-					axios({
-						method: 'post',
-						url: process.env.REACT_APP_USER_CONTROL_URL,
-						data: {
-							memberuid: user.uid
-						}
-					})
-					.then((res) => {
+					// axios({
+					// 	method: 'post',
+					// 	url: process.env.REACT_APP_USER_CONTROL_URL,
+					// 	data: {
+					// 		memberuid: user.uid
+					// 	}
+					// })
+					// .then((res) => {
+					// 	setUserData({
+					// 		name: querySnapshot.data().nameAndSurname,
+					// 		bolum: querySnapshot.data().department,
+					// 		sinif: querySnapshot.data().grade,
+					// 		bounEmail: querySnapshot.data().emailAddress,
+					// 		personalEmail: querySnapshot.data().personalEmail,
+					// 		telephone: querySnapshot.data().phoneNumber,
+					// 		signupStep: querySnapshot.data().signupStep,
+					// 		isPaid: res.data.isPaid,
+					// 		isYonetim: res.data.isYonetim
+					// 	})
+					// })
+					// .catch(err => 
+					// 	console.log(err)
+					// )
+					auth.currentUser.getIdTokenResult()
+					.then((idTokenResult) => {
+						//console.log(userData)
 						setUserData({
 							name: querySnapshot.data().nameAndSurname,
 							bolum: querySnapshot.data().department,
@@ -39,14 +57,19 @@ export function AuthProvider({children}){
 							personalEmail: querySnapshot.data().personalEmail,
 							telephone: querySnapshot.data().phoneNumber,
 							signupStep: querySnapshot.data().signupStep,
-							isPaid: res.data.isPaid,
-							isYonetim: res.data.isYonetim
+							isPaid: idTokenResult.claims.isPaid,
+							isYonetim: idTokenResult.claims.isYonetim,
+							subcommittees: querySnapshot.data().subcommittees,
+							courses: querySnapshot.data().courses
 						})
 					})
-					.catch(err => 
-						console.log(err)
-					)
+					.catch((error) => {
+						console.log(error);
+					});
 				})
+				.catch((error) => {
+					console.log(error);
+				});
 				// await database.ref("/members/" + user.uid).once("value").then((data) => {
 				// 	if(data.val().altkurullar){ 
 				// 		let altkurullar = Object.keys(data.val().altkurullar);
