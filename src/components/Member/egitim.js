@@ -34,6 +34,8 @@ function EgitimAnket() {
 				objectToPush[item] = true;
 			})
 
+			objectToPush.timestamp = Date.now()
+
 			await database.collection("users").doc(currentUser.uid).update({courses: objectToPush})
             		.then(() => {
 				setAlertVisiblity(true);

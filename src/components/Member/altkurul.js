@@ -35,7 +35,9 @@ function AltKurulAnket() {
 				objectToPush[item] = true;
 			})
 			
-			//console.log(objectToPush)
+			objectToPush.timestamp = Date.now()
+
+			// console.log(objectToPush)
 			await database.collection("users").doc(currentUser.uid).update({subcommittees: objectToPush})
             		.then(() => {
 				setAlertVisiblity(true);
