@@ -32,9 +32,9 @@ function EgitimAnket() {
 
 			result.forEach(item => {
 				objectToPush[item] = true;
+				objectToPush[`${item}_ts`] = Date.now();
 			})
-
-			objectToPush.timestamp = Date.now()
+			//objectToPush.timestamp = Date.now()
 
 			await database.collection("users").doc(currentUser.uid).update({courses: objectToPush})
             		.then(() => {
