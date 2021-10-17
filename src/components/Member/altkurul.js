@@ -4,7 +4,7 @@ import { UseAuth } from './authcontext';
 
 function AltKurulAnket() {
 
-	const { currentUser, database } = UseAuth();
+	const { currentUser, database, userData} = UseAuth();
 	const [hideButton, setHideButton] = useState(false);
 	const [alertVisibility, setAlertVisiblity] = useState(false);
 	const [alertMessage, setAlertMessage] = useState("");
@@ -78,17 +78,18 @@ function AltKurulAnket() {
 				<h1>Alt Kurul Seçimi</h1> <hr/>
 				<p>
 					Lütfen WhatsApp gruplarına alınmak istediğiniz alt kurulları seçiniz.<br/>
+					<br/>
 					Bu seçim toplu alım içindir. Daha sonraki zamanlarda alt kuruldan sorumlu liderlerden birine ulaşarak da alt kurul WhatsApp grubuna girebilirsiniz.
 				</p>
 				<h3><b>Alt Kurullar</b></h3><hr/>
-				<input className="checkBox" type="checkbox" value="compecawards" name="bbo" /> Boğaziçi Bilişim Ödülleri <br/><br/>
-				<input className="checkBox" type="checkbox" value="devteam" name="devteam" /> DevTeam <br/><br/>
-				<input className="checkBox" type="checkbox" value="digitalEntr" name="dijgir" /> Dijital Girişimcilik <br/><br/>
-				<input className="checkBox" type="checkbox" value="internalcomms" name="ii" /> İç İletişim <br/><br/>
-				<input className="checkBox" type="checkbox" value="gamedev" name="gamedev" /> Oyun Geliştirme <br/><br/>
-				<input className="checkBox" type="checkbox" value="pr" name="pr" /> PR <br/><br/>
-				<input className="checkBox" type="checkbox" value="tech" name="tech" /> Teknoloji <br/><br/>
-				<input className="checkBox" type="checkbox" value="datascience" name="datasci" /> Veri Bilimi <br/><br/><br/>
+				<input className="checkBox" type="checkbox" value="compecawards" name="bbo" defaultChecked={userData.subcommittees.compecawards}/> Boğaziçi Bilişim Ödülleri <br/><br/>
+				<input className="checkBox" type="checkbox" value="devteam" name="devteam" defaultChecked={userData.subcommittees.devteam}/> DevTeam <br/><br/>
+				<input className="checkBox" type="checkbox" value="digitalEntr" name="dijgir" defaultChecked={userData.subcommittees.digitalEntr}/> Dijital Girişimcilik <br/><br/>
+				<input className="checkBox" type="checkbox" value="internalcomms" name="ii" defaultChecked={userData.subcommittees.internalcomms}/> İç İletişim <br/><br/>
+				<input className="checkBox" type="checkbox" value="gamedev" name="gamedev" defaultChecked={userData.subcommittees.gamedev}/> Oyun Geliştirme <br/><br/>
+				<input className="checkBox" type="checkbox" value="pr" name="pr" defaultChecked={userData.subcommittees.pr}/> PR <br/><br/>
+				<input className="checkBox" type="checkbox" value="tech" name="tech" defaultChecked={userData.subcommittees.tech}/> Teknoloji <br/><br/>
+				<input className="checkBox" type="checkbox" value="datascience" name="datasci" defaultChecked={userData.subcommittees.datascience}/> Veri Bilimi <br/><br/><br/>
 
 				{/*<h3><b>Eğitimler</b></h3><hr/>
 				<input className="checkBox" type="checkbox" value="algo" name="algo" /> C++ ile ALGO101 <br/><br/>
