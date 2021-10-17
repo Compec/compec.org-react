@@ -77,9 +77,7 @@ function AltKurulAnket() {
 				<div className="card-body">
 				<h1>Alt Kurul Seçimi</h1> <hr/>
 				<p>
-					Lütfen WhatsApp gruplarına alınmak istediğiniz alt kurulları seçiniz.<br/>
-					<br/>
-					Bu seçim toplu alım içindir. Daha sonraki zamanlarda alt kuruldan sorumlu liderlerden birine ulaşarak da alt kurul WhatsApp grubuna girebilirsiniz.
+					Lütfen katılmak istediğiniz alt kurulları seçiniz.<br/>
 				</p>
 				<h3><b>Alt Kurullar</b></h3><hr/>
 				<input className="checkBox" type="checkbox" value="compecawards" name="bbo" defaultChecked={userData.subcommittees.compecawards}/> Boğaziçi Bilişim Ödülleri <br/><br/>

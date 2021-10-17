@@ -64,7 +64,6 @@ function EgitimAnket() {
 				<h1>Eğitim Seçimi</h1> <hr/>
 				<p>
 					Lütfen WhatsApp gruplarına alınmak istediğiniz eğitimleri seçiniz.<br/>
-					Bu seçim toplu alım içindir. Daha sonraki zamanlarda eğitimden sorumlu liderlerden birine ulaşarak da alt kurul WhatsApp grubuna girebilirsiniz.
 				</p>
 				
 				<h3><b>Eğitimler</b></h3><hr/>

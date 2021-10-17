@@ -12,7 +12,22 @@ function Profile(){
 	const history = useHistory();
 
 	//console.log(userData);
-
+	const isimCevrim = {
+		devteam: "DevTeam",
+		tech: "Teknoloji",
+		pr: "PR",
+		compecawards: "BBÖ",
+		internalcomms: "İç İletişim",
+		datascience: "Veri Bilimi",
+		digitalEntr: "Dijital Girişimcilik",
+		gamedev: "Oyun Geliştirme",
+		AquuRO9TM4heaXTQ8Bbz: "Python",
+		B59aA3E8LrwiuDqPtm2j: "Unity",
+		JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
+		LCMK7I7PQX4QKfRlIBJN: "ALGO101 CPP",
+		fTLZJZE2NHEzYRxyyZjz: "Java"
+	}
+	
 	useEffect(() => {
         //generateQrCode(currentUser.uid);
 		(async () => {
@@ -122,14 +137,27 @@ function Profile(){
 											</a>) : null}
 										</div>
 									</div>
-									{/* <div class="row">
+									<div class="row">
 										<div class="col-sm-4">
 											<h6 class="mb-0">Kayıtlı Olduğum Alt Kurul ve Eğitimler</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
-											{userData.altkurullar}
+											{Object.keys(userData.subcommittees).filter(subcommittee => subcommittee.slice(-3) !== "_ts").map(subcommittee => {
+												return(
+												<div class="col-sm-8 text-secondary">
+													{isimCevrim[subcommittee]}
+												</div>
+												)
+											})}
+											{Object.keys(userData.courses).filter(course => course.slice(-3) !== "_ts").map(course => {
+												return(
+												<div class="col-sm-8 text-secondary">
+													{isimCevrim[course]}
+												</div>
+												)
+											})}
 										</div>
-									</div> */}
+									</div>
 									<hr/>
 									<div class="row">
 										<div class="col">
