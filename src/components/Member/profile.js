@@ -7,24 +7,40 @@ import QRCode from 'qrcode';
 
 function Profile(){
 
-	const { currentUser, userData, logout } = UseAuth();
+	const { currentUser, userData, logout, coursesCevrim, subcommitteesCevrim } = UseAuth();
 	const [imageUrl, setImageUrl] = useState('');
 	const history = useHistory();
 
-	// console.log(userData);
-
-    useEffect(() => {
+	//console.log(userData);
+	// const isimCevrim = {
+	// 	devteam: "DevTeam",
+	// 	tech: "Teknoloji",
+	// 	pr: "PR",
+	// 	compecawards: "BBÖ",
+	// 	internalcomms: "İç İletişim",
+	// 	datascience: "Veri Bilimi",
+	// 	digitalEntr: "Dijital Girişimcilik",
+	// 	gamedev: "Oyun Geliştirme",
+	// 	AquuRO9TM4heaXTQ8Bbz: "Python",
+	// 	B59aA3E8LrwiuDqPtm2j: "Unity",
+	// 	JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
+	// 	LCMK7I7PQX4QKfRlIBJN: "ALGO101 CPP",
+	// 	fTLZJZE2NHEzYRxyyZjz: "Java"
+	// }
+	const isimCevrim = {...coursesCevrim, ...subcommitteesCevrim} // merge two js objects
+	
+	useEffect(() => {
         //generateQrCode(currentUser.uid);
-        (async () => {
-            try {
-                const response = await QRCode.toDataURL("https://compec.org/user/" + currentUser.uid);
+		(async () => {
+			try {
+				const response = await QRCode.toDataURL("https://compec.org/user/" + currentUser.uid);
 
-                setImageUrl(response);
-            } catch (error) {
-                console.log(error);
-            }
-        })()
-    }, [])
+				setImageUrl(response);
+			} catch (error) {
+				console.log(error);
+			}
+		})()
+	}, [])
 
 	function logoutHandler(){
 		logout()
@@ -122,14 +138,27 @@ function Profile(){
 											</a>) : null}
 										</div>
 									</div>
-									{/* <div class="row">
+									<div class="row">
 										<div class="col-sm-4">
 											<h6 class="mb-0">Kayıtlı Olduğum Alt Kurul ve Eğitimler</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
-											{userData.altkurullar}
+											{userData.subcommittees && Object.keys(userData.subcommittees).filter(subcommittee => subcommittee.slice(-3) !== "_ts").map(subcommittee => {
+												return(
+												<div class="col-sm-8 text-secondary">
+													{isimCevrim[subcommittee]}
+												</div>
+												)
+											})}
+											{userData.courses && Object.keys(userData.courses).filter(course => course.slice(-3) !== "_ts").map(course => {
+												return(
+												<div class="col-sm-8 text-secondary">
+													{isimCevrim[course]}
+												</div>
+												)
+											})}
 										</div>
-									</div> */}
+									</div>
 									<hr/>
 									<div class="row">
 										<div class="col">
@@ -149,6 +178,11 @@ function Profile(){
 								QR OKUT
 							</div>
 							</Link>) : null}
+							<Link to="/member/altkurul">
+							<div className="btn btn-info" style={{margin:"5px"}}>
+								Alt Kurul Seçimi
+							</div>
+							</Link>
 
 						</div>
 					</div>

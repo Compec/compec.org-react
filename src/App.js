@@ -25,7 +25,8 @@ import Register from "./components/Member/register"
 import SignUp from "./components/Member/signup"
 import Profile from "./components/Member/profile"
 import MemberHome from "./components/Member/memberhome";
-import AltKurulAnket from "./components/Member/altkurul"
+import AltKurulAnket from "./components/Member/altkurul";
+import EgitimAnket from "./components/Member/egitim";
 import { AuthProvider } from "./components/Member/authcontext";
 import PrivateRoute from "./components/PrivateRoute";
 import PublicRoute from "./components/PublicRoute";
@@ -72,7 +73,8 @@ function App() {
 								<PrivateRoute path="/member/home" exact component={MemberHome} /> */}
 								<PrivateRoute path="/member/profile" exact component={Profile} />
 								<UnfRegRoute path="/member/unfreg" exact component={UnfReg} />
-								{/* <PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} /> */}
+								<PrivateRoute path="/member/altkurul" exact component={AltKurulAnket} />
+								<PrivateRoute path="/member/egitim" exact component={EgitimAnket} />
 								<YonetimRoute path="/member/qr" exact component={QRValidation}/>
 								<UnpaidRoute path="/member/unpaidreg" exact component={UnpaidReg}/>
 								<UnverifiedEmailRoute path="/member/unverifiedemailreg" exact component={UnverifiedEmailReg}/>

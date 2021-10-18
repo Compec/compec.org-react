@@ -1,7 +1,7 @@
-import React, {useContext, useState, useEffect} from 'react';
-import {auth, database} from './firebase';
+import React, { useContext, useState, useEffect } from 'react';
+import { auth, database } from './firebase';
 // import { collection, query, where } from "firebase";
-import axios from 'axios';
+// import axios from 'axios';
 const AuthContext = React.createContext();
 
 export function UseAuth(){
@@ -21,16 +21,34 @@ export function AuthProvider({children}){
 			setCurrentUser(user);
 			if (user /*&& user.emailVerified */) { // burası sıkıntı
 				await database.collection("users").doc(user.uid).get()
-				.then((querySnapshot) => {
+				.then(async (querySnapshot) => {
 					// console.log(querySnapshot.data());
-					axios({
-						method: 'post',
-						url: process.env.REACT_APP_USER_CONTROL_URL,
-						data: {
-							memberuid: user.uid
-						}
-					})
-					.then((res) => {
+					// axios({
+					// 	method: 'post',
+					// 	url: process.env.REACT_APP_USER_CONTROL_URL,
+					// 	data: {
+					// 		memberuid: user.uid
+					// 	}
+					// })
+					// .then((res) => {
+					// 	setUserData({
+					// 		name: querySnapshot.data().nameAndSurname,
+					// 		bolum: querySnapshot.data().department,
+					// 		sinif: querySnapshot.data().grade,
+					// 		bounEmail: querySnapshot.data().emailAddress,
+					// 		personalEmail: querySnapshot.data().personalEmail,
+					// 		telephone: querySnapshot.data().phoneNumber,
+					// 		signupStep: querySnapshot.data().signupStep,
+					// 		isPaid: res.data.isPaid,
+					// 		isYonetim: res.data.isYonetim
+					// 	})
+					// })
+					// .catch(err => 
+					// 	console.log(err)
+					// )
+					await auth.currentUser.getIdTokenResult(true)
+					.then((idTokenResult) => {
+						//console.log(userData)
 						setUserData({
 							name: querySnapshot.data().nameAndSurname,
 							bolum: querySnapshot.data().department,
@@ -39,14 +57,19 @@ export function AuthProvider({children}){
 							personalEmail: querySnapshot.data().personalEmail,
 							telephone: querySnapshot.data().phoneNumber,
 							signupStep: querySnapshot.data().signupStep,
-							isPaid: res.data.isPaid,
-							isYonetim: res.data.isYonetim
+							isPaid: idTokenResult.claims.isPaid,
+							isYonetim: idTokenResult.claims.isYonetim,
+							subcommittees: querySnapshot.data().subcommittees,
+							courses: querySnapshot.data().courses
 						})
 					})
-					.catch(err => 
-						console.log(err)
-					)
+					.catch((error) => {
+						console.log(error);
+					});
 				})
+				.catch((error) => {
+					console.log(error);
+				});
 				// await database.ref("/members/" + user.uid).once("value").then((data) => {
 				// 	if(data.val().altkurullar){ 
 				// 		let altkurullar = Object.keys(data.val().altkurullar);
@@ -137,8 +160,27 @@ export function AuthProvider({children}){
 		return auth.sendPasswordResetEmail(email);
 	} 
 
+	const coursesCevrim = {
+		AquuRO9TM4heaXTQ8Bbz: "Python",
+		B59aA3E8LrwiuDqPtm2j: "Unity",
+		JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
+		LCMK7I7PQX4QKfRlIBJN: "ALGO101 CPP",
+		fTLZJZE2NHEzYRxyyZjz: "Java"
+	}
+
+	const subcommitteesCevrim = {
+		devteam: "DevTeam",
+		tech: "Teknoloji",
+		pr: "PR",
+		compecawards: "BBÖ",
+		internalcomms: "İç İletişim",
+		datascience: "Veri Bilimi",
+		digitalEntr: "Dijital Girişimcilik",
+		gamedev: "Oyun Geliştirme"
+	}
+
 	// const value = { currentUser, userData, login, logout, announcements, meetings, events, database };
-	const value = { currentUser, userData, login, logout, database, passwordReset};
+	const value = { currentUser, userData, login, logout, database, passwordReset, coursesCevrim, subcommitteesCevrim};
 
 	return(
 		<AuthContext.Provider value={value}>
