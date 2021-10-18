@@ -7,26 +7,27 @@ import QRCode from 'qrcode';
 
 function Profile(){
 
-	const { currentUser, userData, logout } = UseAuth();
+	const { currentUser, userData, logout, coursesCevrim, subcommitteesCevrim } = UseAuth();
 	const [imageUrl, setImageUrl] = useState('');
 	const history = useHistory();
 
 	//console.log(userData);
-	const isimCevrim = {
-		devteam: "DevTeam",
-		tech: "Teknoloji",
-		pr: "PR",
-		compecawards: "BBÖ",
-		internalcomms: "İç İletişim",
-		datascience: "Veri Bilimi",
-		digitalEntr: "Dijital Girişimcilik",
-		gamedev: "Oyun Geliştirme",
-		AquuRO9TM4heaXTQ8Bbz: "Python",
-		B59aA3E8LrwiuDqPtm2j: "Unity",
-		JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
-		LCMK7I7PQX4QKfRlIBJN: "ALGO101 CPP",
-		fTLZJZE2NHEzYRxyyZjz: "Java"
-	}
+	// const isimCevrim = {
+	// 	devteam: "DevTeam",
+	// 	tech: "Teknoloji",
+	// 	pr: "PR",
+	// 	compecawards: "BBÖ",
+	// 	internalcomms: "İç İletişim",
+	// 	datascience: "Veri Bilimi",
+	// 	digitalEntr: "Dijital Girişimcilik",
+	// 	gamedev: "Oyun Geliştirme",
+	// 	AquuRO9TM4heaXTQ8Bbz: "Python",
+	// 	B59aA3E8LrwiuDqPtm2j: "Unity",
+	// 	JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
+	// 	LCMK7I7PQX4QKfRlIBJN: "ALGO101 CPP",
+	// 	fTLZJZE2NHEzYRxyyZjz: "Java"
+	// }
+	const isimCevrim = {...coursesCevrim, ...subcommitteesCevrim} // merge two js objects
 	
 	useEffect(() => {
         //generateQrCode(currentUser.uid);

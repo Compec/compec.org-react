@@ -4,7 +4,7 @@ import { UseAuth } from './authcontext';
 
 function AltKurulAnket() {
 
-	const { currentUser, database, userData} = UseAuth();
+	const { currentUser, database, userData, subcommitteesCevrim} = UseAuth();
 	const [hideButton, setHideButton] = useState(false);
 	const [alertVisibility, setAlertVisiblity] = useState(false);
 	const [alertMessage, setAlertMessage] = useState("");
@@ -12,7 +12,6 @@ function AltKurulAnket() {
 
 	async function onClickHandler() {
 		let inputElements = document.getElementsByClassName("checkBox");
-		//console.log(inputElements)
 		let result = [];
 
 		for (let i = 0; i < inputElements.length; i++) {
@@ -80,14 +79,32 @@ function AltKurulAnket() {
 					Lütfen katılmak istediğiniz alt kurulları seçiniz.<br/>
 				</p>
 				<h3><b>Alt Kurullar</b></h3><hr/>
-				<input className="checkBox" type="checkbox" value="compecawards" name="bbo" defaultChecked={userData.subcommittees.compecawards}/> Boğaziçi Bilişim Ödülleri <br/><br/>
-				<input className="checkBox" type="checkbox" value="devteam" name="devteam" defaultChecked={userData.subcommittees.devteam}/> DevTeam <br/><br/>
-				<input className="checkBox" type="checkbox" value="digitalEntr" name="dijgir" defaultChecked={userData.subcommittees.digitalEntr}/> Dijital Girişimcilik <br/><br/>
-				<input className="checkBox" type="checkbox" value="internalcomms" name="ii" defaultChecked={userData.subcommittees.internalcomms}/> İç İletişim <br/><br/>
-				<input className="checkBox" type="checkbox" value="gamedev" name="gamedev" defaultChecked={userData.subcommittees.gamedev}/> Oyun Geliştirme <br/><br/>
-				<input className="checkBox" type="checkbox" value="pr" name="pr" defaultChecked={userData.subcommittees.pr}/> PR <br/><br/>
-				<input className="checkBox" type="checkbox" value="tech" name="tech" defaultChecked={userData.subcommittees.tech}/> Teknoloji <br/><br/>
-				<input className="checkBox" type="checkbox" value="datascience" name="datasci" defaultChecked={userData.subcommittees.datascience}/> Veri Bilimi <br/><br/><br/>
+				{
+					Object.entries(subcommitteesCevrim).map((entry) => {
+						return(
+							<div>
+								<label>
+									<input 
+										className="checkBox" 
+										type="checkbox" 
+										value={entry[0]} 
+										name={entry[0]} 
+										defaultChecked={userData.subcommittees[entry[0]]}
+									/> 
+									{" " + entry[1]}
+								</label><br/><br/>
+							</div>
+						)
+					})
+				}
+				{/* <label><input className="checkBox" type="checkbox" value="compecawards" name="bbo" defaultChecked={userData.subcommittees.compecawards}/> Boğaziçi Bilişim Ödülleri </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="devteam" name="devteam" defaultChecked={userData.subcommittees.devteam}/> DevTeam </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="digitalEntr" name="dijgir" defaultChecked={userData.subcommittees.digitalEntr}/> Dijital Girişimcilik </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="internalcomms" name="ii" defaultChecked={userData.subcommittees.internalcomms}/> İç İletişim </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="gamedev" name="gamedev" defaultChecked={userData.subcommittees.gamedev}/> Oyun Geliştirme </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="pr" name="pr" defaultChecked={userData.subcommittees.pr}/> PR </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="tech" name="tech" defaultChecked={userData.subcommittees.tech}/> Teknoloji </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="datascience" name="datasci" defaultChecked={userData.subcommittees.datascience}/> Veri Bilimi </label><br/><br/> */}
 
 				{/*<h3><b>Eğitimler</b></h3><hr/>
 				<input className="checkBox" type="checkbox" value="algo" name="algo" /> C++ ile ALGO101 <br/><br/>

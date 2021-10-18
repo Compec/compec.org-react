@@ -160,8 +160,27 @@ export function AuthProvider({children}){
 		return auth.sendPasswordResetEmail(email);
 	} 
 
+	const coursesCevrim = {
+		AquuRO9TM4heaXTQ8Bbz: "Python",
+		B59aA3E8LrwiuDqPtm2j: "Unity",
+		JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
+		LCMK7I7PQX4QKfRlIBJN: "ALGO101 CPP",
+		fTLZJZE2NHEzYRxyyZjz: "Java"
+	}
+
+	const subcommitteesCevrim = {
+		devteam: "DevTeam",
+		tech: "Teknoloji",
+		pr: "PR",
+		compecawards: "BBÖ",
+		internalcomms: "İç İletişim",
+		datascience: "Veri Bilimi",
+		digitalEntr: "Dijital Girişimcilik",
+		gamedev: "Oyun Geliştirme"
+	}
+
 	// const value = { currentUser, userData, login, logout, announcements, meetings, events, database };
-	const value = { currentUser, userData, login, logout, database, passwordReset};
+	const value = { currentUser, userData, login, logout, database, passwordReset, coursesCevrim, subcommitteesCevrim};
 
 	return(
 		<AuthContext.Provider value={value}>

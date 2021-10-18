@@ -4,7 +4,7 @@ import { UseAuth } from './authcontext';
 
 function EgitimAnket() {
 
-	const { currentUser, database, userData } = UseAuth();
+	const { currentUser, database, userData, coursesCevrim } = UseAuth();
 	const [hideButton, setHideButton] = useState(false);
 	const [alertVisibility, setAlertVisiblity] = useState(false);
 	const [alertMessage, setAlertMessage] = useState("");
@@ -67,11 +67,29 @@ function EgitimAnket() {
 				</p>
 				
 				<h3><b>Eğitimler</b></h3><hr/>
-				<input className="checkBox" type="checkbox" value="LCMK7I7PQX4QKfRlIBJN" name="algo" defaultChecked={userData.courses.LCMK7I7PQX4QKfRlIBJN}/> C++ ile ALGO101 <br/><br/>
-				<input className="checkBox" type="checkbox" value="fTLZJZE2NHEzYRxyyZjz" name="java" defaultChecked={userData.courses.fTLZJZE2NHEzYRxyyZjz}/> Java <br/><br/>
-				<input className="checkBox" type="checkbox" value="AquuRO9TM4heaXTQ8Bbz" name="python" defaultChecked={userData.courses.AquuRO9TM4heaXTQ8Bbz}/> Python <br/><br/>
-				<input className="checkBox" type="checkbox" value="JFFbaCCQrX5VU2yt9zjc" name="webdev" defaultChecked={userData.courses.JFFbaCCQrX5VU2yt9zjc}/> Web Geliştirme <br/><br/>
-				<input className="checkBox" type="checkbox" value="B59aA3E8LrwiuDqPtm2j" name="unity" defaultChecked={userData.courses.B59aA3E8LrwiuDqPtm2j}/> Unity ile Oyun Geliştirme <br/><br/>
+				{
+					Object.entries(coursesCevrim).map((entry) => {
+						return(
+							<div>
+								<label>
+									<input 
+										className="checkBox" 
+										type="checkbox" 
+										value={entry[0]} 
+										name={entry[0]} 
+										defaultChecked={userData.courses[entry[0]]}
+									/> 
+									{" " + entry[1]}
+								</label><br/><br/>
+							</div>
+						)
+					})
+				}
+				{/* <label><input className="checkBox" type="checkbox" value="LCMK7I7PQX4QKfRlIBJN" name="algo" defaultChecked={userData.courses.LCMK7I7PQX4QKfRlIBJN}/> C++ ile ALGO101 </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="fTLZJZE2NHEzYRxyyZjz" name="java" defaultChecked={userData.courses.fTLZJZE2NHEzYRxyyZjz}/> Java </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="AquuRO9TM4heaXTQ8Bbz" name="python" defaultChecked={userData.courses.AquuRO9TM4heaXTQ8Bbz}/> Python </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="JFFbaCCQrX5VU2yt9zjc" name="webdev" defaultChecked={userData.courses.JFFbaCCQrX5VU2yt9zjc}/> Web Geliştirme </label><br/><br/>
+				<label><input className="checkBox" type="checkbox" value="B59aA3E8LrwiuDqPtm2j" name="unity" defaultChecked={userData.courses.B59aA3E8LrwiuDqPtm2j}/> Unity ile Oyun Geliştirme </label><br/><br/> */}
 				{/*<input className="checkBox" type="checkbox" value="tasarim" name="tasarim" /> Dijital Tasarım <br/><br/>*/}
 
 				<button className="btn btn-primary" onClick={onClickHandler} disabled={hideButton} style={{marginBottom: "20px"}}>Kaydet</button>
