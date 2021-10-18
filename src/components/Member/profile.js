@@ -178,6 +178,11 @@ function Profile(){
 								QR OKUT
 							</div>
 							</Link>) : null}
+							<Link to="/member/altkurul">
+							<div className="btn btn-info" style={{margin:"5px"}}>
+								Alt Kurul Seçimi
+							</div>
+							</Link>
 
 						</div>
 					</div>
