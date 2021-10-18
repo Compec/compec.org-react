@@ -77,7 +77,7 @@ function EgitimAnket() {
 										type="checkbox" 
 										value={entry[0]} 
 										name={entry[0]} 
-										defaultChecked={userData.courses[entry[0]]}
+										defaultChecked={userData.courses ? userData.courses[entry[0]] : false}
 									/> 
 									{" " + entry[1]}
 								</label><br/><br/>

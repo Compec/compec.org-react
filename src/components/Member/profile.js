@@ -143,14 +143,14 @@ function Profile(){
 											<h6 class="mb-0">Kayıtlı Olduğum Alt Kurul ve Eğitimler</h6>
 										</div>
 										<div class="col-sm-8 text-secondary">
-											{Object.keys(userData.subcommittees).filter(subcommittee => subcommittee.slice(-3) !== "_ts").map(subcommittee => {
+											{userData.subcommittees && Object.keys(userData.subcommittees).filter(subcommittee => subcommittee.slice(-3) !== "_ts").map(subcommittee => {
 												return(
 												<div class="col-sm-8 text-secondary">
 													{isimCevrim[subcommittee]}
 												</div>
 												)
 											})}
-											{Object.keys(userData.courses).filter(course => course.slice(-3) !== "_ts").map(course => {
+											{userData.courses && Object.keys(userData.courses).filter(course => course.slice(-3) !== "_ts").map(course => {
 												return(
 												<div class="col-sm-8 text-secondary">
 													{isimCevrim[course]}

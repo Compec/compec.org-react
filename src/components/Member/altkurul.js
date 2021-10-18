@@ -89,7 +89,7 @@ function AltKurulAnket() {
 										type="checkbox" 
 										value={entry[0]} 
 										name={entry[0]} 
-										defaultChecked={userData.subcommittees[entry[0]]}
+										defaultChecked={userData.subcommittees ? userData.subcommittees[entry[0]] : false}
 									/> 
 									{" " + entry[1]}
 								</label><br/><br/>
