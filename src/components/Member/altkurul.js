@@ -4,7 +4,7 @@ import { UseAuth } from './authcontext';
 
 function AltKurulAnket() {
 
-	const { currentUser, database, userData, subcommitteesCevrim} = UseAuth();
+	const { currentUser, database, userData, subcommitteeDates} = UseAuth();
 	const [hideButton, setHideButton] = useState(false);
 	const [alertVisibility, setAlertVisiblity] = useState(false);
 	const [alertMessage, setAlertMessage] = useState("");
@@ -80,7 +80,7 @@ function AltKurulAnket() {
 				</p>
 				<h3><b>Alt Kurullar</b></h3><hr/>
 				{
-					Object.entries(subcommitteesCevrim).map((entry) => {
+					Object.entries(subcommitteeDates).map((entry) => {
 						return(
 							<div>
 								<label>

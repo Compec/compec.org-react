@@ -178,9 +178,19 @@ export function AuthProvider({children}){
 		digitalEntr: "Dijital Girişimcilik",
 		gamedev: "Oyun Geliştirme"
 	}
-
+	const subcommitteeDates = {
+		devteam: "DevTeam -	Çarşamba 19:00",
+		tech: "Teknoloji - Perşembe 19:00",
+		pr: "PR	- Çarşamba 19:00",
+		compecawards: "BBÖ - Salı ve Perşembe 19:00",
+		internalcomms: "İç İletişim - Pazartesi 19:00",
+		datascience: "Veri Bilimi - Perşembe 19:30",
+		digitalEntr: "Dijital Girişimcilik - Cuma 19:00",
+		gamedev: "Oyun Geliştirme - Cuma 19:00"
+	}
+	
 	// const value = { currentUser, userData, login, logout, announcements, meetings, events, database };
-	const value = { currentUser, userData, login, logout, database, passwordReset, coursesCevrim, subcommitteesCevrim};
+	const value = { currentUser, userData, login, logout, database, passwordReset, coursesCevrim, subcommitteesCevrim, subcommitteeDates};
 
 	return(
 		<AuthContext.Provider value={value}>
