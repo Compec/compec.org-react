@@ -29,7 +29,7 @@ function Altkurullar() {
 						<Card.Body>
 							<Container>
 								<Card.Body>
-								Boğaziçi Bilişim Ödülleri alt kurulu sene boyunca bilişim alanında en çok öne çıkan profesyonelleri ve kurumları prestijli bir ödülle buluşturan etkinlik olan Boğaziçi Bilişim Ödülleri’nin düzenlenmesiyle sorumludur. Bunun yanında sene boyunca bilişimle ilgili önemli bilgileri aktaran Teknoloji Magazini TechMag’in sorumluluğu ve sene boyunca ödül sahipleri ile yapılan podcast, söyleşi, röportaj gibi etkinlikler de bu alt kurulun sorumluluğundadır.
+								Boğaziçi Bilişim Ödülleri Alt Kurulu, bilişim dünyasının enlerinin halk ve jüri oylaması sonucu Albert Long Hall'de 9.'sunun 18 Aralık tarihinde düzenleneceği Boğaziçi Bilişim Ödülleri organizasyonunun alt kuruldakilerle birlikte düzenlenmesinden sorumludur.  Bu etkinlik, alanında en iyi olan ve yeni çıkış yapan bilişim dünyasının en önemli kişileriyle birlikte oldukça prestijli bir gece olarak gerçekleştirilir.
 								</Card.Body>
 							</Container>
 						</Card.Body>
@@ -75,7 +75,7 @@ function Altkurullar() {
 					<Accordion.Collapse eventKey="3">
 						<Container>
 							<Card.Body>
-								Oyun Geliştirme altkurulu sene boyunca oyun geliştirme eğitimleri düzenlemesinin yanında, sömestr projesi adı altında tüm Oyun Geliştirme üyeleriyle birlikte projeler yapar, röportaj ve podcastler düzenler, ikinci dönem düzenlenecek olan DevelopIT etkinliğinin sorumluluğunu üstlenir ve GameJam'ler düzenler.
+							Oyun Geliştirme Alt Kurulu, Boğaziçi GameJam'in düzenlenmesinden, oyun geliştirme eğitimlerinin verilmesinden ve GameDevTalks serisinin çekilmesinden sorumludur. Boğaziçi GameJam 48 saatlik bir ödüllü oyun geliştirme maratonudur. Kazanlar hem para hem de staj ve daha fazlasıyla ödüllendirilir. Alanında uzman kişilerle oyun geliştirme sektöründeki iş imkanlarıyla üyelerin tanıştırılması amaçlanır. GameDevTalks, oyun geliştirme sektöründe çalışan kişilerin online olarak bizimle yaptığı ve Youtube'da yayınladığımız kariyer temalı sohbet serileridir. Aynı zamanda workshoplarla ve alt kurul sohbetleriyle bu alana dair her şeyi üyelerin öğrenmesi amaçlanır.
 							</Card.Body>
 						</Container>
 					</Accordion.Collapse>
@@ -120,7 +120,22 @@ function Altkurullar() {
 					<Accordion.Collapse eventKey="6">
 						<Container>
 							<Card.Body>
-								Veri Bilimi alt kurulu, veri bilimi, makine öğrenmesi ve yapay zeka disiplinleri ile ilgilenenlerin bir araya geldiği ve Veri Bilimi ile ilgilenen kulüp üyelerinin kendini geliştiriği, projeler yaptığı alt kuruldur. Alt kurul Veri Bilimi alanında çeşitli eğitimler ve atölyeler düzenler, kulüp tanıtımı için kulüp verileri ile çeşitli görselleştirmeler yapar. Bu yıl 3. kez düzenlenecek Boğaziçi DataCamp Zirvesi'nin organize edilmesinden ve ilgili etkinliklerin sosyal medya kanallarının yönetilmesinden sorumludur.
+							Veri Bilimi alt kurulu, veri bilimi, makine öğrenmesi ve yapay zeka disiplinleri ile ilgilenenlerin bir araya geldiği ve Veri Bilimi ile ilgilenen kulüp üyelerinin kendini geliştirdiği, birlikte projeler yaptığı alt kuruldur. Alt kurul Veri Bilimi alanında Machine Learning, Excel, Tableau gibi çeşitli eğitimler düzenler ve alt kurul üyelerinin sene sonuna kadar Veri Bilimi’nde belirli bir yetkinliğe ulaşmasını amaçlar. Bu amaç doğrultusunda alt kurulda çalışma grupları oluşturur. Ayrıca bu yıl 4. kez düzenlenecek Boğaziçi DataCamp Veri Bilimi Zirvesi'nin organize edilmesinden sorumludur.
+							</Card.Body>
+						</Container>
+					</Accordion.Collapse>
+				</Card>
+
+				<Card>
+					<Card.Header>
+						<Accordion.Toggle as={NavLink} variant="link" eventKey="7">
+						Kurumsal İletişim
+						</Accordion.Toggle>
+					</Card.Header>
+					<Accordion.Collapse eventKey="7">
+						<Container>
+							<Card.Body>
+							Kurumsal İletişim alt kurulunun temel görevi kulübün sponsorluklarının yapılması, şirketlerle yürütülen süreçlerin takip edilmesi, sürdürülmesi ve kulübün şirket kontaklarının artırılmasını sağlamaktır. Alt kurulu yoktur. 6 kariyer kulübü tarafından düzenlenen P&R Days Kariyer Fuarı’nın kulüp içindeki organizasyonundan sorumludur. Üyelerin bilgilenmesi ve tecrübe kazanmasını hedef almakla beraber kulübün dış networkünü geliştirirken iyi ilişkiler kurar.
 							</Card.Body>
 						</Container>
 					</Accordion.Collapse>
