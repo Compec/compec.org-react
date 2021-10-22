@@ -185,7 +185,7 @@ export function AuthProvider({children}){
 		compecawards: "BBÖ - Salı ve Perşembe 19:00",
 		internalcomms: "İç İletişim - Pazartesi 19:00",
 		datascience: "Veri Bilimi - Perşembe 19:30",
-		digitalEntr: "Dijital Girişimcilik - Cuma 19:00",
+		digitalEntr: "Dijital Girişimcilik - Pazartesi 19:00",
 		gamedev: "Oyun Geliştirme - Cuma 19:00"
 	}
 	
