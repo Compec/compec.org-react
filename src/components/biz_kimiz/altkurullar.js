@@ -141,6 +141,21 @@ function Altkurullar() {
 					</Accordion.Collapse>
 				</Card>
 
+				<Card>
+					<Card.Header>
+						<Accordion.Toggle as={NavLink} variant="link" eventKey="8">
+						İç İletişim
+						</Accordion.Toggle>
+					</Card.Header>
+					<Accordion.Collapse eventKey="8">
+						<Container>
+							<Card.Body>
+							İç İletişim, kulüp içi eğlence aktivitelerini düzenleyen, bunu yaparken de kulüp üyelerinin arasındaki bağı güçlendirmeyi amaçlayan alt kuruldur. Haftalık online-offline takılmacalar, Youroomluyoruz, TagNight ve Kilyos101 gibi başlıca etkinlikleriyle kulüp üyelerini bir araya getirir ve insanların keyifli vakit geçirmesini sağlar.
+							</Card.Body>
+						</Container>
+					</Accordion.Collapse>
+				</Card>
+
 			</Accordion>
 		</div>
 	);
