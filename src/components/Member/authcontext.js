@@ -161,11 +161,14 @@ export function AuthProvider({children}){
 	} 
 
 	const coursesCevrim = {
+		/*
 		AquuRO9TM4heaXTQ8Bbz: "Python",
+		fTLZJZE2NHEzYRxyyZjz: "Java",
+		*/
 		B59aA3E8LrwiuDqPtm2j: "Unity",
 		JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
-		LCMK7I7PQX4QKfRlIBJN: "ALGO101 CPP",
-		fTLZJZE2NHEzYRxyyZjz: "Java"
+		LCMK7I7PQX4QKfRlIBJN: "C++",
+		
 	}
 
 	const subcommitteesCevrim = {
