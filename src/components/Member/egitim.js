@@ -85,6 +85,9 @@ function EgitimAnket() {
 						)
 					})
 				}
+				<p>
+					Python ve java eğitimlerimiz de çok yakında sizlerle :)<br/>
+				</p>
 				{/* <label><input className="checkBox" type="checkbox" value="LCMK7I7PQX4QKfRlIBJN" name="algo" defaultChecked={userData.courses.LCMK7I7PQX4QKfRlIBJN}/> C++ ile ALGO101 </label><br/><br/>
 				<label><input className="checkBox" type="checkbox" value="fTLZJZE2NHEzYRxyyZjz" name="java" defaultChecked={userData.courses.fTLZJZE2NHEzYRxyyZjz}/> Java </label><br/><br/>
 				<label><input className="checkBox" type="checkbox" value="AquuRO9TM4heaXTQ8Bbz" name="python" defaultChecked={userData.courses.AquuRO9TM4heaXTQ8Bbz}/> Python </label><br/><br/>
