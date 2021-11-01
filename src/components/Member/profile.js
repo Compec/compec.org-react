@@ -184,7 +184,7 @@ function Profile(){
 							</div>
 							</Link>
 							<Link to="/member/egitim">
-							<div className="btn btn-info" style={{margin:"5px"}}>
+							<div className="btn btn-success" style={{margin:"5px"}}>
 								Eğitim Seçimi
 							</div>
 							</Link>
