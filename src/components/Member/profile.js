@@ -183,6 +183,11 @@ function Profile(){
 								Alt Kurul Seçimi
 							</div>
 							</Link>
+							<Link to="/member/egitim">
+							<div className="btn btn-info" style={{margin:"5px"}}>
+								Eğitim Seçimi
+							</div>
+							</Link>
 
 						</div>
 					</div>
