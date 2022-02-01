@@ -116,9 +116,9 @@ const YonetimInfo = {
 		{
 			isim: "Tarık Talha Dinç",
 			gorev: "Teknoloji Lideri",
-			foto: "/yonetim/tarik_talha_dinc.jpg",
+			foto: "/yonetim/tarik_talha_dinc.png",
 			linkedin: "https://www.linkedin.com/in/tariktalhadinc",
-			insta: "https://www.instagram.com/tlhtrkdnc/"
+			insta: "https://www.instagram.com/tariktalhadnc"
 		},
 		{
 			isim: "Görkem Tekin",
@@ -159,14 +159,15 @@ const YonetimInfo = {
 			gorev: "DevTeam Lideri",
 			foto: "/yonetim/seyfullah_akgun.png",
 			linkedin: "https://www.linkedin.com/in/seyfullah-akg%C3%BCn-201363197/",
-			insta: "https://www.instagram.com/swofgod/"
+			// insta: "https://www.instagram.com/swofgod/"
 		},
+		/*
 		{
 			isim: "Ali Başaran",
 			gorev: "DevTeam Lideri",
 			foto: "/yonetim/ali_basaran.jpeg",
 			linkedin: "https://www.linkedin.com/in/ali-ba%C5%9Faran-374566204/"
-		},
+		}, */
 		{
 			isim: "Onur Can Bakanoğlu",
 			gorev: "Dijital Girişimcilik Lideri",
@@ -206,14 +207,14 @@ const YonetimInfo = {
 			foto: "/yonetim/ahmet_bayir.jpg",
 			linkedin: "https://www.linkedin.com/in/ahmet-bayir",
 			insta: "https://www.instagram.com/ahmet.bayir__/"
-		},
+		}, /*
 		{
 			isim: "Ece Yalçın",
 			gorev: "Oyun Geliştirme Lideri",
 			foto: "/yonetim/ece_yalcin.jpg",
 			linkedin: "https://www.linkedin.com/in/eceyalcin/",
 			insta: "https://www.instagram.com/eceeyylcn/"
-		},
+		}, */
 		{
 			isim: "Bulut Uygun",
 			gorev: "Kurumsal İletişim Lideri",
