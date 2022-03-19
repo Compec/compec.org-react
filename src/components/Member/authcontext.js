@@ -162,12 +162,14 @@ export function AuthProvider({children}){
 
 	const coursesCevrim = {
 		/*
-		AquuRO9TM4heaXTQ8Bbz: "Python",
-		fTLZJZE2NHEzYRxyyZjz: "Java",
-		*/
 		B59aA3E8LrwiuDqPtm2j: "Unity",
 		JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
 		LCMK7I7PQX4QKfRlIBJN: "C++",
+		*/
+		TeKxllEsyJTdMfrhVEWB: "ALGO101",
+    	aD2YYOxYCc75pnlRI3cY: "Siber Güvenlik",
+		AquuRO9TM4heaXTQ8Bbz: "Python",
+		fTLZJZE2NHEzYRxyyZjz: "Java"
 		
 	}
 
@@ -187,7 +189,7 @@ export function AuthProvider({children}){
 		pr: "PR	- Çarşamba 19:00",
 		compecawards: "BBÖ - Salı ve Perşembe 19:00",
 		internalcomms: "İç İletişim - Pazartesi 19:00",
-		datascience: "Veri Bilimi - Perşembe 19:30",
+		datascience: "Veri Bilimi - Salı 19:30",
 		digitalEntr: "Dijital Girişimcilik - Pazartesi 19:00",
 		gamedev: "Oyun Geliştirme - Cuma 19:00"
 	}
