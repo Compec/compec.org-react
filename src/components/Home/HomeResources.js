@@ -9,30 +9,30 @@ const HomeResources = {
 		},
 		*/
 		{
-			src: "/anasayfa/anasayfa-slayt1.jpg",
+			src: "/anasayfa/bbo.png",
 			alt: "First slide",
 			captionH1: "#CompecRocks!",
 			captionP:""
 				/*"Compec (Boğaziçi Üniversitesi Bilişim Kulübü), 1994 yılından bu yana faaliyet gösteren ve bilişim alanında çalışmalar yapan kariyer kulübüdür. Sene boyunca bilişimin ve teknolojinin birçok dalında etkinlikler ve eğitimler düzenleyerek üyelerini gerek akademik dünyaya gerek iş dünyasına hazırlamayı ve onları daha donanımlı bireyler haline getirmeyi amaçlar."*/
 		},
 		{
-			src: "/anasayfa/anasayfa-slayt2.jpg",
-			alt: "First slide",
-			captionH1: "#ThatsIT",
+			src: "/anasayfa/techsummit.png",
+			alt: "Second slide",
+			captionH1: "#TechSummit",
 			captionP:"" /*"Her zaman sizi dinleriz, ve kendimizi geliştiririz.",*/
 		},
 		{
-			src: "/anasayfa/anasayfa-slayt3.jpg",
-			alt: "First slide",
-			captionH1: "#CompecRocks!",
+			src: "/anasayfa/datacamp.png",
+			alt: "Third slide",
+			captionH1: "#DataCamp!",
 			captionP: "" /*"Her zaman sizi dinleriz, ve kendimizi geliştiririz.",*/
 		},
-		{
+		/* {
 			src: "/anasayfa/anasayfa-slayt4.jpg",
 			alt: "First slide",
 			captionH1: "#ThatsIT",
-			captionP: "" /*"Her zaman sizi dinleriz, ve kendimizi geliştiririz.",*/
-		},
+			captionP: "" 
+		}, */
 	],
 	Missions : [
 		{
