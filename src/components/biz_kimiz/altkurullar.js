@@ -141,7 +141,7 @@ function Altkurullar() {
 					</Accordion.Collapse>
 				</Card>
 
-				<Card>
+				{/* <Card>
 					<Card.Header>
 						<Accordion.Toggle as={NavLink} variant="link" eventKey="8">
 						İç İletişim
@@ -154,7 +154,7 @@ function Altkurullar() {
 							</Card.Body>
 						</Container>
 					</Accordion.Collapse>
-				</Card>
+				</Card> */}
 
 			</Accordion>
 		</div>

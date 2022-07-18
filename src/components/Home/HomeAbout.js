@@ -40,7 +40,7 @@ function HomeAbout() {
 							<div class="col-lg-3 stats">
 								<i class="fa fa-envelope-o countUpIcon" aria-hidden="true"></i>
 								<div className="countUpNumber">
-									<CountUp end={13000} duration={4} suffix={"+"} />
+									<CountUp end={14000} duration={4} suffix={"+"} />
 								</div>
 								<h5 className="countUpText">Kişilik İletişim Ağı</h5>
 							</div>
