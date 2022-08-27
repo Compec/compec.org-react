@@ -25,8 +25,7 @@ function GameJam() {
 				<div class="col">
 					<h1>Boğaziçi GameJam</h1><br/>
 					<p>
-					Oyun geliştirenleri ve oyun geliştirme tutkunlarını bir araya getirme amacıyla oluşturulan GameJam, son zamanların sevilen oyunlarının arkasındaki oyun şirketlerine, oyunlarla vakit geçirip gelişim sürecini merak edenlere ve oyun geliştiricilerine ev sahipliği yapıyor. 
-					Etkinlik boyunca katılımcılarımız; “Oyun geliştirme süreci nasıldır?” ve “Oyunlarda yapay zeka nasıl kullanılır?” gibi birçok sorunun cevaplandığı panellere katılıp oyun şirketlerinden bilgi alıyor, düzenlenen atölyelerde oyun geliştirme sürecine bizzat tanıklık ediyor, ve etkinlik sonundaki 24 saatlik GameJam ile eşsiz bir deneyim elde ediyor.
+					Boğaziçi Game Jam, katılımcıların 48 saat boyunca verilen bir tema üzerine kendi oyunlarını yaptıkları fiziksel bir oyun geliştirme hackathon’udur. Süreç içerisinde katılımcılar yeni ekip arkadaşları ile tanışabilir ve yeni teknikler öğrenebilirler. 48 saatin sonunda geliştirilen oyunlar ses, tasarım, senaryo,  orijinallik gibi kategorilerde değerlendirilir. Katılımcılar için yarışma en iyi oyun yapmaktan ziyade network ve yeteneklerini test etmek amaçlıdır. Bundan dolayı ortamda tatlı bir rekabetin yanında samimiyet duygusu hakimdir . Bu ortam sayesinde Boğaziçi Game Jam, katılımcılara ilham veren, takım çalışmasını öğreten, duygusal yönden destekleyen ve dayanışma gücünü pekiştiren bir etkinlik haline gelir.  Compec olarak bizde bu genelekselleşmiş etkinliği düzenlemekte olup ek olarak katılımcılara network olanağı ve bilgi içeren paneller sağlamaktadır.
 					</p>
 
 					<p><a class="btn btn-primary" href="https://bogazicigamejam.com/" role="button" target="_blank" rel="noopener noreferrer">Web Sitesini Ziyaret Et</a></p>
