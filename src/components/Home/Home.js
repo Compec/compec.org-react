@@ -7,7 +7,7 @@ function Home() {
 	return (
 		<div>
 			<Helmet>
-				<title>Ana Sayfa - Boğaziçi Üniversitesi Bilişim Kulübü</title>
+				<title>Ana Sayfa - Boğaziçi Üniversitesi Bilişim Kulübü Compec</title>
 				<meta name="description"
 				content="Boğaziçi Üniversitesi Bilişim Kulübü, üyelerini yazılım, tasarım ve girişimcilik alanında geliştirirken, teknolojiye ve bilişime yön verecek işlere imza atıyor." />
 			</Helmet>
