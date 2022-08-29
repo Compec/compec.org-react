@@ -1,5 +1,8 @@
 .navigationn {
-	background-color: #1f4068;
+	height: max-content;
+	background-color: rgba(31, 64, 104,1);
+	box-shadow: 0px 10px 10px 1px rgba(31, 64, 104,0.4);
+	
 }
 
 .main-footer{
