@@ -184,14 +184,14 @@ export function AuthProvider({children}){
 		gamedev: "Oyun Geliştirme"
 	}
 	const subcommitteeDates = {
-		devteam: "DevTeam -	Çarşamba 19:00",
-		tech: "Teknoloji - Perşembe 19:00",
-		pr: "PR	- Çarşamba 19:00",
-		compecawards: "BBÖ - Salı ve Perşembe 19:00",
-		internalcomms: "İç İletişim - Pazartesi 19:00",
-		datascience: "Veri Bilimi - Salı 19:30",
-		digitalEntr: "Dijital Girişimcilik - Pazartesi 19:00",
-		gamedev: "Oyun Geliştirme - Cuma 19:00"
+		devteam: "DevTeam",
+		tech: "Teknoloji",
+		pr: "PR",
+		compecawards: "BBÖ",
+		internalcomms: "İç İletişim",
+		datascience: "Veri Bilimi",
+		digitalEntr: "Dijital Girişimcilik",
+		gamedev: "Oyun Geliştirme"
 	}
 	
 	// const value = { currentUser, userData, login, logout, announcements, meetings, events, database };
