@@ -129,6 +129,7 @@ function Register() {
 					<option value="Fen Bilgisi Öğretmenliği">Fen Bilgisi Öğretmenliği</option>
 					<option value="Fizik">Fizik</option>
 					<option value="Fizik Öğretmenliği">Fizik Öğretmenliği</option>
+					<option value="Hukuk">Hukuk</option>
 					<option value="İktisat">İktisat</option>
 					<option value="İlköğretim Matematik Öğretmenliği">İlköğretim Matematik Öğretmenliği</option>
 					<option value="İngiliz Dili ve Edebiyatı">İngiliz Dili ve Edebiyatı</option>
