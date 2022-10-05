@@ -164,13 +164,15 @@ export function AuthProvider({children}){
 		/*
 		B59aA3E8LrwiuDqPtm2j: "Unity",
 		JFFbaCCQrX5VU2yt9zjc: "Web Geliştirme",
-		LCMK7I7PQX4QKfRlIBJN: "C++",
-		*/
+		
+		
 		TeKxllEsyJTdMfrhVEWB: "ALGO101",
     	aD2YYOxYCc75pnlRI3cY: "Siber Güvenlik",
 		AquuRO9TM4heaXTQ8Bbz: "Python",
 		fTLZJZE2NHEzYRxyyZjz: "Java"
-		
+		*/
+		LCMK7I7PQX4QKfRlIBJN: "C++",
+		AquuRO9TM4heaXTQ8Bbz: "Python",
 	}
 
 	const subcommitteesCevrim = {
@@ -178,20 +180,18 @@ export function AuthProvider({children}){
 		tech: "Teknoloji",
 		pr: "PR",
 		compecawards: "BBÖ",
-		internalcomms: "İç İletişim",
 		datascience: "Veri Bilimi",
 		digitalEntr: "Dijital Girişimcilik",
 		gamedev: "Oyun Geliştirme"
 	}
 	const subcommitteeDates = {
-		devteam: "DevTeam",
-		tech: "Teknoloji",
-		pr: "PR",
-		compecawards: "BBÖ",
-		internalcomms: "İç İletişim",
-		datascience: "Veri Bilimi",
-		digitalEntr: "Dijital Girişimcilik",
-		gamedev: "Oyun Geliştirme"
+		devteam: "DevTeam | Pazartesi 18.30",
+		tech: "Teknoloji | Çarşamba 19.00",
+		pr: "PR | Pazartesi 19.30",
+		compecawards: "BBÖ | Salı 19.30",
+		datascience: "Veri Bilimi | Cuma 18.30",
+		digitalEntr: "Dijital Girişimcilik | Perşembe 18.30",
+		gamedev: "Oyun Geliştirme | Salı 18.30"
 	}
 	
 	// const value = { currentUser, userData, login, logout, announcements, meetings, events, database };
