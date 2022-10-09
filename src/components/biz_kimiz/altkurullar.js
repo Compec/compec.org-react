@@ -105,7 +105,7 @@ function Altkurullar() {
 					<Accordion.Collapse eventKey="5">
 						<Container>
 							<Card.Body>
-								Teknoloji alt kurulu, kulübün en köklü etkinliklerinden ve ulusal çapta öğrenciler tarafından düzenlenen en büyük teknoloji zirvesi olan TechSummit'in organizasyonundan sorumludur. Alt kurul üyeleri sene içinde organizasyon tecrübesi kazanmanın yanı sıra donanımsal ve yazılımsal becerilerini geliştirerek kulübe yeni projeler kazandırırlar. Dönem boyunca gerçekleşecek, alanında uzman isimleri de konuk edeceğimiz ekip toplantılarında robotikten IoT teknolojilerine, üç boyutlu baskıdan bilgisayar görüşüne teknoloji sektörünün birçok farklı trendi ele alınır. Ayrıca hedef kitlesi teknolojiye erişimi kısıtlı bölgelerdeki 7-12 yaş arası öğrenciler olan şehir dışı sosyal sorumluluk projemiz TeknoDolu'ya, Teknoloji ekibi öncülük etmektedir.
+							Teknoloji alt kurulu, kulübün en köklü etkinliklerinden olup öğrenciler tarafından düzenlenen ulusal çaptaki en büyük teknoloji zirvesi olan TechSummit'in organizasyonundan sorumludur. Alt kurul üyeleri sene içinde organizasyon tecrübesi kazanırlar. Dönem boyunca gerçekleşecek, alanında uzman isimleri de konuk edeceğimiz ekip toplantılarında robotikten IoT teknolojilerine, üç boyutlu baskıdan bilgisayar görüşüne teknoloji sektörünün birçok farklı trendi ele alınır. Ayrıca hedef kitlesi teknolojiye erişimi kısıtlı bölgelerdeki 7-12 yaş arası öğrenciler olan şehir dışı sosyal sorumluluk projemiz TeknoDolu'ya, Teknoloji ekibi öncülük etmektedir.
 							</Card.Body>
 						</Container>
 					</Accordion.Collapse>
