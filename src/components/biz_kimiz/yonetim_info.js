@@ -5,24 +5,25 @@ const YonetimInfo = {
 			gorev: "Yönetim Kurulu Başkanı",
 			foto: "/yonetim/emir_yaman_sivrikaya.png",
 			linkedin: "https://www.linkedin.com/in/emir-yaman-sivrikaya/",
-			insta: "https://www.instagram.com/e_yaman4"
+			insta: "https://www.instagram.com/e_yaman4/"
 		},
 		{
 			isim: "Seda Uysal",
 			gorev: "Genel Sekreter",
 			foto: "/yonetim/seda_uysal.JPG",
-			linkedin: "https://www.linkedin.com/in/seda-uysal/"
+			linkedin: "https://www.linkedin.com/in/seda-uysal/",
+			insta: "https://www.instagram.com/sedaa_uysal/"
 		},
 		{
 			isim: "Zeynep Okumuş",
 			gorev: "Kurumsal İletişim ve Finans Direktörü",
 			foto: "/yonetim/zeynep_okumus.JPG",
 			linkedin: "https://www.linkedin.com/in/zeynepokumus",
-			insta: "https://www.instagram.com/zeynep.okumuuss"
+			insta: "https://www.instagram.com/zeynep.okumuuss/"
 		},
 		{
 			isim: "Asaf Kanlıpıçak",
-			gorev: "Veri Bilimi ve AR-GE Direktörü",
+			gorev: "AR-GE ve Veri Bilimi Direktörü",
 			foto: "/yonetim/asaf_kanlipicak.jpg",
 			linkedin: "https://www.linkedin.com/in/asaf-kanlipicak/"
 		},
@@ -34,30 +35,30 @@ const YonetimInfo = {
 		},
 		{
 			isim: "Güneş Öztürk",
-			gorev: "",
+			gorev: "Bilişim Ödülleri ve PR Direktörü",
 			foto: "/yonetim/gunes_ozturk.jpg",
 			linkedin: "https://www.linkedin.com/in/güneş-öztürk-aa4628205/",
-			insta: "https://www.instagram.com/gunesoztrk"
+			insta: "https://www.instagram.com/gunesoztrk/"
 		},
 		{
 			isim: "Mustafa İnan Aybek",
-			gorev: "",
+			gorev: "PR ve Blockchain Direktörü",
 			foto: "/yonetim/mustafa_inan_aybek.jpg",
 			linkedin: "https://www.linkedin.com/in/mustafa-inan-aybek-218564224/",
-			insta: "https://www.instagram.com/mstfaybk"
+			insta: "https://www.instagram.com/mstfaybk/"
 		},
 		{
 			isim: "Yusuf Türkay",
-			gorev: "",
+			gorev: "Dijital Girişimcilik Direktörü",
 			foto: "/yonetim/yusuf_turkay.JPG",
 			linkedin: "https://www.linkedin.com/in/yusufturkay/"
 		},
 		{
 			isim: "Ahmet Bayır",
-			gorev: "Oyun Geliştirme ve Dijital Girişimcilik Direktörü",
+			gorev: "AR-GE ve Oyun Geliştirme Direktörü",
 			foto: "/yonetim/ahmet_bayir.JPG",
 			linkedin: "https://www.linkedin.com/in/ahmet-bayir/",
-			insta: "https://www.instagram.com/ahmet.bayir___"
+			insta: "https://www.instagram.com/ahmet.bayir__/"
 		}
 	],
 	"Liderler": [
