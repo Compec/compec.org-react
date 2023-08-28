@@ -10,13 +10,13 @@ const YonetimInfo = {
 		{
 			isim: "Seda Uysal",
 			gorev: "Genel Sekreter",
-			foto: "/yonetim/seda_uysal.jpg",
+			foto: "/yonetim/seda_uysal.JPG",
 			linkedin: "https://www.linkedin.com/in/seda-uysal/"
 		},
 		{
 			isim: "Zeynep Okumuş",
 			gorev: "Kurumsal İletişim ve Finans Direktörü",
-			foto: "/yonetim/zeynep_okumus.jpg",
+			foto: "/yonetim/zeynep_okumus.JPG",
 			linkedin: "https://www.linkedin.com/in/zeynepokumus",
 			insta: "https://www.instagram.com/zeynep.okumuuss"
 		},
@@ -49,13 +49,13 @@ const YonetimInfo = {
 		{
 			isim: "Yusuf Türkay",
 			gorev: "",
-			foto: "/yonetim/yusuf_turkay.jpg",
+			foto: "/yonetim/yusuf_turkay.JPG",
 			linkedin: "https://www.linkedin.com/in/yusufturkay/"
 		},
 		{
 			isim: "Ahmet Bayır",
 			gorev: "Oyun Geliştirme ve Dijital Girişimcilik Direktörü",
-			foto: "/yonetim/ahmet_bayir.jpg",
+			foto: "/yonetim/ahmet_bayir.JPG",
 			linkedin: "https://www.linkedin.com/in/ahmet-bayir/",
 			insta: "https://www.instagram.com/ahmet.bayir___"
 		}
@@ -64,7 +64,7 @@ const YonetimInfo = {
 		{
 			isim: "Semih Mutlu",
 			gorev: "DevTeam Lideri",
-			foto: "/yonetim/semih_mutlu.jpg",
+			foto: "/yonetim/semih_mutlu.JPG",
 			linkedin: "https://www.linkedin.com/in/semih-mutlu-9b11b6219/"
 		},
 		{
@@ -82,7 +82,7 @@ const YonetimInfo = {
 		{
 			isim: "Özgür Çelik",
 			gorev: "PR Lideri",
-			foto: "/yonetim/ozgur_celik.jpg",
+			foto: "/yonetim/default.png",
 			linkedin: "https://www.linkedin.com/in/mehmet-özgür-çelik-4259b7225/"
 		},
 		{
@@ -106,7 +106,7 @@ const YonetimInfo = {
 		{
 			isim: "Utku Yeşil",
 			gorev: "Teknoloji Lideri",
-			foto: "/yonetim/utku_yesil.jpg",
+			foto: "/yonetim/utku_yesil.JPG",
 			linkedin: "https://www.linkedin.com/in/utkuyesill/"
 		},
 		{
@@ -124,13 +124,13 @@ const YonetimInfo = {
 		{
 			isim: "Edanur Bozkurt",
 			gorev: "Veri Bilimi Lideri",
-			foto: "/yonetim/edanur_bozkurt.jpg",
+			foto: "/yonetim/edanur_bozkurt.JPG",
 			linkedin: "https://www.linkedin.com/in/edanur-bozkurt-13a331227/"
 		},
 		{
 			isim: "Doğukan Çayağzı",
 			gorev: "Veri Bilimi Lideri",
-			foto: "/yonetim/dogukan_cayagzi.jpg",
+			foto: "/yonetim/dogukan_cayagzi.JPG",
 			linkedin: "https://www.linkedin.com/in/dogukancayagzi/"
 		},
 		{
@@ -160,7 +160,7 @@ const YonetimInfo = {
 		{
 			isim: "Esin Akay",
 			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
-			foto: "/yonetim/default.png",
+			foto: "/yonetim/esin_akay.jpg",
 			linkedin: "https://www.linkedin.com/in/esin-akay/"
 		},
 		{
@@ -178,7 +178,7 @@ const YonetimInfo = {
 		{
 			isim: "Emre Akbaşaran",
 			gorev: "Dijital Girişimcilik Lideri",
-			foto: "/yonetim/emre_akbasaran.png",
+			foto: "/yonetim/emre_akbasaran.JPG",
 			linkedin: "https://www.linkedin.com/in/emreakbasaran/"
 		},
 		{
