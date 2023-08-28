@@ -1,214 +1,220 @@
 const YonetimInfo = {
 	"YK": [
 		{
-			isim: "Alperen Dönmez",
-			gorev: "Yönetim Kurulu Başkanı",
-			foto: "/yonetim/alperen_talip_donmez.png",
-			linkedin: "https://www.linkedin.com/in/alperendonmez",
-			insta: "https://www.instagram.com/alper.end"
-		},
-		{
-			isim: "Berat Bağcı",
-			gorev: "Genel Sekreter",
-			foto: "/yonetim/berat_bagci.png",
-			linkedin: "https://www.linkedin.com/in/beratbagcii/",
-			insta: "https://www.instagram.com/beratbagcii/"
-		},
-		{
-			isim: "Fatmanur Yaman",
-			gorev: "Kurumsal İletişim ve Finans Direktörü",
-			foto: "/yonetim/fatmanur_yaman.png",
-			linkedin: "https://www.linkedin.com/in/fatmanuryaman",
-			insta: "https://www.instagram.com/fatmanuryaman/"
-		},
-		{
 			isim: "Emir Yaman Sivrikaya",
-			gorev: "AR-GE Direktörü",
+			gorev: "Yönetim Kurulu Başkanı",
 			foto: "/yonetim/emir_yaman_sivrikaya.png",
 			linkedin: "https://www.linkedin.com/in/emir-yaman-sivrikaya/",
-			insta: "https://instagram.com/e_yaman4"
-		},
-		{
-			isim: "Ahmet Celal Gündoğdu",
-			gorev: "Veri Bilimi ve PR Direktörü",
-			foto: "/yonetim/ahmet_celal_gundogdu.png",
-			linkedin: "https://www.linkedin.com/in/ahmetcelalgundogdu/",
-			insta: "https://www.instagram.com/ahmetcelalgundogdu/",
-		},
-		{
-			isim: "Tarık Talha Dinç",
-			gorev: "Teknoloji ve PR Direktörü",
-			foto: "/yonetim/tarik_talha_dinc.png",
-			linkedin: "https://www.linkedin.com/in/tariktalhadinc/",
-			insta: "https://instagram.com/tariktalhadinc",
-		},
-		{
-			isim: "Nihat Çuhacı",
-			gorev: "Oyun Geliştirme ve Dijital Girişimcilik Direktörü",
-			foto: "/yonetim/nihat_cuhaci.png",
-			linkedin: "https://www.linkedin.com/in/nihatcuhaci/",
-			insta: "https://www.instagram.com/nihatcuhaci/"
-		}
-	],
-	"Liderler": [
-		{
-			isim: "Seyfullah Akgün",
-			gorev: "DevTeam Lideri",
-			foto: "/yonetim/seyfullah_akgun.png",
-			linkedin: "https://www.linkedin.com/in/seyfullah-akgun/",
-			insta: "https://www.instagram.com/swofgod/"
-		},
-		{
-			isim: "Beyza Nur Deniz",
-			gorev: "DevTeam Lideri",
-			foto: "/yonetim/beyza_nur_deniz.png",
-			linkedin: "https://www.linkedin.com/in/beyza-nur-deniz",
-			insta: "https://www.instagram.com/beyzanurdenizz/"
-		},
-		{
-			isim: "Zeynep Sude Arıkan",
-			gorev: "DevTeam Lideri",
-			foto: "/yonetim/zeynep_sude_arikan.png",
-			linkedin: "https://www.linkedin.com/in/zeynep-sude-arikan",
-			insta: "https://www.instagram.com/ms.beeblood/"
-		},
-		{
-			isim: "Esra Can",
-			gorev: "DevTeam Lideri",
-			foto: "/yonetim/esra_can.png",
-			linkedin: "https://www.linkedin.com/in/esra-can/",
-			insta: "https://www.instagram.com/_esraacan/"
-		},
-		{
-			isim: "Seyide Sude Kurt",
-			gorev: "PR Lideri",
-			foto: "/yonetim/seyide_sude_kurt.png",
-			linkedin: "https://www.linkedin.com/in/seyide-sude-kurt-a2b6001bb/",
-			insta: "https://www.instagram.com/seyidesudekurt"
-		},
-		{
-			isim: "Şule Köroğlu",
-			gorev: "PR Lideri",
-			foto: "/yonetim/sule_koroglu.png",
-			linkedin: "https://www.linkedin.com/in/%C5%9Fule-k%C3%B6ro%C4%9Flu-45b372225/",
-			insta: "https://www.instagram.com/variksia/"
-		},
-		{
-			isim: "Berkay Temiz",
-			gorev: "PR Lideri",
-			foto: "/yonetim/berkay_temiz.png",
-			linkedin: "https://www.linkedin.com/in/berkay-temiz-998372221",
-			insta: "https://www.instagram.com/b.e.r.k.a.i/"
-		},
-		{
-			isim: "Begüm Gökmen",
-			gorev: "Teknoloji Lideri",
-			foto: "/yonetim/begum_gokmen.png",
-			linkedin: "https://www.linkedin.com/in/beg%C3%BCm-g%C3%B6kmen-64a330227",
-			insta: "https://www.instagram.com/begumgk/"
+			insta: "https://www.instagram.com/e_yaman4/"
 		},
 		{
 			isim: "Seda Uysal",
-			gorev: "Teknoloji Lideri",
-			foto: "/yonetim/default.png",			
-			linkedin: "https://www.linkedin.com/in/seda-uysal-382712228",
+			gorev: "Genel Sekreter",
+			foto: "/yonetim/seda_uysal.JPG",
+			linkedin: "https://www.linkedin.com/in/seda-uysal/",
 			insta: "https://www.instagram.com/sedaa_uysal/"
 		},
 		{
-			isim: "Sedanur Ayhan",
-			gorev: "Teknoloji Lideri",
-			foto: "/yonetim/default.png",
-			linkedin: "https://www.linkedin.com/in/sedanurayhan/",
-		},
-		{
-			isim: "Ali Sönmez",
-			gorev: "Veri Bilimi Lideri",
-			foto: "/yonetim/ali_sonmez.png",
-			linkedin: "https://www.linkedin.com/in/ali-s%C3%B6nmez-7a9b1b218/",
-			insta: "https://www.instagram.com/alisonmez234/"
-		},
-		{
-			isim: "Kaan Aydın",
-			gorev: "Veri Bilimi Lideri",
-			foto: "/yonetim/kaan_aydin.png",
-			linkedin: "https://www.linkedin.com/in/kaannaydinn",
-			insta: "https://www.instagram.com/kaannaydinn/"
-		},
-		{
-			isim: "Asaf Kanlıpıçak",
-			gorev: "Veri Bilimi Lideri",
-			foto: "/yonetim/default.png",
-			linkedin: "https://www.linkedin.com/in/asaf-kanl%C4%B1p%C4%B1%C3%A7ak-a268aa223",
-		},
-		{
-			isim: "Ahmet Bayır",
-			gorev: "Oyun Geliştirme Lideri",
-			foto: "/yonetim/ahmet_bayir.png",
-			linkedin: "https://www.linkedin.com/in/ahmet-bayir",
-			insta: "https://www.instagram.com/ahmet.bayir__/"
-		},
-		{
 			isim: "Zeynep Okumuş",
-			gorev: "Oyun Geliştirme Lideri",
-			foto: "/yonetim/zeynep_okumus.png",
-			linkedin: "https://www.linkedin.com/in/zeynep-okumu%C5%9F-1b1791139/",
+			gorev: "Kurumsal İletişim ve Finans Direktörü",
+			foto: "/yonetim/zeynep_okumus.JPG",
+			linkedin: "https://www.linkedin.com/in/zeynepokumus",
 			insta: "https://www.instagram.com/zeynep.okumuuss/"
 		},
 		{
+			isim: "Asaf Kanlıpıçak",
+			gorev: "AR-GE ve Veri Bilimi Direktörü",
+			foto: "/yonetim/asaf_kanlipicak.jpg",
+			linkedin: "https://www.linkedin.com/in/asaf-kanlipicak/"
+		},
+		{
+			isim: "Begüm Gökmen",
+			gorev: "Teknoloji Direktörü",
+			foto: "/yonetim/begum_gokmen.jpg",
+			linkedin: "https://www.linkedin.com/in/begumgokmen/"
+		},
+		{
+			isim: "Güneş Öztürk",
+			gorev: "Bilişim Ödülleri ve PR Direktörü",
+			foto: "/yonetim/gunes_ozturk.jpg",
+			linkedin: "https://www.linkedin.com/in/güneş-öztürk-aa4628205/",
+			insta: "https://www.instagram.com/gunesoztrk/"
+		},
+		{
 			isim: "Mustafa İnan Aybek",
-			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
-			foto: "/yonetim/default.png",
+			gorev: "PR ve Blockchain Direktörü",
+			foto: "/yonetim/mustafa_inan_aybek.jpg",
 			linkedin: "https://www.linkedin.com/in/mustafa-inan-aybek-218564224/",
 			insta: "https://www.instagram.com/mstfaybk/"
 		},
 		{
-			isim: "Erdem Efe Peynirci",
-			gorev: "Boğaziçi Bilişim Ödülleri",
-			foto: "/yonetim/default.png",
-			linkedin: "https://www.linkedin.com/in/erdem-efe-peynirci-9a362b1ba",
-			insta: "https://instagram.com/erdemefepeynirci"
-		},
-		{
-			isim: "Güneş Öztürk",
-			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
-			foto: "/yonetim/gunes_ozturk.png",
-			linkedin: "https://www.linkedin.com",
-			insta: "https://www.instagram.com/gunesoztrk/?hl=tr"
-		},
-		{
-			isim: "İlayda Çınar",
-			gorev: "Dijital Girişimcilik Lideri",
-			foto: "/yonetim/ilayda_cinar.png",
-			linkedin: "https://www.linkedin.com/in/ilayda-%C3%A7%C4%B1nar-80b893226",
-			insta: "https://www.instagram.com/ilayda_ncr/"
-		},
-		{
-			isim: "Enes Bağatar",
-			gorev: "Dijital Girişimcilik Lideri",
-			foto: "/yonetim/default.png",
-			linkedin: "https://www.linkedin.com/in/enes-ba%C4%9Fatar-a65033186",
-			insta: "https://www.instagram.com/enesemrebagatar/"
-		},
-		{
 			isim: "Yusuf Türkay",
-			gorev: "Dijital Girişimcilik Lideri",
-			foto: "/yonetim/yusuf_turkay.png",
-			linkedin: "https://www.linkedin.com/in/yusufturkay",
-			insta: "https://www.instagram.com/yusufturkay/"
+			gorev: "Dijital Girişimcilik Direktörü",
+			foto: "/yonetim/yusuf_turkay.JPG",
+			linkedin: "https://www.linkedin.com/in/yusufturkay/"
 		},
 		{
-			isim: "Cahide Ünal",
-			gorev: "Kurumsal İletişim Lideri",
-			foto: "/yonetim/cahide_unal.png",
-			linkedin: "https://www.linkedin.com/in/cahideunal",
-			insta: "https://www.instagram.com/iampresenttt"
+			isim: "Ahmet Bayır",
+			gorev: "AR-GE ve Oyun Geliştirme Direktörü",
+			foto: "/yonetim/ahmet_bayir.JPG",
+			linkedin: "https://www.linkedin.com/in/ahmet-bayir/",
+			insta: "https://www.instagram.com/ahmet.bayir__/"
+		}
+	],
+	"Liderler": [
+		{
+			isim: "Semih Mutlu",
+			gorev: "DevTeam Lideri",
+			foto: "/yonetim/semih_mutlu.JPG",
+			linkedin: "https://www.linkedin.com/in/semih-mutlu-9b11b6219/"
 		},
 		{
-			isim: "Nergis Özyol",
-			gorev: "Kurumsal İletişim Lideri",
+			isim: "Melike Uç",
+			gorev: "DevTeam Lideri",
+			foto: "/yonetim/melike_uc.jpg",
+			linkedin: "https://www.linkedin.com/in/melike-uc/"
+		},
+		{
+			isim: "Hüseyin Emir Akdağ",
+			gorev: "DevTeam Lideri",
 			foto: "/yonetim/default.png",
-			linkedin: "https://www.linkedin.com/in/nergis-%C3%B6zyol-a301981b5/",
-			insta: "https://www.instagram.com/nergisozyol/"
+			linkedin: "https://www.linkedin.com/in/huseyinemirakdag/"
+		},
+		{
+			isim: "Özgür Çelik",
+			gorev: "PR Lideri",
+			foto: "/yonetim/default.png",
+			linkedin: "https://www.linkedin.com/in/mehmet-özgür-çelik-4259b7225/"
+		},
+		{
+			isim: "Serhat Taha Korkmaz",
+			gorev: "PR Lideri",
+			foto: "/yonetim/serhat_taha_korkmaz.jpg",
+			linkedin: "https://www.linkedin.com/in/serhat-taha-korkmaz-952674159/"
+		},
+		{
+			isim: "Merve Semiha Balcı",
+			gorev: "PR Lideri",
+			foto: "/yonetim/merve_semiha_balci.jpg",
+			linkedin: "https://www.linkedin.com/in/semihamervebalci/"
+		},
+		{
+			isim: "Sena Pekacar",
+			gorev: "PR Lideri",
+			foto: "/yonetim/sena_pekacar.jpg",
+			linkedin: "https://www.linkedin.com/in/betulsenapekacar/"
+		},
+		{
+			isim: "Utku Yeşil",
+			gorev: "Teknoloji Lideri",
+			foto: "/yonetim/utku_yesil.JPG",
+			linkedin: "https://www.linkedin.com/in/utkuyesill/"
+		},
+		{
+			isim: "Evrim Özdoğan",
+			gorev: "Teknoloji Lideri",
+			foto: "/yonetim/evrim_ozdogan.jpg",			
+			linkedin: "https://www.linkedin.com/in/evrimozdogan/"
+		},
+		{
+			isim: "Ayşe Hilal Bedir",
+			gorev: "Teknoloji Lideri",
+			foto: "/yonetim/ayse_hilal_bedir.jpg",
+			linkedin: "https://www.linkedin.com/in/hilalbedir/"
+		},
+		{
+			isim: "Edanur Bozkurt",
+			gorev: "Veri Bilimi Lideri",
+			foto: "/yonetim/edanur_bozkurt.JPG",
+			linkedin: "https://www.linkedin.com/in/edanur-bozkurt-13a331227/"
+		},
+		{
+			isim: "Doğukan Çayağzı",
+			gorev: "Veri Bilimi Lideri",
+			foto: "/yonetim/dogukan_cayagzi.JPG",
+			linkedin: "https://www.linkedin.com/in/dogukancayagzi/"
+		},
+		{
+			isim: "Sefa Mert Gökyar",
+			gorev: "Veri Bilimi Lideri",
+			foto: "/yonetim/sefa_mert_gokyar.jpg",
+			linkedin: "https://www.linkedin.com/in/mertgokyar/",
+		},
+		{
+			isim: "Sema Aydın",
+			gorev: "Oyun Geliştirme Lideri",
+			foto: "/yonetim/sema_aydin.jpg",
+			linkedin: "https://www.linkedin.com/in/sema-aydin/"
+		},
+		{
+			isim: "Serdar Şen",
+			gorev: "Oyun Geliştirme Lideri",
+			foto: "/yonetim/serdar_sen.jpg",
+			linkedin: "https://www.linkedin.com/in/serdarsenn/"
+		},
+		{
+			isim: "Esin Dinçer",
+			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
+			foto: "/yonetim/esin_dincer.jpg",
+			linkedin: "https://www.linkedin.com/in/esindincer/"
+		},
+		{
+			isim: "Esin Akay",
+			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
+			foto: "/yonetim/esin_akay.jpg",
+			linkedin: "https://www.linkedin.com/in/esin-akay/"
+		},
+		{
+			isim: "Ali Kaan Karagöz",
+			gorev: "Boğaziçi Bilişim Ödülleri Lideri",
+			foto: "/yonetim/ali_kaan_karagoz.jpg",
+			linkedin: "https://www.linkedin.com/in/ali-kaan-karagöz-5618a51a2/"
+		},
+		{
+			isim: "Ceyda Nikel",
+			gorev: "Dijital Girişimcilik Lideri",
+			foto: "/yonetim/ceyda_nikel.jpg",
+			linkedin: "https://www.linkedin.com/in/ceyda-nikel-3212711b6/"
+		},
+		{
+			isim: "Emre Akbaşaran",
+			gorev: "Dijital Girişimcilik Lideri",
+			foto: "/yonetim/emre_akbasaran.JPG",
+			linkedin: "https://www.linkedin.com/in/emreakbasaran/"
+		},
+		{
+			isim: "Oğuz Özer",
+			gorev: "Dijital Girişimcilik Lideri",
+			foto: "/yonetim/oguz_ozer.jpg",
+			linkedin: "https://www.linkedin.com/in/oğuz-özer-865095247/"
+		},
+		{
+			isim: "Tuana Yücedağ",
+			gorev: "Kurumsal İletişim Lideri",
+			foto: "/yonetim/tuana_yucedag.jpg",
+			linkedin: "https://www.linkedin.com/in/tuana-yucedag/"
+		},
+		{
+			isim: "Elif Önal",
+			gorev: "Kurumsal İletişim Lideri",
+			foto: "/yonetim/elif_onal.jpg",
+			linkedin: "https://www.linkedin.com/in/elif-önal-bb4291261/"
+		},
+		{
+			isim: "Hasan Deveci",
+			gorev: "Kurumsal İletişim Lideri",
+			foto: "/yonetim/default.jpg"
+		},
+		{
+			isim: "Mehmet Güneş",
+			gorev: "Blockchain Lideri",
+			foto: "/yonetim/default.png"
+		},
+		{
+			isim: "Ceyda Aydın",
+			gorev: "Blockchain Lideri",
+			foto: "/yonetim/ceyda_aydin.jpg",
+			linkedin: "https://www.linkedin.com/in/ceyda-aydın/"
 		}
 	]
 }
