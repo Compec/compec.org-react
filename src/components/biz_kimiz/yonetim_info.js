@@ -23,7 +23,7 @@ const YonetimInfo = {
 		},
 		{
 			isim: "Asaf Kanlıpıçak",
-			gorev: "AR-GE ve Veri Bilimi Direktörü",
+			gorev: "Veri Bilimi ve AR-GE Direktörü",
 			foto: "/yonetim/asaf_kanlipicak.jpg",
 			linkedin: "https://www.linkedin.com/in/asaf-kanlipicak/"
 		},
@@ -89,7 +89,7 @@ const YonetimInfo = {
 		{
 			isim: "Serhat Taha Korkmaz",
 			gorev: "PR Lideri",
-			foto: "/yonetim/serhat_taha_korkmaz.jpg",
+			foto: "/yonetim/default.png",
 			linkedin: "https://www.linkedin.com/in/serhat-taha-korkmaz-952674159/"
 		},
 		{
@@ -208,7 +208,7 @@ const YonetimInfo = {
 		{
 			isim: "Mehmet Güneş",
 			gorev: "Blockchain Lideri",
-			foto: "/yonetim/default.png"
+			foto: "/yonetim/mehmet_gunes.jpg"
 		},
 		{
 			isim: "Ceyda Aydın",
