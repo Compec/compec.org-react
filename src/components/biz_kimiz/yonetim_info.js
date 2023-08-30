@@ -203,7 +203,8 @@ const YonetimInfo = {
 		{
 			isim: "Hasan Deveci",
 			gorev: "Kurumsal İletişim Lideri",
-			foto: "/yonetim/default.jpg"
+			foto: "/yonetim/hasan_deveci.JPG",
+			linkedin: "https://www.linkedin.com/in/hasancan-deveci-9b0908225"
 		},
 		{
 			isim: "Mehmet Güneş",
