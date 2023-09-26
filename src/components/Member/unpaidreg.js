@@ -53,9 +53,9 @@ function UnpaidReg() {
             <h3>Kulüp harcınızı ödedikten sonra aşağıdaki QR kodunuzu yönetim ekibinden bir görevliye gösteriniz.</h3>
             
             <h4>
-                <span style={{color:"red", fontWeight:"bold"}}>Eğer online kayıt olmak istiyorsanız</span> 40 TL olan harcınızı aşağıdaki <span style={{color:'red', fontWeight:'bold'}}>IBAN adresine, açıklama kısmına BOUN uzantılı mail adresinizi</span> yazarak gönderiniz.<br/><br/>
-                TR41 0011 1000 0000 0111 0859 16<br/>
-                Fatmanur Yaman
+                <span style={{color:"red", fontWeight:"bold"}}>Eğer online kayıt olmak istiyorsanız</span> 60 TL olan harcınızı aşağıdaki <span style={{color:'red', fontWeight:'bold'}}>IBAN adresine, açıklama kısmına BOUN uzantılı mail adresinizi</span> yazarak gönderiniz.<br/><br/>
+                TR83 0011 1000 0000 0124 7424 69<br/>
+                Betül Zeynep Okumuş
             </h4>
             <br/>
             <h5>Kaydınızı tamamlamak için tekrar form doldurmanıza gerek yoktur.</h5>
